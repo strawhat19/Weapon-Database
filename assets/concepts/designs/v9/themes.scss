@@ -1,0 +1,65 @@
+:root,
+[data-armory-theme="dark"] {
+  color-scheme: dark;
+  --armory-background: #17181A;
+  --armory-surface: #202428;
+  --armory-surface-deep: #080A09;
+  --armory-text: #F8F8F8;
+  --armory-text-muted: #859398;
+  --armory-border: #565B64;
+  --armory-accent: #7EB638;
+  --armory-accent-text: #7EB638;
+  --armory-on-accent: #080A09;
+  --armory-detail: #E5302B;
+  --armory-header-overlay: rgba(23, 24, 26, 0.82);
+  --armory-edge-highlight: rgba(133, 147, 152, 0.24);
+  --armory-font-display: "Weapon Saira Stencil One", sans-serif;
+  --armory-font-heading: "Weapon Rajdhani", sans-serif;
+  --armory-font-body: "Weapon Barlow", sans-serif;
+  --armory-font-mono: "Weapon JetBrains Mono", monospace;
+  --armory-header-blur: 14px;
+  --armory-transition-duration: 220ms;
+  --armory-transition-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-armory-theme="light"] {
+  color-scheme: light;
+  --armory-background: #F8F8F8;
+  --armory-surface: #EDF0F2;
+  --armory-surface-deep: #E3E7E9;
+  --armory-text: #17181A;
+  --armory-text-muted: #565B64;
+  --armory-border: #859398;
+  --armory-accent: #7EB638;
+  --armory-accent-text: #3D5844;
+  --armory-on-accent: #080A09;
+  --armory-detail: #E5302B;
+  --armory-header-overlay: rgba(248, 248, 248, 0.88);
+  --armory-edge-highlight: rgba(255, 255, 255, 0.72);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  [data-armory-theme] {
+    --armory-transition-duration: 0ms;
+  }
+}
+
+:root,
+[data-armory-theme] {
+  --armory-rule-width: 1px;
+  --armory-annotation-width: 0.75px;
+  --armory-annotation-opacity: 0.6;
+  --armory-serial-mark-opacity: 0.32;
+  --armory-active-marker-opacity: 0.7;
+  --armory-search-border-width: 1px;
+  --armory-vault-rim: linear-gradient(165deg, #859398, #565B64 25%, #020302 52%, #859398 78%, #565B64);
+  --armory-vault-accent: #81BC34;
+  --armory-vault-rim-opacity: 0.36;
+  --armory-vault-recess-opacity: 0.18;
+  --armory-vault-accent-opacity: 0.4;
+}
+[data-armory-theme="light"] {
+  --armory-vault-accent: #375540;
+  --armory-vault-rim-opacity: 0.31;
+  --armory-vault-recess-opacity: 0.035;
+  --armory-vault-accent-opacity: 0.29;
+}
