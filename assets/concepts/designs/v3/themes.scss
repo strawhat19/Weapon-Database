@@ -1,0 +1,53 @@
+:root,
+[data-armory-theme="dark"] {
+  color-scheme: dark;
+  --armory-background: #020302;
+  --armory-surface: #020302;
+  --armory-surface-deep: #020302;
+  --armory-text: #F8F8F8;
+  --armory-text-muted: #859398;
+  --armory-border: #303537;
+  --armory-accent: #81BC34;
+  --armory-accent-text: #81BC34;
+  --armory-on-accent: #020302;
+  --armory-detail: #E5302B;
+  --armory-header-overlay: #020302;
+  --armory-edge-highlight: rgba(133, 147, 152, 0.24);
+  --armory-font-display: "Weapon Saira Stencil One", sans-serif;
+  --armory-font-heading: "Weapon Rajdhani", sans-serif;
+  --armory-font-body: "Weapon Barlow", sans-serif;
+  --armory-font-mono: "Weapon JetBrains Mono", monospace;
+  --armory-header-blur: 14px;
+  --armory-transition-duration: 220ms;
+  --armory-transition-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-armory-theme="light"] {
+  color-scheme: light;
+  --armory-background: #EDF0F2;
+  --armory-surface: #EDF0F2;
+  --armory-surface-deep: #E3E7E9;
+  --armory-text: #000000;
+  --armory-text-muted: #565B64;
+  --armory-border: #859398;
+  --armory-accent: #81BC34;
+  --armory-accent-text: #375540;
+  --armory-on-accent: #020302;
+  --armory-detail: #E5302B;
+  --armory-header-overlay: #020302;
+  --armory-edge-highlight: rgba(255, 255, 255, 0.72);
+}
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  [data-armory-theme] {
+    --armory-transition-duration: 0ms;
+  }
+}
+
+:root,
+[data-armory-theme] {
+  --armory-panel-background: #020302;
+  --armory-panel-text: #F8F8F8;
+  --armory-panel-muted: #859398;
+  --armory-panel-border: #303537;
+  --armory-panel-accent: #81BC34;
+}

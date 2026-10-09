@@ -1,0 +1,245 @@
+{
+  "name": "Weapon Database Armory Vault",
+  "version": "v4",
+  "kind": "Landing Page Visual Concept",
+  "assetPolicy": {
+    "crest": "assets/logos/v1/01-armory-crest-mark.svg",
+    "crestColors": "Preserve all approved v23 crest colors and geometry in both themes",
+    "application": "Design reference only; no application integration"
+  },
+  "palette": {
+    "crestGreen": "#81BC34",
+    "structuralGreen": "#375540",
+    "silverWhite": "#F8F8F8",
+    "hardwareGray": "#859398",
+    "gunmetal": "#565B64",
+    "magazineCharcoal": "#17181A",
+    "shieldField": "#020302",
+    "hardwareBlack": "#000000",
+    "reticleRed": "#E5302B",
+    "junctionPin": "#372126"
+  },
+  "themes": {
+    "dark": {
+      "name": "Charcoal Steel",
+      "background": "#17181A",
+      "surface": "#202428",
+      "surfaceDeep": "#020302",
+      "text": "#F8F8F8",
+      "textMuted": "#859398",
+      "border": "#565B64",
+      "accent": "#81BC34",
+      "accentText": "#81BC34",
+      "onAccent": "#020302",
+      "detail": "#E5302B",
+      "headerOverlay": "rgba(23, 24, 26, 0.82)",
+      "material": {
+        "name": "Cool Brushed Gunmetal",
+        "base": "#17181A",
+        "highlight": "#565B64",
+        "highlightOpacity": 0.12,
+        "grainOpacity": 0.045,
+        "grainDirection": "Horizontal",
+        "edgeHighlight": "rgba(133, 147, 152, 0.24)",
+        "finish": "Soft steel sheen with fine native texture; avoid high-contrast scratches"
+      }
+    },
+    "light": {
+      "name": "Silver Steel",
+      "background": "#F8F8F8",
+      "surface": "#EDF0F2",
+      "surfaceDeep": "#E3E7E9",
+      "text": "#020302",
+      "textMuted": "#565B64",
+      "border": "#859398",
+      "accent": "#81BC34",
+      "accentText": "#375540",
+      "onAccent": "#020302",
+      "detail": "#E5302B",
+      "headerOverlay": "rgba(248, 248, 248, 0.88)",
+      "material": {
+        "name": "Soft Brushed Silver",
+        "base": "#F8F8F8",
+        "highlight": "#859398",
+        "highlightOpacity": 0.075,
+        "grainOpacity": 0.035,
+        "grainDirection": "Horizontal",
+        "edgeHighlight": "rgba(255, 255, 255, 0.72)",
+        "finish": "Pale silver planes with restrained cool-gray grain and dark readable copy"
+      }
+    }
+  },
+  "typography": {
+    "families": {
+      "display": "\"Weapon Saira Stencil One\", sans-serif",
+      "heading": "\"Weapon Rajdhani\", sans-serif",
+      "body": "\"Weapon Barlow\", sans-serif",
+      "mono": "\"Weapon JetBrains Mono\", monospace"
+    },
+    "desktop": {
+      "headlineRajdhani": {
+        "size": 112,
+        "weight": 700,
+        "lineHeight": 0.94,
+        "letterSpacing": -1.5
+      },
+      "headlineStencil": {
+        "size": 96,
+        "weight": 400,
+        "lineHeight": 1.0,
+        "letterSpacing": 0
+      },
+      "headlineRange": [
+        90,
+        112
+      ],
+      "sectionHeading": {
+        "size": 44,
+        "weight": 700,
+        "lineHeight": 1.08
+      },
+      "cardHeading": {
+        "size": 28,
+        "weight": 600,
+        "lineHeight": 1.1
+      },
+      "body": {
+        "size": 18,
+        "weight": 400,
+        "lineHeight": 1.5
+      },
+      "navigation": {
+        "size": 15,
+        "weight": 600,
+        "lineHeight": 1.2
+      },
+      "metadata": {
+        "size": 12,
+        "weight": 500,
+        "lineHeight": 1.4,
+        "letterSpacing": 0.6
+      }
+    },
+    "mobile": {
+      "headlineRajdhani": {
+        "size": 62,
+        "weight": 700,
+        "lineHeight": 0.98,
+        "letterSpacing": -0.5
+      },
+      "headlineStencil": {
+        "size": 54,
+        "weight": 400,
+        "lineHeight": 1.02,
+        "letterSpacing": 0
+      },
+      "headlineRange": [
+        54,
+        62
+      ],
+      "sectionHeading": {
+        "size": 32,
+        "weight": 700,
+        "lineHeight": 1.1
+      },
+      "cardHeading": {
+        "size": 24,
+        "weight": 600,
+        "lineHeight": 1.12
+      },
+      "body": {
+        "size": 16,
+        "weight": 400,
+        "lineHeight": 1.5
+      },
+      "navigation": {
+        "size": 14,
+        "weight": 600,
+        "lineHeight": 1.2
+      },
+      "metadata": {
+        "size": 11,
+        "weight": 500,
+        "lineHeight": 1.4,
+        "letterSpacing": 0.4
+      }
+    },
+    "casing": "Preserve authored capitalization; Weapon Database stays in Title Case and no global uppercase transform is applied"
+  },
+  "spacing": {
+    "unit": 8,
+    "steps": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64,
+      80,
+      96
+    ],
+    "desktopPageGutter": 72,
+    "desktopSectionGap": 96,
+    "desktopCardGap": 24,
+    "mobilePageGutter": 24,
+    "mobileSectionGap": 56,
+    "mobileCardGap": 16
+  },
+  "layout": {
+    "desktop": "Twelve-column structure; wide hero copy alongside the featured rifle, with search and category navigation near the catalog entry",
+    "mobile": "One-column reading order; short hero, catalog search and categories, featured asset, catalog cards, loadout preview, history and blogs",
+    "pairedBoards": "Each theme presents desktop and mobile together on one board with matching content and material treatment",
+    "primaryAction": "Explore Catalog",
+    "secondaryAction": "Build a Loadout",
+    "publicBrowsing": "Catalog and reference content remain public; Sign In appears for Saved Items and saved loadouts",
+    "accents": "Use Crest Green for primary controls, small category indicators and selected states; keep large surfaces neutral",
+    "shape": "Thin metallic rules, precise rectangular panels and restrained angular corner details"
+  },
+  "motion": {
+    "sticky": true,
+    "header": "Sticky header gains a soft translucent background and blur after scrolling",
+    "headerBlur": "14px",
+    "blurDeclarationOrder": [
+      "-webkit-backdrop-filter",
+      "backdrop-filter"
+    ],
+    "transitionDurationMs": 220,
+    "transitionEasing": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+    "scrollToTop": "Bottom-right control fades in after the hero",
+    "reducedMotion": "Disable decorative movement and smooth scrolling; keep state changes immediate"
+  },
+  "neutralExtensions": {
+    "darkSurface": "#202428",
+    "lightSurface": "#EDF0F2",
+    "lightSurfaceDeep": "#E3E7E9",
+    "usage": "Surrounding layout materials only; the official crest uses its original palette"
+  },
+  "refinement": "Original v2 steel material, sheen, surfaces and layout with small black accents",
+  "subtleBlackAccents": {
+    "color": "#020302",
+    "reversedText": "#F8F8F8",
+    "searchBorderWidth": 2,
+    "footerRuleWidth": 2,
+    "roles": [
+      "Small Sign In Button",
+      "Small Archive Badge",
+      "Search Bezel",
+      "Loadout Top Hairline",
+      "Rifle Caption Hairline",
+      "Footer Divider"
+    ]
+  },
+  "preservedFromV2": [
+    "Steel Texture Assets",
+    "Material Overlay And Sheen Opacity",
+    "Steel Header And Footer",
+    "Open Category Index",
+    "Weapon Imagery",
+    "Typography And Spacing",
+    "Desktop And Mobile Layout",
+    "Official Crest"
+  ]
+}
