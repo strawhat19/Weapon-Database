@@ -1,0 +1,14 @@
+Use case: precise-object-edit
+Asset type: a finished single-logo refinement for the Weapon Database Armory Crest, round v3.
+Input images: Image 1 is the edit target. Use ONLY its LEFT Armory Crest panel as the source. Do not include or alter the Modular WD panel in this output.
+Primary request: retain the favored Armory Crest and add more of the same silver-white already used on its central sword.
+Output composition: a single large centered Armory Crest on a near-black square canvas, with its existing two-line 'Weapon Database' stencil wordmark below and small 'Armory Crest' label. All of the shield and text fully in-frame. Preserve the original visual hierarchy, calm margins, flat military style and original shield proportions.
+Change only these color/detail targets:
+1. Make the four main scope spokes/cardinal reticle bars and their small precision tick marks silver-white #E6EDDF. Keep the circular scope ring itself olive/tactical green and the dark space behind it. The reticle still sits behind the rifles and sword.
+2. Add deliberate silver-white highlights or inlay panels in BOTH green crossed rifles, particularly small receiver/rail, barrel and magazine accents. Keep most rifle surfaces green, keep their silhouettes, and avoid recoloring entire guns white.
+3. Make the arrow HEAD silver-white #E6EDDF, clearly shaped and distinguishable. Keep the bow limbs and most arrow shaft green.
+4. Make the ENTIRE upper-right fighter jet silhouette silver-white #E6EDDF, matching the sword blade; any tiny canopy seam can be near-black. All wings, fuselage and tailplanes belong to the silver silhouette.
+Preserve the original silver sword, green hilt, peaked green-outlined shield, crossed rifles, bow and nocked arrow upper-left, fighter jet upper-right, scope target behind weapons and stencil wordmark. Do not redesign any of them.
+Color palette: near-black #090E0B, olive #617340, tactical green #8AAD45, structural green #3E5949, and the exact sword-matching silver-white #E6EDDF.
+Text (verbatim): 'Weapon Database', with Weapon on the first line and Database on the second. Small label 'Armory Crest'. Preserve exact spelling and Title Case. No other text.
+Constraints: strict continuation of the reference logo, clean vector-style geometry and flat colors, no 3D/chrome/gradient/glow, no new objects, no extra weapons, no new insignia, no watermarks, no cropping.

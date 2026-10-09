@@ -1,0 +1,96 @@
+<svg
+  role="img"
+  fill="none"
+  viewBox="0 0 920 280"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-labelledby="armory-crest-lockup-title armory-crest-lockup-description"
+>
+  <title id="armory-crest-lockup-title">Weapon Database — Armory Crest Lockup</title>
+  <desc id="armory-crest-lockup-description">A black armory shield with a crossed rifle and sword sits beside the editable two-line Weapon Database wordmark in pale green and olive.</desc>
+  <g id="armory-crest-lockup-mark" transform="translate(16 12)">
+    <path
+      id="armory-crest-lockup-shield"
+      fill="#090E0B"
+      d="M40 32H216V140L200 184L128 230L56 184L40 140Z"
+    />
+    <path
+      id="armory-crest-lockup-shield-border"
+      stroke="#617340"
+      stroke-width="6"
+      d="M44 36H212V139L197 181L128 225L59 181L44 139Z"
+    />
+    <path
+      id="armory-crest-lockup-inner-border"
+      stroke="#3E5949"
+      stroke-width="3"
+      d="M56 48H200V137L187 173L128 211L69 173L56 137Z"
+    />
+    <g id="armory-crest-lockup-rifle" transform="rotate(40 128 128)">
+      <path
+        id="armory-crest-lockup-rifle-silhouette"
+        fill="#617340"
+        d="M52 113H69L82 120H93V112H145V115H181V118H201V125H181V128H150L143 134H127L135 153H121L112 134H104L103 151H91L94 130H81L67 139H52Z"
+      />
+      <path
+        id="armory-crest-lockup-rifle-receiver-cut"
+        fill="#090E0B"
+        d="M107 120H134V125H107Z"
+      />
+      <path
+        id="armory-crest-lockup-rifle-stock-cut"
+        fill="#090E0B"
+        d="M58 120H66L73 125L66 131H58Z"
+      />
+    </g>
+    <g id="armory-crest-lockup-sword" transform="rotate(40 128 128)">
+      <path
+        id="armory-crest-lockup-sword-separation"
+        stroke="#090E0B"
+        stroke-width="8"
+        stroke-linejoin="miter"
+        d="M128 54L136 77V150L132 155H150V164H134V189L140 195V201H116V195L122 189V164H106V155H124L120 150V77Z"
+      />
+      <path
+        id="armory-crest-lockup-sword-blade"
+        fill="#8AAD45"
+        d="M128 54L136 77V150L128 161L120 150V77Z"
+      />
+      <path
+        id="armory-crest-lockup-sword-fuller"
+        fill="#617340"
+        d="M127 79H129V149L128 151L127 149Z"
+      />
+      <path
+        id="armory-crest-lockup-sword-hilt"
+        fill="#E6EDDF"
+        d="M106 155H150V164H134V189L140 195V201H116V195L122 189V164H106Z"
+      />
+      <path
+        id="armory-crest-lockup-sword-grip"
+        fill="#617340"
+        d="M126 169H130V188H126Z"
+      />
+    </g>
+  </g>
+  <g
+    id="armory-crest-lockup-wordmark"
+    font-weight="900"
+    letter-spacing="1.5"
+    font-family="'Arial Black', Impact, sans-serif"
+  >
+    <text
+      x="290"
+      y="124"
+      fill="#E6EDDF"
+      font-size="78"
+      id="armory-crest-lockup-weapon"
+    >Weapon</text>
+    <text
+      x="294"
+      y="197"
+      fill="#8AAD45"
+      font-size="64"
+      id="armory-crest-lockup-database"
+    >Database</text>
+  </g>
+</svg>

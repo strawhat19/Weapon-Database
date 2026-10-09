@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" role="img" aria-labelledby="modular-wd-v3-lockup-title modular-wd-v3-lockup-description">
+  <title id="modular-wd-v3-lockup-title">Weapon Database — Modular WD Vault Arsenal Lockup</title>
+  <desc id="modular-wd-v3-lockup-description">A detailed green WD vault badge with an interior scope halo, silver ticks, armor panels, bolts, and cartridge finish swatches, framed by exterior crossed silver swords, armored fins, and targeting brackets. The editable Weapon Database wordmark is intended for a dark background.</desc>
+  <g id="modular-wd-v3-lockup-mark" transform="translate(12 12)">
+  <g id="modular-wd-v3-lockup-crossed-silver-swords">
+    <g id="modular-wd-v3-lockup-right-pointing-sword" transform="rotate(44 128 128)">
+      <path fill="#E6EDDF" stroke="#090E0B" stroke-width="3" d="M128 6L140 31V201L128 215L116 201V31Z"/>
+      <path fill="none" stroke="#3E5949" stroke-width="2.5" d="M128 31V204"/>
+      <path fill="#617340" stroke="#090E0B" stroke-width="3" d="M104 210H152V218L145 223H135V256L128 264L121 256V223H111L104 218Z"/>
+      <path fill="#090E0B" d="M121 229H135V233H121ZM121 240H135V244H121ZM121 251H135V255H121Z"/>
+    </g>
+    <g id="modular-wd-v3-lockup-left-pointing-sword" transform="rotate(-44 128 128)">
+      <path fill="#E6EDDF" stroke="#090E0B" stroke-width="3" d="M128 6L140 31V201L128 215L116 201V31Z"/>
+      <path fill="none" stroke="#3E5949" stroke-width="2.5" d="M128 31V204"/>
+      <path fill="#617340" stroke="#090E0B" stroke-width="3" d="M104 210H152V218L145 223H135V256L128 264L121 256V223H111L104 218Z"/>
+      <path fill="#090E0B" d="M121 229H135V233H121ZM121 240H135V244H121ZM121 251H135V255H121Z"/>
+    </g>
+  </g>
+  <g id="modular-wd-v3-lockup-exterior-armored-fins">
+    <path id="modular-wd-v3-lockup-left-wing" fill="#090E0B" stroke="#3E5949" stroke-width="3" d="M45 88L17 68V85L5 95V119L14 128L5 137V161L17 171V188L45 168Z"/>
+    <path id="modular-wd-v3-lockup-right-wing" fill="#090E0B" stroke="#3E5949" stroke-width="3" d="M211 88L239 68V85L251 95V119L242 128L251 137V161L239 171V188L211 168Z"/>
+    <path id="modular-wd-v3-lockup-left-fin-inlays" fill="#617340" d="M16 92L39 106V114L16 101ZM14 119H40V126H14ZM14 133H40V140H14ZM16 155L39 141V149L16 163Z"/>
+    <path id="modular-wd-v3-lockup-right-fin-inlays" fill="#617340" d="M240 92L217 106V114L240 101ZM242 119H216V126H242ZM242 133H216V140H242ZM240 155L217 141V149L240 163Z"/>
+    <path id="modular-wd-v3-lockup-left-rail-edge" fill="#8AAD45" d="M29 89L33 92V110L29 107ZM29 149L33 146V164L29 167Z"/>
+    <path id="modular-wd-v3-lockup-right-rail-edge" fill="#8AAD45" d="M227 89L223 92V110L227 107ZM227 149L223 146V164L227 167Z"/>
+  </g>
+  <g id="modular-wd-v3-lockup-vault-plate">
+    <path fill="#090E0B" d="M58 44H198L213 59V197L198 212H58L43 197V59Z"/>
+    <path fill="none" stroke="#617340" stroke-width="3" d="M62 50H194L207 63V193L194 206H62L49 193V63Z"/>
+  </g>
+  <g id="modular-wd-v3-lockup-interior-recessed-armor" fill="#3E5949">
+    <path id="modular-wd-v3-lockup-top-left-panel" d="M67 58H103L93 72H76L67 67Z"/>
+    <path id="modular-wd-v3-lockup-top-right-panel" d="M153 58H189V67L180 72H163Z"/>
+    <path id="modular-wd-v3-lockup-bottom-left-panel" d="M63 179L77 183L91 200H68L60 192Z"/>
+    <path id="modular-wd-v3-lockup-bottom-right-panel" d="M193 179L179 183L165 200H188L196 192Z"/>
+    <path id="modular-wd-v3-lockup-left-gutter-armor" d="M53 89H60V106H55V117H60V139H55V150H60V167H53Z"/>
+    <path id="modular-wd-v3-lockup-right-gutter-armor" d="M203 89H196V106H201V117H196V139H201V150H196V167H203Z"/>
+  </g>
+  <g id="modular-wd-v3-lockup-interior-scope-halo" fill="none" stroke="#3E5949" stroke-width="3.5">
+    <path id="modular-wd-v3-lockup-upper-left-scope-arc" d="M55 108A76 76 0 0 1 108 55"/>
+    <path id="modular-wd-v3-lockup-upper-right-scope-arc" d="M148 55A76 76 0 0 1 201 108"/>
+    <path id="modular-wd-v3-lockup-lower-right-scope-arc" d="M201 148A76 76 0 0 1 148 201"/>
+    <path id="modular-wd-v3-lockup-lower-left-scope-arc" d="M108 201A76 76 0 0 1 55 148"/>
+    <path id="modular-wd-v3-lockup-inner-scope-arc" stroke="#617340" stroke-width="2" d="M79 81A68 68 0 0 1 177 81M80 176A68 68 0 0 0 176 176"/>
+  </g>
+  <g id="modular-wd-v3-lockup-interior-silver-range-ticks" fill="#E6EDDF">
+    <path id="modular-wd-v3-lockup-top-range-tick" d="M126 52H130V64H126Z"/>
+    <path id="modular-wd-v3-lockup-left-range-tick" d="M51 126H63V130H51Z"/>
+    <path id="modular-wd-v3-lockup-right-range-tick" d="M193 126H205V130H193Z"/>
+    <path id="modular-wd-v3-lockup-bottom-range-tick" d="M126 201H130V206H126Z"/>
+  </g>
+  <g id="modular-wd-v3-lockup-letter-core" transform="translate(26.88 26.88) scale(.79)">
+    <g id="modular-wd-v3-lockup-letter-panels" stroke="#090E0B" stroke-width="8" stroke-linejoin="round" paint-order="stroke fill">
+      <path id="modular-wd-v3-lockup-letter-w" fill="#8AAD45" d="M47 73H66L73 150L86 116H104L117 150L123 73H142L132 190H112L95 146L78 190H58Z"/>
+      <path id="modular-wd-v3-lockup-letter-d" fill="#617340" fill-rule="evenodd" d="M151 73H182L209 100V163L182 190H151ZM169 91V172H175L191 156V107L175 91Z"/>
+      <path id="modular-wd-v3-lockup-d-counter" fill="#090E0B" stroke="none" d="M169 91V172H175L191 156V107L175 91Z"/>
+    </g>
+    <g id="modular-wd-v3-lockup-silver-blade-edge-inlays" fill="#E6EDDF">
+      <path id="modular-wd-v3-lockup-w-blade-edge" d="M55 84H59L65 145L63 164L59 147Z"/>
+      <path id="modular-wd-v3-lockup-d-blade-edge" d="M197 104L202 109V154L197 159Z"/>
+    </g>
+    <g id="modular-wd-v3-lockup-letter-panel-seams" fill="#090E0B">
+      <path d="M49 102H69L70 110H50ZM119 160H135L134 169H118ZM151 128H169V137H151ZM191 128H209V137H191Z"/>
+    </g>
+  </g>
+  <g id="modular-wd-v3-lockup-interior-cartridge-finish-row" stroke="#090E0B" stroke-width="2">
+    <path id="modular-wd-v3-lockup-forest-cartridge" fill="#3E5949" d="M101 185L105 181L109 185V197H101Z"/>
+    <path id="modular-wd-v3-lockup-olive-cartridge" fill="#617340" d="M115 185L119 181L123 185V197H115Z"/>
+    <path id="modular-wd-v3-lockup-tactical-cartridge" fill="#8AAD45" d="M129 185L133 181L137 185V197H129Z"/>
+    <path id="modular-wd-v3-lockup-silver-cartridge" fill="#E6EDDF" d="M143 185L147 181L151 185V197H143Z"/>
+    <path id="modular-wd-v3-lockup-cartridge-base-seams" fill="#090E0B" stroke="none" d="M101 192H109V194H101ZM115 192H123V194H115ZM129 192H137V194H129ZM143 192H151V194H143Z"/>
+  </g>
+  <g id="modular-wd-v3-lockup-interior-silver-bolts" fill="#E6EDDF">
+    <circle id="modular-wd-v3-lockup-top-left-bolt" cx="58" cy="64" r="2.5"/>
+    <circle id="modular-wd-v3-lockup-top-right-bolt" cx="198" cy="64" r="2.5"/>
+    <circle id="modular-wd-v3-lockup-bottom-left-bolt" cx="58" cy="192" r="2.5"/>
+    <circle id="modular-wd-v3-lockup-bottom-right-bolt" cx="198" cy="192" r="2.5"/>
+  </g>
+  <g id="modular-wd-v3-lockup-exterior-targeting-brackets" fill="none" stroke="#8AAD45" stroke-width="3.5">
+    <path id="modular-wd-v3-lockup-top-left-bracket" d="M27 61V31H60"/>
+    <path id="modular-wd-v3-lockup-top-right-bracket" d="M196 31H229V61"/>
+    <path id="modular-wd-v3-lockup-bottom-left-bracket" d="M27 195V225H60"/>
+    <path id="modular-wd-v3-lockup-bottom-right-bracket" d="M196 225H229V195"/>
+  </g>
+  <g id="modular-wd-v3-lockup-exterior-range-rail" fill="#617340">
+    <path id="modular-wd-v3-lockup-top-rail" d="M101 28H155V34H101Z"/>
+    <path id="modular-wd-v3-lockup-bottom-rail" d="M101 222H155V228H101Z"/>
+    <path id="modular-wd-v3-lockup-top-range-marker" fill="#E6EDDF" d="M126 24H130V39H126Z"/>
+    <path id="modular-wd-v3-lockup-bottom-range-marker" fill="#E6EDDF" d="M126 217H130V232H126Z"/>
+  </g>
+  </g>
+  <g id="modular-wd-v3-lockup-wordmark" font-family="'Arial Black', Impact, sans-serif" font-weight="900">
+    <text id="modular-wd-v3-lockup-weapon-word" x="302" y="128" fill="#E6EDDF" font-size="78" letter-spacing="1">Weapon</text>
+    <text id="modular-wd-v3-lockup-database-word" x="305" y="203" fill="#8AAD45" font-size="58" letter-spacing="5">Database</text>
+  </g>
+</svg>

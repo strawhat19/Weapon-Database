@@ -1,0 +1,11 @@
+Use case: precise-object-edit
+Asset type: Weapon Database Armory Crest, v7 final-balance concept.
+Input images: Image 1 is the exact nearly approved edit target.
+Primary request: only TWO small local refinements. Preserve everything else exactly.
+1. Slightly reduce the red on the bow and arrow in the upper-left: make the red bow limb joints narrower and make the red fletching/nock insert smaller, reducing this local red area about 25–35%. Keep a trace of muted red, retain all green details, silver outlines and black grooves. Do not remove red elsewhere.
+2. Add a few delicate near-black #090E0B grooves within the silver MAIN scope CIRCLE, not just the spokes. These should be very short curved inset lines following the ring curvature, balanced across visible left/right and lower arcs. Keep them much narrower than the silver ring thickness, leaving silver edges on both sides, so the ring remains predominantly silver and appears continuous. No large black breaks, chunky notches or additional ring segments. Keep existing black scope-spoke insets.
+Invariants: exact peaked green shield, structural green corner panels, crossed green/black rifles with tiny red hardware, upright silver sword with unchanged tip and dark blade groove, green/silver/red sword grip and silver pommel, silver jet with red canopy and thin black seams, bow/arrow shape and position, all reticle geometry, red scope tips, original stencil wordmark and typography, square framing and near-black backdrop. Do not redesign, reshape or move any object. The sword tip must remain exactly as in the reference.
+Palette: #090E0B black, #617340 olive, #8AAD45 tactical green, #3E5949 structural green, #E6EDDF silver-white, #B54A43 muted red. Flat vector-style colors, no new palette.
+Text (verbatim): 'Weapon Database', Weapon on first line and Database on second; small label 'Armory Crest'. Preserve exact spelling, Title Case, font, position and margins.
+Constraints: a faithful tiny refinement of the supplied image, only the two specified changes, entire logo and type in-frame.
+Avoid: altering the rifles, sword, jet, scope spokes or shield, new objects, new decoration, heavy black patches, changing silhouettes, increasing red, changing typography, gradients, textures, shadows, glow, chrome, 3D, watermarks, cropping.

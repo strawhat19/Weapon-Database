@@ -1,0 +1,138 @@
+<svg
+  role="img"
+  fill="none"
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-labelledby="armory-crest-v2-mark-title armory-crest-v2-mark-description"
+>
+  <title id="armory-crest-v2-mark-title">Weapon Database — Expanded Armory Crest</title>
+  <desc id="armory-crest-v2-mark-description">A peaked black and green shield contains a scope reticle behind an upright silver sword and diagonal olive rifle. A bow and arrow fills the upper left sector and a top-down fighter jet fills the upper right.</desc>
+  <g id="armory-crest-v2-mark">
+    <path
+      id="armory-crest-v2-shield"
+      fill="#090E0B"
+      d="M128 22L218 62V142L202 180L128 236L54 180L38 142V62Z"
+    />
+    <path
+      id="armory-crest-v2-shield-border"
+      stroke="#8AAD45"
+      stroke-width="6"
+      d="M128 26L214 65V141L199 178L128 231L57 178L42 141V65Z"
+    />
+    <path
+      id="armory-crest-v2-shield-inset"
+      stroke="#3E5949"
+      stroke-width="3"
+      d="M128 40L201 73V138L188 169L128 214L68 169L55 138V73Z"
+    />
+    <g id="armory-crest-v2-scope" stroke="#617340" stroke-width="4">
+      <circle id="armory-crest-v2-scope-ring" r="49" cx="128" cy="139" />
+      <path
+        id="armory-crest-v2-scope-crosshair"
+        d="M128 90V188M79 139H177"
+      />
+      <path
+        id="armory-crest-v2-scope-cardinal-ticks"
+        stroke="#8AAD45"
+        stroke-width="6"
+        d="M128 82V100M128 178V196M71 139H89M167 139H185"
+      />
+    </g>
+    <g id="armory-crest-v2-bow-and-arrow">
+      <path
+        id="armory-crest-v2-bow-separation"
+        stroke="#090E0B"
+        stroke-width="13"
+        stroke-linecap="round"
+        d="M75 66C96 79 96 105 75 118M75 66L84 92L75 118M61 92H108M100 84L109 92L100 100M61 85L69 92L61 99"
+      />
+      <path
+        id="armory-crest-v2-bow-limbs"
+        stroke="#8AAD45"
+        stroke-width="5"
+        stroke-linecap="round"
+        d="M75 66C96 79 96 105 75 118"
+      />
+      <path
+        id="armory-crest-v2-bow-string"
+        stroke="#617340"
+        stroke-width="2"
+        d="M75 66L84 92L75 118"
+      />
+      <path
+        id="armory-crest-v2-arrow"
+        stroke="#E6EDDF"
+        stroke-width="3"
+        stroke-linejoin="miter"
+        d="M61 92H108M100 84L109 92L100 100M61 85L69 92L61 99"
+      />
+    </g>
+    <path
+      id="armory-crest-v2-fighter-jet"
+      fill="#8AAD45"
+      stroke="#090E0B"
+      stroke-width="5"
+      stroke-linejoin="miter"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M177 52L182 75L199 91V100L183 90V106L191 114V121L177 115L163 121V114L171 106V90L155 100V91L172 75Z"
+    />
+    <path
+      id="armory-crest-v2-jet-fuselage"
+      fill="#617340"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M176 76H178V108H176Z"
+    />
+    <g
+      id="armory-crest-v2-rifle"
+      transform="translate(25.6 45.8) scale(0.8) rotate(-20 128 139)"
+    >
+      <path
+        id="armory-crest-v2-rifle-silhouette"
+        fill="#617340"
+        stroke="#090E0B"
+        stroke-width="6"
+        stroke-linejoin="miter"
+        d="M53 125H69L82 132H93V124H145V127H180V130H199V137H180V140H150L143 146H127L135 165H121L112 146H104L103 163H91L94 142H81L67 151H53Z"
+      />
+      <path
+        id="armory-crest-v2-rifle-receiver-cut"
+        fill="#090E0B"
+        d="M107 132H134V137H107Z"
+      />
+      <path
+        id="armory-crest-v2-rifle-stock-cut"
+        fill="#090E0B"
+        d="M59 132H66L73 137L66 143H59Z"
+      />
+    </g>
+    <g id="armory-crest-v2-sword">
+      <path
+        id="armory-crest-v2-sword-separation"
+        stroke="#090E0B"
+        stroke-width="9"
+        stroke-linejoin="miter"
+        d="M128 55L136 80V163H151V173H134V196L140 202V209H116V202L122 196V173H105V163H120V80Z"
+      />
+      <path
+        id="armory-crest-v2-sword-blade"
+        fill="#E6EDDF"
+        d="M128 55L136 80V158L128 170L120 158V80Z"
+      />
+      <path
+        id="armory-crest-v2-sword-fuller"
+        fill="#3E5949"
+        d="M127 82H129V155L128 157L127 155Z"
+      />
+      <path
+        id="armory-crest-v2-sword-hilt"
+        fill="#8AAD45"
+        d="M105 163H151V173H134V196L140 202V209H116V202L122 196V173H105Z"
+      />
+      <path
+        id="armory-crest-v2-sword-grip"
+        fill="#617340"
+        d="M126 178H130V195H126Z"
+      />
+    </g>
+  </g>
+</svg>

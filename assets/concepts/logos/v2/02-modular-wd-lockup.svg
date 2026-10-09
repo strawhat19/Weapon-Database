@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" role="img" aria-labelledby="modular-wd-v2-lockup-title modular-wd-v2-lockup-description">
+  <title id="modular-wd-v2-lockup-title">Weapon Database — Modular WD Blade Lockup</title>
+  <desc id="modular-wd-v2-lockup-description">A green WD armor-panel monogram with crossed silver swords, targeting brackets, side rails, and finish swatches beside the editable Weapon Database wordmark. The light wordmark is intended for a dark background.</desc>
+  <g id="modular-wd-v2-lockup-mark" transform="translate(12 12)">
+    <g id="modular-wd-v2-lockup-armor-plate">
+      <path fill="#090E0B" d="M43 15H213L241 43V213L213 241H43L15 213V43Z"/>
+      <path fill="none" stroke="#3E5949" stroke-width="5" d="M46 28H210L228 46V210L210 228H46L28 210V46Z"/>
+    </g>
+    <g id="modular-wd-v2-lockup-armored-side-rails" fill="#3E5949">
+      <path id="modular-wd-v2-lockup-left-rail" d="M15 74H30V91H22V111H30V144H22V164H30V181H15L7 173V82Z"/>
+      <path id="modular-wd-v2-lockup-right-rail" d="M241 74H226V91H234V111H226V144H234V164H226V181H241L249 173V82Z"/>
+    </g>
+    <g id="modular-wd-v2-lockup-crossed-silver-blades">
+      <g id="modular-wd-v2-lockup-right-pointing-sword" transform="rotate(42 128 128)">
+        <path fill="#E6EDDF" d="M128 22L140 47V170L128 181L116 170V47Z"/>
+        <path fill="none" stroke="#3E5949" stroke-width="2.5" d="M128 46V173"/>
+        <path fill="#617340" d="M104 176H152V184L146 190H136V211L128 220L120 211V190H110L104 184Z"/>
+        <path fill="#090E0B" d="M121 193H135V197H121ZM121 203H135V207H121Z"/>
+      </g>
+      <g id="modular-wd-v2-lockup-left-pointing-sword" transform="rotate(-42 128 128)">
+        <path fill="#E6EDDF" d="M128 22L140 47V170L128 181L116 170V47Z"/>
+        <path fill="none" stroke="#3E5949" stroke-width="2.5" d="M128 46V173"/>
+        <path fill="#617340" d="M104 176H152V184L146 190H136V211L128 220L120 211V190H110L104 184Z"/>
+        <path fill="#090E0B" d="M121 193H135V197H121ZM121 203H135V207H121Z"/>
+      </g>
+    </g>
+    <g id="modular-wd-v2-lockup-letter-panels" stroke="#090E0B" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">
+      <path id="modular-wd-v2-lockup-letter-w" fill="#8AAD45" d="M47 73H66L73 150L86 116H104L117 150L123 73H142L132 190H112L95 146L78 190H58Z"/>
+      <path id="modular-wd-v2-lockup-letter-d" fill="#617340" fill-rule="evenodd" d="M151 73H182L209 100V163L182 190H151ZM169 91V172H175L191 156V107L175 91Z"/>
+      <path id="modular-wd-v2-lockup-d-counter" fill="#090E0B" stroke="none" d="M169 91V172H175L191 156V107L175 91Z"/>
+    </g>
+    <g id="modular-wd-v2-lockup-silver-blade-edge-inlays" fill="#E6EDDF">
+      <path id="modular-wd-v2-lockup-w-blade-edge" d="M55 84H59L65 145L63 164L59 147Z"/>
+      <path id="modular-wd-v2-lockup-d-blade-edge" d="M197 104L202 109V154L197 159Z"/>
+    </g>
+    <g id="modular-wd-v2-lockup-panel-seams" fill="#090E0B">
+      <path d="M49 102H69L70 110H50ZM119 160H135L134 169H118ZM151 128H169V137H151ZM191 128H209V137H191Z"/>
+    </g>
+    <g id="modular-wd-v2-lockup-targeting-brackets" fill="none" stroke="#8AAD45" stroke-width="3.5">
+      <path id="modular-wd-v2-lockup-top-left-bracket" d="M41 61V41H73"/>
+      <path id="modular-wd-v2-lockup-top-right-bracket" d="M183 41H215V61"/>
+      <path id="modular-wd-v2-lockup-bottom-left-bracket" d="M41 195V215H73"/>
+      <path id="modular-wd-v2-lockup-bottom-right-bracket" d="M183 215H215V195"/>
+    </g>
+    <g id="modular-wd-v2-lockup-range-ticks" fill="#617340">
+      <path d="M116 38H124V42H116ZM132 38H140V42H132ZM35 123H40V133H35ZM216 123H221V133H216Z"/>
+    </g>
+    <g id="modular-wd-v2-lockup-finish-swatches">
+      <path id="modular-wd-v2-lockup-forest-swatch" fill="#3E5949" d="M92 214H112V223H92Z"/>
+      <path id="modular-wd-v2-lockup-olive-swatch" fill="#617340" d="M118 214H138V223H118Z"/>
+      <path id="modular-wd-v2-lockup-tactical-swatch" fill="#8AAD45" d="M144 214H164V223H144Z"/>
+    </g>
+  </g>
+  <g id="modular-wd-v2-lockup-wordmark" font-family="'Arial Black', Impact, sans-serif" font-weight="900">
+    <text id="modular-wd-v2-lockup-weapon-word" x="302" y="128" fill="#E6EDDF" font-size="78" letter-spacing="1">Weapon</text>
+    <text id="modular-wd-v2-lockup-database-word" x="305" y="203" fill="#8AAD45" font-size="58" letter-spacing="5">Database</text>
+  </g>
+</svg>

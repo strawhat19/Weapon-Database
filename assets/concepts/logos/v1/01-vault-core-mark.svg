@@ -1,0 +1,74 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  id="vault-core-mark"
+  role="img"
+  viewBox="0 0 256 256"
+  aria-labelledby="vault-core-title vault-core-description"
+>
+  <title id="vault-core-title">Weapon Database — Vault Core</title>
+  <desc id="vault-core-description">An angular black vault door with an olive frame, a circular locking ring, and three tactical green archive chambers.</desc>
+  <g id="vault-core-shell">
+    <path
+      fill="#617340"
+      d="M 70 18 H 186 L 238 70 V 186 L 186 238 H 70 L 18 186 V 70 Z"
+    />
+    <path
+      fill="#090E0B"
+      d="M 74 28 H 182 L 228 74 V 182 L 182 228 H 74 L 28 182 V 74 Z"
+    />
+    <path
+      fill="none"
+      stroke="#3E5949"
+      stroke-width="3"
+      d="M 79 43 H 177 L 213 79 V 177 L 177 213 H 79 L 43 177 V 79 Z"
+    />
+  </g>
+  <g id="vault-core-frame-details" fill="#8AAD45">
+    <path d="M 96 18 H 160 V 28 H 96 Z" />
+    <path d="M 18 96 H 28 V 160 H 18 Z" />
+    <path d="M 228 96 H 238 V 160 H 228 Z" />
+  </g>
+  <g id="vault-core-locking-ring">
+    <circle
+      r="66"
+      cx="128"
+      cy="128"
+      fill="none"
+      stroke="#3E5949"
+      stroke-width="8"
+    />
+    <path
+      fill="none"
+      stroke="#617340"
+      stroke-width="8"
+      d="M 81 81 A 66 66 0 0 1 175 81 M 175 175 A 66 66 0 0 1 81 175"
+    />
+    <path
+      fill="#8AAD45"
+      d="M 185 116 H 201 V 140 H 185 Z"
+    />
+    <path
+      fill="#617340"
+      d="M 55 119 H 70 V 137 H 55 Z"
+    />
+  </g>
+  <g id="vault-core-archive-chambers" fill="#8AAD45">
+    <path
+      id="vault-core-archive-chamber-1"
+      d="M 97 88 H 154 L 165 99 V 110 H 91 V 94 Z"
+    />
+    <path
+      id="vault-core-archive-chamber-2"
+      d="M 91 117 H 165 V 139 H 91 Z"
+    />
+    <path
+      id="vault-core-archive-chamber-3"
+      d="M 91 146 H 165 V 162 L 159 168 H 102 L 91 157 Z"
+    />
+  </g>
+  <g id="vault-core-chamber-slots" fill="#090E0B">
+    <path d="M 103 96 H 146 V 102 H 103 Z" />
+    <path d="M 103 125 H 153 V 131 H 103 Z" />
+    <path d="M 110 154 H 153 V 160 H 110 Z" />
+  </g>
+</svg>

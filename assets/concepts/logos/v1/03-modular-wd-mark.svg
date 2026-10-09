@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="modular-wd-mark-title modular-wd-mark-description">
+  <title id="modular-wd-mark-title">Weapon Database — Modular WD Mark</title>
+  <desc id="modular-wd-mark-description">An original WD monogram built from olive and tactical green armor panels inside a black clipped-corner plate. Three small finish swatches suggest interchangeable weapon skins and camouflage.</desc>
+  <g id="modular-wd-armor-plate">
+    <path fill="#090E0B" d="M40 16H216L240 40V216L216 240H40L16 216V40Z"/>
+    <path fill="none" stroke="#3E5949" stroke-width="6" d="M43 29H213L227 43V213L213 227H43L29 213V43Z"/>
+  </g>
+  <g id="modular-wd-letter-panels">
+    <path fill="#8AAD45" d="M48 66H66L72 146L85 111H103L116 146L122 66H140L130 188H111L94 143L77 188H58Z"/>
+    <path fill="#617340" fill-rule="evenodd" d="M150 66H184L210 92V162L184 188H150ZM168 84V170H176L192 154V100L176 84Z"/>
+    <path fill="#090E0B" d="M49 97H70L71 106H50ZM117 158H133L132 168H116ZM150 123H168V133H150ZM192 123H210V133H192Z"/>
+  </g>
+  <g id="modular-wd-finish-swatches">
+    <path fill="#3E5949" d="M94 204H112V214H94Z"/>
+    <path fill="#617340" d="M119 204H137V214H119Z"/>
+    <path fill="#8AAD45" d="M144 204H162V214H144Z"/>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" role="img" aria-labelledby="modular-wd-lockup-title modular-wd-lockup-description">
+  <title id="modular-wd-lockup-title">Weapon Database — Modular WD Lockup</title>
+  <desc id="modular-wd-lockup-description">A modular WD armor-plate monogram beside the editable Weapon Database wordmark. Olive and tactical green swatches evoke custom skins and camouflage. Designed for a dark background.</desc>
+  <g id="modular-wd-lockup-mark" transform="translate(12 12)">
+    <g id="modular-wd-lockup-armor-plate">
+      <path fill="#090E0B" d="M40 16H216L240 40V216L216 240H40L16 216V40Z"/>
+      <path fill="none" stroke="#3E5949" stroke-width="6" d="M43 29H213L227 43V213L213 227H43L29 213V43Z"/>
+    </g>
+    <g id="modular-wd-lockup-letter-panels">
+      <path fill="#8AAD45" d="M48 66H66L72 146L85 111H103L116 146L122 66H140L130 188H111L94 143L77 188H58Z"/>
+      <path fill="#617340" fill-rule="evenodd" d="M150 66H184L210 92V162L184 188H150ZM168 84V170H176L192 154V100L176 84Z"/>
+      <path fill="#090E0B" d="M49 97H70L71 106H50ZM117 158H133L132 168H116ZM150 123H168V133H150ZM192 123H210V133H192Z"/>
+    </g>
+    <g id="modular-wd-lockup-finish-swatches">
+      <path fill="#3E5949" d="M94 204H112V214H94Z"/>
+      <path fill="#617340" d="M119 204H137V214H119Z"/>
+      <path fill="#8AAD45" d="M144 204H162V214H144Z"/>
+    </g>
+  </g>
+  <g id="modular-wd-lockup-wordmark" font-family="'Arial Black', Impact, sans-serif" font-weight="900">
+    <text x="302" y="128" fill="#E6EDDF" font-size="78" letter-spacing="1">Weapon</text>
+    <text x="305" y="203" fill="#8AAD45" font-size="58" letter-spacing="5">Database</text>
+  </g>
+</svg>
