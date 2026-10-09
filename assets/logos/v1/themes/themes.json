@@ -1,0 +1,57 @@
+{
+  "name": "Weapon Database Official Themes",
+  "version": "v1",
+  "default": "charcoal",
+  "attribute": "data-weapon-theme",
+  "fonts": {
+    "display": "\"Weapon Saira Stencil One\", sans-serif",
+    "heading": "\"Weapon Rajdhani\", sans-serif",
+    "body": "\"Weapon Barlow\", sans-serif",
+    "mono": "\"Weapon JetBrains Mono\", monospace"
+  },
+  "themes": {
+    "charcoal": {
+      "name": "Charcoal",
+      "colorScheme": "dark",
+      "background": "#17181A",
+      "surface": "#020302",
+      "surfaceRaised": "#375540",
+      "text": "#F8F8F8",
+      "textMuted": "#859398",
+      "border": "#565B64",
+      "accent": "#81BC34",
+      "accentText": "#81BC34",
+      "onAccent": "#020302",
+      "detail": "#E5302B"
+    },
+    "graphite": {
+      "name": "Graphite",
+      "colorScheme": "dark",
+      "background": "#565B64",
+      "surface": "#17181A",
+      "surfaceRaised": "#375540",
+      "text": "#F8F8F8",
+      "textMuted": "#F8F8F8",
+      "border": "#859398",
+      "accent": "#81BC34",
+      "accentText": "#F8F8F8",
+      "onAccent": "#020302",
+      "detail": "#E5302B"
+    },
+    "light": {
+      "name": "Light",
+      "colorScheme": "light",
+      "background": "#F8F8F8",
+      "surface": "#F8F8F8",
+      "surfaceRaised": "#F8F8F8",
+      "text": "#17181A",
+      "textMuted": "#565B64",
+      "border": "#859398",
+      "accent": "#81BC34",
+      "accentText": "#375540",
+      "onAccent": "#020302",
+      "detail": "#E5302B"
+    }
+  },
+  "usage": "Theme values apply to layouts surrounding the crest; the SVG and PNG retain the approved v23 colors."
+}

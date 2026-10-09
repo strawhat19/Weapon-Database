@@ -1,7 +1,9 @@
 # Weapon Database Assets
 
-Weapon Database is a military vault-inspired collection for weapons, swords, custom builds, camouflage, and skins. The initial identity explores black, olive, and tactical green.
+Weapon Database is a military vault-inspired collection for weapons, swords, custom builds, camouflage, and skins. The official identity uses the adopted v23 Armory Crest.
 
-Logo explorations live in `concepts/logos/v1/`. Each concept includes a standalone SVG mark and an SVG wordmark lockup. The version README explains the ideas, palette, and intended uses.
+The official brand package is in [logos/v1/](logos/v1/README.md), with the exact crest, SVG/PNG wordmark lockups, brand cards, palettes, themes, and fonts. Logo explorations remain in `concepts/logos/vN/` as design history.
 
-Keep future logo rounds in the next unused `concepts/logos/vN/` folder. Create `concepts/mockups/vN/` only when mockups are requested. Adopted application assets can be added after a concept is chosen.
+Landing-page concepts live in [concepts/designs/](concepts/designs/README.md), starting with desktop and mobile hero designs in `v1/`.
+
+Keep future logo rounds in the next unused `concepts/logos/vN/` folder. Create `concepts/mockups/vN/` only when mockups are requested. Keep subsequent official identity packages in `logos/vN/`.

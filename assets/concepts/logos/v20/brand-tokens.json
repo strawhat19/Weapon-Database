@@ -1,0 +1,70 @@
+{
+  "name": "Weapon Database Armory Crest",
+  "round": "v20",
+  "format": {
+    "svg": "01-armory-crest-mark.svg",
+    "png": "01-armory-crest-mark.png",
+    "viewBox": [
+      0,
+      0,
+      788,
+      914
+    ],
+    "pngDimensions": [
+      1576,
+      1828
+    ],
+    "construction": "Native vector geometry",
+    "centerline": 394,
+    "surroundingCanvas": "Transparent",
+    "rasterSource": "Rendered directly from the SVG master",
+    "fontDependencies": false,
+    "embeddedBitmaps": false
+  },
+  "palette": {
+    "crestGreen": "#81BC34",
+    "structuralGreen": "#375540",
+    "silverWhite": "#F8F8F8",
+    "hardwareGray": "#859398",
+    "gunmetal": "#565B64",
+    "magazineCharcoal": "#17181A",
+    "shieldField": "#020302",
+    "hardwareBlack": "#000000",
+    "reticleRed": "#E5302B",
+    "junctionPin": "#372126"
+  },
+  "refinements": {
+    "pairedElements": "Mirrored base silhouettes and hardware with directional overlap at the crossing",
+    "swordTip": "Bold black V separation",
+    "barrelGap": 7,
+    "railSpikes": "Uniform angular trapezoids with black spacing",
+    "gripExtensions": "Shorter, broader heels with chamfered tips and separate upper recesses",
+    "magazineRails": "Full-length curves clipped to outlined bodies",
+    "magazineOutlineWidth": 5,
+    "stockBandSeparationWidth": 4.5,
+    "stocks": "Open hooked skeletons with inset gray reinforcement",
+    "scopeBlackInlayWidth": 5.5,
+    "jetBlackBoundaryWidth": 2,
+    "jetWingSlots": "Slim angled apertures with gently rounded outside ends",
+    "jetTail": "White fins and exhaust with black linework",
+    "jetRearWingFacet": {
+      "color": "#859398",
+      "opacity": 0.35
+    },
+    "centerTangWidth": 52,
+    "crossingChannelWidth": 10,
+    "crossingChannel": "Continuous foreground separation painted above the central mount",
+    "swordScopeClearance": 9,
+    "stockPadBottomSeparationWidth": 6,
+    "stockHookSeparationWidth": 3.5,
+    "swordGrip": "Four gray bands, three broad white bands, dark gaps and symmetric taper from v15",
+    "forearmWindows": "Chamfered apertures with leading and trailing gray collar clips",
+    "frontInsert": "Longer silver insert with chamfered ends and a thin white rim",
+    "frontCollarSeparationWidth": 9,
+    "receiverShoulder": "Lower contour with a short black relief beside the structural bridge",
+    "receiverInsert": "Metallic detail beneath the black aperture with a separated lower recess",
+    "triggerPockets": "Stepped contours with black clearance around each red selector",
+    "triggerBar": "Straight 24px white bar at local y43–47",
+    "magazineMouth": "Angled black corner relief with full-length gray rails preserved"
+  }
+}

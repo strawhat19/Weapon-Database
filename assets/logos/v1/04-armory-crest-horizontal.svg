@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="620" viewBox="0 0 1900 620" role="img" aria-labelledby="asset-title"><title id="asset-title">Weapon Database — Horizontal Logo</title><g transform="translate(40 43) scale(0.583756345177665)">
+<title id="crest-3-crest-title">Weapon Database Armory Crest — v23</title>
+<desc id="crest-3-crest-description">The v22 crest refined with a connected receiver opening that establishes the foreground rifle edge and merges naturally into the blade V and rear trigger pocket, without a separate rectangular crossing bar. Three mirrored rows of black ports and a centered service recess add detail beside the unbordered gray joining rails. The full-width magazine separators, current colors, native vector construction and transparent surrounding canvas are preserved.</desc>
+<g id="crest-3-armory-crest-v23">
+<path id="crest-3-shield-contour" d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="#020302" stroke="#81BC34" stroke-width="28" stroke-linejoin="miter"/>
+<g id="crest-3-shield-panels-left"><path id="crest-3-shield-upper-panel" d="M218 137L320 103L254 211Z" fill="#375540"/>
+<path id="crest-3-shield-upper-side-panel" d="M74 177L122 162L74 220Z" fill="#375540"/>
+<path id="crest-3-shield-middle-side-panel" d="M74 246L106 284L74 318Z" fill="#375540"/>
+<path id="crest-3-shield-central-side-panel" d="M74 328L136 389L74 464Z" fill="#375540"/>
+<path id="crest-3-shield-lower-side-panel" d="M78.121 507L169 612L128.162 640C101.518 598.768 85.238 554.678 78.121 507Z" fill="#375540"/>
+<path id="crest-3-shield-bottom-panel" d="M225 701L323.503 805C287.835 786.467 256.434 766.754 229.066 746Z" fill="#375540"/></g><use id="crest-3-shield-panels-left-mirrored" href="#crest-3-shield-panels-left" transform="translate(788 0) scale(-1 1)"/>
+<g id="crest-3-shield-hardware-left"><path id="crest-3-shield-top-black-slot" d="M55 151L124 129L127 137L58 159Z" fill="#000000"/>
+<rect id="crest-3-shield-red-marker" x="132" y="121" width="10" height="10" fill="#E5302B" transform="rotate(-18.5 137 126)"/>
+<path id="crest-3-shield-top-metal-frame" d="M169 111L319 64L323 75L173 122Z" fill="#565B64"/>
+<path id="crest-3-shield-top-metal-inlay" d="M190 105L271 80L273 87L192 112Z" fill="#859398"/>
+<rect id="crest-3-shield-side-metal-frame" x="42" y="191" width="10" height="100" fill="#565B64"/>
+<rect id="crest-3-shield-side-metal-inlay" x="44" y="194" width="6" height="58" fill="#859398"/>
+<path id="crest-3-shield-lower-metal-frame" d="M48.152 493C51.708 527.805 59.709 561.169 72.431 593" fill="none" stroke="#565B64" stroke-width="12" stroke-linecap="butt"/>
+<path id="crest-3-shield-lower-metal-inlay" d="M53.728 530C57.792 550.201 63.483 569.874 70.861 589" fill="none" stroke="#859398" stroke-width="6" stroke-linecap="butt"/>
+<path id="crest-3-shield-lower-black-slot" d="M95.914 641C105.542 657.474 116.615 673.479 129.178 689" fill="none" stroke="#000000" stroke-width="9" stroke-linecap="butt"/>
+<path id="crest-3-shield-bottom-metal-frame" d="M175.62 738C192.737 753.589 211.646 768.595 232.403 783" fill="none" stroke="#565B64" stroke-width="12" stroke-linecap="butt"/>
+<path id="crest-3-shield-bottom-metal-inlay" d="M201.459 760C209.973 766.788 218.858 773.455 228.119 780" fill="none" stroke="#859398" stroke-width="6" stroke-linecap="butt"/></g><use id="crest-3-shield-hardware-left-mirrored" href="#crest-3-shield-hardware-left" transform="translate(788 0) scale(-1 1)"/>
+<g id="crest-3-scope-left"><path id="crest-3-scope-upper-arc" d="M199.042 339.489A238 238 0 0 1 352.672 241.616L355.797 259.342A220 220 0 0 0 213.787 349.813Z" fill="#F8F8F8"/>
+<path id="crest-3-scope-upper-inlay" d="M221.172 325.762A229 229 0 0 1 282.979 275.712" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="crest-3-scope-side-upper-arc" d="M156.58 459.398A238 238 0 0 1 167.649 402.454L184.768 408.016A220 220 0 0 0 174.536 460.654Z" fill="#F8F8F8"/>
+<path id="crest-3-scope-side-upper-inlay" d="M165.871 456.041A229 229 0 0 1 172.803 416.73" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="crest-3-scope-side-lower-arc" d="M199.042 612.511A238 238 0 0 1 156.58 492.602L174.536 491.346A220 220 0 0 0 213.787 602.187Z" fill="#F8F8F8"/>
+<path id="crest-3-scope-side-lower-inlay" d="M199.797 597.352A229 229 0 0 1 180.21 558.066" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="crest-3-scope-bottom-arc" d="M352.672 710.384A238 238 0 0 1 254.107 668.546L264.687 653.984A220 220 0 0 0 355.797 692.658Z" fill="#F8F8F8"/>
+<path id="crest-3-scope-bottom-inlay" d="M315.677 691.19A229 229 0 0 1 279.5 674.32" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="crest-3-scope-black-notch-1" d="M334.462 268.367L328.95 249.142" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="crest-3-scope-black-notch-2" d="M189.768 546.323L170.858 552.834" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="crest-3-scope-black-notch-3" d="M299.312 670.14L290.544 688.115" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="crest-3-scope-radial-tick-1" d="M272.715 320.762L253.014 295.546" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="crest-3-scope-radial-tick-2" d="M339.699 286.631L330.879 255.871" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="crest-3-scope-radial-tick-3" d="M207.733 540.137L177.476 550.555" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="crest-3-scope-radial-tick-4" d="M226.935 580.394L199.797 597.352" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="crest-3-scope-radial-tick-5" d="M307.641 653.062L293.613 681.824" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="crest-3-scope-horizontal-register" d="M100 468H199L193 476L199 484H100Z" fill="#F8F8F8"/>
+<rect id="crest-3-scope-horizontal-inlay" x="119" y="473.5" width="54" height="5" fill="#000000" rx="0.75"/>
+<rect id="crest-3-scope-red-register" x="201" y="468" width="4" height="16" fill="#E5302B"/>
+<rect id="crest-3-scope-inner-register" x="334" y="354" width="21" height="13" fill="#F8F8F8"/></g><use id="crest-3-scope-left-mirrored" href="#crest-3-scope-left" transform="translate(788 0) scale(-1 1)"/>
+<g id="crest-3-armory-bow-arrow-clean">
+    <path id="crest-3-bow-outer-limb" fill="none" stroke="#F8F8F8" stroke-width="3" stroke-linecap="round" d="M193 154C217 174 230 202 230 230C230 258 217 286 193 306"/>
+    <path id="crest-3-bow-inner-limb" fill="none" stroke="#F8F8F8" stroke-width="3" stroke-linecap="round" d="M193 154C213 174 224 202 224 230C224 258 213 286 193 306"/>
+    <path id="crest-3-bow-straight-string" fill="none" stroke="#F8F8F8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M193 154L122 230L193 306"/>
+    <path id="crest-3-arrow-open-head-white" fill="#F8F8F8" fill-rule="evenodd" d="M243 222L270 230L243 238L248 230ZM249 226L262 230L249 234L252 230Z"/>
+    <path id="crest-3-arrow-horizontal-shaft" fill="none" stroke="#F8F8F8" stroke-width="3.4" d="M116 230H248"/>
+    <path id="crest-3-arrow-dark-silver-hardware" fill="none" stroke="#859398" stroke-width="3.4" d="M205 230H230"/>
+    <path id="crest-3-arrow-white-fletching-outline" fill="#F8F8F8" d="M94 222H111L121 230L111 238H94L101 230Z"/>
+    <path id="crest-3-arrow-red-fletching" fill="#E5302B" d="M98 225H109L115 230L109 235H98L104 230Z"/>
+    <circle id="crest-3-bow-upper-white-cap" r="5" cx="193" cy="154" fill="#F8F8F8"/>
+    <circle id="crest-3-bow-lower-white-cap" r="5" cx="193" cy="306" fill="#F8F8F8"/>
+    <path id="crest-3-bow-upper-red-attachment" fill="#E5302B" d="M193 155L197 160L193 165L189 160Z"/>
+    <path id="crest-3-bow-lower-red-attachment" fill="#E5302B" d="M193 295L197 300L193 305L189 300Z"/>
+  </g>
+<g id="crest-3-v18-crest-jet" stroke-linejoin="round" stroke-linecap="round">
+  <defs>
+    <g id="crest-3-v18-crest-jet-left-wing">
+      <path id="crest-3-v18-crest-jet-left-tail-fin" d="M597 256 L608 278 L592 295 L578 292 L575 282 Z" fill="#F8F8F8" stroke="#000000" stroke-width="2"/>
+      <path id="crest-3-v18-crest-jet-left-tail-seam" d="M598 266 L579 291" fill="none" stroke="#000000" stroke-width="1.8"/>
+      <path id="crest-3-v18-crest-jet-left-inner-pylon" d="M586 220 V205 H590 V218" fill="#F8F8F8" stroke="#000000" stroke-width="1.2"/>
+      <path id="crest-3-v18-crest-jet-left-inner-pylon-cap" d="M586 205 H590" fill="none" stroke="#E5302B" stroke-width="0.8"/>
+      <path id="crest-3-v18-crest-jet-left-outer-pylon" d="M558 238 V226 C558 221 564 221 564 226 V235 Z" fill="#F8F8F8"/>
+      <path id="crest-3-v18-crest-jet-left-outer-pylon-cap" d="M558 229 V225 C558 220.5 564 220.5 564 225 V229 Z" fill="#E5302B"/>
+      <path id="crest-3-v18-crest-jet-left-wing-surface" d="M598 214 L545 244 V260 H586 L605 254 L598 247 Z" fill="#F8F8F8" stroke="#000000" stroke-width="2"/>
+      <path id="crest-3-v18-crest-jet-left-wing-rear-facet" d="M549 257 L598 246 L603 252 L586 258 H549 Z" fill="#859398" opacity="0.35"/>
+      <path id="crest-3-v18-crest-jet-left-wing-slot" d="M559 240 L587 227 L586.5 232.5 L560 244.8 C558.6 245.5 557.5 245 557.5 243.5 C557.5 241.9 558 240.6 559 240 Z" fill="#000000"/>
+      <path id="crest-3-v18-crest-jet-left-wing-trailing-seam" d="M548 257 L598 246" fill="none" stroke="#000000" stroke-width="2"/>
+    </g>
+  </defs>
+  <use id="crest-3-v18-crest-jet-left-wing-instance" href="#crest-3-v18-crest-jet-left-wing"/>
+  <use id="crest-3-v18-crest-jet-right-wing-instance" href="#crest-3-v18-crest-jet-left-wing" transform="translate(1228 0) scale(-1 1)"/>
+  <path id="crest-3-v18-crest-jet-fuselage" d="M614 149 L622 166 L624 199 L631 218 L628 248 L614 296 L600 248 L597 218 L604 199 L606 166 Z" fill="#F8F8F8" stroke="#000000" stroke-width="2"/>
+  <path id="crest-3-v18-crest-jet-rear-engine" d="M608 260 Q614 258.5 620 260 L618 278 L614 296 L610 278 Z" fill="#F8F8F8" stroke="#000000" stroke-width="1.6"/>
+  <path id="crest-3-v18-crest-jet-rear-engine-seam" d="M614 261 V293" fill="none" stroke="#000000" stroke-width="1.2"/>
+  <path id="crest-3-v18-crest-jet-center-seam" d="M614 155 V178 M614 216 V260" fill="none" stroke="#000000" stroke-width="1.6"/>
+  <path id="crest-3-v18-crest-jet-cockpit" d="M614 179 C607.8 179 607.8 215 614 215 C620.2 215 620.2 179 614 179 Z" fill="#000000" stroke="#E5302B" stroke-width="1.35"/>
+</g>
+
+<g id="crest-3-rifle-magazines"><g id="crest-3-rifle-magazines-left"><g transform="translate(110 306) rotate(38)"><defs><clipPath id="crest-3-rifle-magazine-clip"><path id="crest-3-rifle-magazine-clip-outline" d="M295 90H340C345 125 343 165 336 196L281 183C294 151 298 119 295 90Z" fill="#F8F8F8"/></clipPath></defs>
+<path id="crest-3-rifle-magazine-body" d="M295 90H340C345 125 343 165 336 196L281 183C294 151 298 119 295 90Z" fill="#17181A" stroke="#000000" stroke-width="5" stroke-linejoin="round"/>
+<g id="crest-3-rifle-magazine-full-length-rails" clip-path="url(#crest-3-rifle-magazine-clip)">
+<path id="crest-3-rifle-magazine-rail-1" d="M301 80C307 115 306 157 289 201" fill="none" stroke="#859398" stroke-width="4.5"/>
+<path id="crest-3-rifle-magazine-rail-2" d="M317 80C323 115 322 157 305 201" fill="none" stroke="#859398" stroke-width="4.5"/>
+<path id="crest-3-rifle-magazine-rail-3" d="M333 80C339 115 338 157 321 201" fill="none" stroke="#859398" stroke-width="4.5"/>
+<path id="crest-3-rifle-magazine-leading-highlight" d="M301.53 84C302.8 95 303.6 101 304.2 108" fill="none" stroke="#F8F8F8" stroke-width="2"/>
+</g></g></g><use id="crest-3-rifle-magazines-left-mirrored" href="#crest-3-rifle-magazines-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="crest-3-rifle-green-frames"><g id="crest-3-rifle-green-frames-left"><g transform="translate(110 306) rotate(38)"><rect id="crest-3-rifle-muzzle-frame" x="0" y="-12" width="42" height="24" fill="#81BC34"/>
+<rect id="crest-3-rifle-barrel-shroud" x="48" y="-9" width="55" height="18" fill="#81BC34"/>
+<path id="crest-3-rifle-forearm" d="M110-24H252V27H178V29H126V25H110Z" fill="#81BC34"/>
+<path id="crest-3-rifle-receiver" d="M250-22H255L259-12H273L284-20H354V24L337 32H267L258 23H250Z" fill="#81BC34"/>
+<path id="crest-3-rifle-trigger-frame" d="M282 24H333L343 48V81L347 87H375L378 90.5L347 94L335 87H287L282 81V50Z" fill="#81BC34"/>
+<path id="crest-3-rifle-grip-upper-casing" d="M328 24H354L357 36V57H336L331 49Z" fill="#81BC34"/>
+<path id="crest-3-rifle-curved-stock-neck" d="M283 82H295C300 120 293 154 284 183L273 180C284 149 288 117 283 82Z" fill="#81BC34"/>
+<path id="crest-3-rifle-rear-stock-pad" d="M268 188L327 202L322 221L263 207Z" fill="#81BC34"/>
+<path id="crest-3-rifle-fork-stock" d="M273 213L284 216L281 234L300 240L315 253L312 221H318L324 254L325 270L302 265V258Q302 252 297 249L292 247Q288 247 285 252L283 260L265 256L258 251V240L264 234Z" fill="#81BC34"/></g></g><use id="crest-3-rifle-green-frames-left-mirrored" href="#crest-3-rifle-green-frames-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="crest-3-rifle-black-cutouts"><g id="crest-3-rifle-black-cutouts-left"><g transform="translate(110 306) rotate(38)"><rect id="crest-3-rifle-muzzle-opening" x="5" y="-7" width="30" height="14" fill="#000000"/>
+<rect id="crest-3-rifle-barrel-slot" x="59" y="-3" width="31" height="6" fill="#000000" rx="1.5"/>
+<rect id="crest-3-rifle-top-vent-1" x="126" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="crest-3-rifle-top-vent-2" x="148" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="crest-3-rifle-top-vent-3" x="170" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="crest-3-rifle-top-vent-4" x="192" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="crest-3-rifle-top-vent-5" x="214" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="crest-3-rifle-top-vent-6" x="236" y="-17" width="14" height="7" fill="#000000"/>
+<path id="crest-3-rifle-front-window" d="M130 0H170L177 5V24L174 27H131L128 23V3Z" fill="#000000"/>
+<path id="crest-3-rifle-rear-window" d="M183 0H242L248 7V22L245 25H183L180 22V3Z" fill="#000000"/>
+<path id="crest-3-rifle-front-collar-separation" d="M117-5H126V22L124 25H119L117 22Z" fill="#000000"/>
+<path id="crest-3-rifle-receiver-slot" d="M283-11H332L336-7V6H283L280 3V-8Z" fill="#000000"/>
+<path id="crest-3-rifle-receiver-lower-recess" d="M288 13H334V17H288Z" fill="#000000"/>
+<path id="crest-3-rifle-magazine-stock-band-separation" d="M268 188L327 202" fill="none" stroke="#000000" stroke-width="4.5"/>
+<path id="crest-3-rifle-stock-pad-bottom-separation" d="M263 207L322 221" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="crest-3-rifle-stock-hook-separation" d="M283 260L285 252Q288 247 292 247L297 249Q302 252 302 258V265" fill="none" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="crest-3-rifle-trigger-opening" d="M290 29H296L302 35V39H313L319 33H322L324 45L328 49H332L335 53V70Q335 73 332 73H325L321 61H316L312 58L309 64L303 67V72H290Q287 72 287 67V36Z" fill="#000000"/>
+<circle id="crest-3-rifle-selector-clearance" cx="316" cy="57" r="6.5" fill="#000000"/>
+<path id="crest-3-rifle-grip-upper-recess" d="M342 43H352L355 47L353 53H343L340 50V46Z" fill="#000000"/>
+<path id="crest-3-rifle-receiver-shoulder-relief" d="M253 23H268L273 27H264L259 25Z" fill="#000000"/></g></g><use id="crest-3-rifle-black-cutouts-left-mirrored" href="#crest-3-rifle-black-cutouts-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="crest-3-rifle-gray-hardware"><g id="crest-3-rifle-gray-hardware-left"><g transform="translate(110 306) rotate(38)"><rect id="crest-3-rifle-muzzle-rear-ring" x="35" y="-12" width="7" height="24" fill="#859398"/>
+<rect id="crest-3-rifle-top-rail" x="116" y="-27" width="134" height="4.5" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-1" d="M116-26.5L117.8-33.5H123L125-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-2" d="M127.4-26.5L129.2-33.5H134.4L136.4-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-3" d="M138.8-26.5L140.6-33.5H145.8L147.8-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-4" d="M150.2-26.5L152-33.5H157.2L159.2-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-5" d="M161.6-26.5L163.4-33.5H168.6L170.6-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-6" d="M173-26.5L174.8-33.5H180L182-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-7" d="M184.4-26.5L186.2-33.5H191.4L193.4-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-8" d="M195.8-26.5L197.6-33.5H202.8L204.8-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-9" d="M207.2-26.5L209-33.5H214.2L216.2-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-10" d="M218.6-26.5L220.4-33.5H225.6L227.6-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-11" d="M230-26.5L231.8-33.5H237L239-26.5Z" fill="#859398"/>
+<path id="crest-3-rifle-rail-spike-12" d="M241.4-26.5L243.2-33.5H248.4L250.4-26.5Z" fill="#859398"/>
+<rect id="crest-3-rifle-underbarrel-rail" x="177" y="26" width="71" height="5" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-1" d="M179 30H186V34H182L179 31Z" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-2" d="M189 30H196V34H192L189 31Z" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-3" d="M199 30H206V34H202L199 31Z" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-4" d="M209 30H216V34H212L209 31Z" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-5" d="M219 30H226V34H222L219 31Z" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-6" d="M229 30H236V34H232L229 31Z" fill="#859398"/>
+<path id="crest-3-rifle-underbarrel-tooth-7" d="M239 30H246V34H242L239 31Z" fill="#859398"/>
+<path id="crest-3-rifle-silver-insert" d="M136 3H163L167 6V10L164 12H136L133 9V6Z" fill="#859398"/>
+<path id="crest-3-rifle-receiver-insert" d="M286 6H334V12H289Z" fill="#859398"/>
+<path id="crest-3-rifle-window-leading-clip" d="M126 0H129V22L132 26H128L125 22V3Z" fill="#859398"/>
+<path id="crest-3-rifle-window-trailing-clip" d="M171 7H175V24L173 27H169L171 23Z" fill="#859398"/>
+<path id="crest-3-rifle-forearm-front-clip" d="M110 21H118L120 24L117 27H110Z" fill="#859398"/>
+<rect id="crest-3-rifle-forearm-rear-clip" x="235" y="21" width="10" height="6" fill="#859398"/>
+<path id="crest-3-rifle-stock-inlay" d="M313.55 223H317.05L321.89 251H316.39Z" fill="#859398" stroke="#000000" stroke-width="1" stroke-linejoin="round"/>
+<circle id="crest-3-rifle-stock-bolt" cx="269" cy="243" r="6.5" fill="#859398"/>
+<circle id="crest-3-rifle-stock-bolt-center" cx="269" cy="243" r="2.8" fill="#000000"/></g></g><use id="crest-3-rifle-gray-hardware-left-mirrored" href="#crest-3-rifle-gray-hardware-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="crest-3-rifle-white-details"><g id="crest-3-rifle-white-details-left"><g transform="translate(110 306) rotate(38)"><path id="crest-3-rifle-silver-insert-highlight" d="M136 4.5H162L164.5 6.5V9.5L162.5 10.5H137L135 8.5V6.5Z" fill="none" stroke="#F8F8F8" stroke-width="1.5" stroke-linejoin="miter"/>
+<rect id="crest-3-rifle-receiver-insert-highlight" x="288" y="6" width="36" height="1.5" fill="#F8F8F8"/>
+<rect id="crest-3-rifle-indicator" x="222" y="12" width="18" height="5" fill="#F8F8F8" rx="0.5"/>
+<path id="crest-3-rifle-trigger" d="M296 43H319L320 47H296Z" fill="#F8F8F8"/></g></g><use id="crest-3-rifle-white-details-left-mirrored" href="#crest-3-rifle-white-details-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="crest-3-rifle-red-selectors"><g id="crest-3-rifle-red-selectors-left"><g transform="translate(110 306) rotate(38)"><circle id="crest-3-rifle-selector" cx="316" cy="57" r="4.5" fill="#E5302B"/><circle id="crest-3-rifle-stock-pin" cx="309" cy="259" r="3" fill="#372126"/></g></g><use id="crest-3-rifle-red-selectors-left-mirrored" href="#crest-3-rifle-red-selectors-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="crest-3-rifle-straight-black-separators"><g id="crest-3-rifle-straight-black-separators-left"><g transform="translate(110 306) rotate(38)"><defs>
+  <clipPath id="crest-3-rifle-magazine-mouth-silhouette">
+  <path id="crest-3-rifle-magazine-mouth-trigger-frame-clip" d="M282 24H333L343 48V81L347 87H375L378 90.5L347 94L335 87H287L282 81V50Z" fill="#F8F8F8"/>
+  <path id="crest-3-rifle-magazine-mouth-stock-neck-clip" d="M283 82H295C300 120 293 154 284 183L273 180C284 149 288 117 283 82Z" fill="#F8F8F8"/>
+  <path id="crest-3-rifle-magazine-mouth-body-clip" d="M295 90H340C345 125 343 165 336 196L281 183C294 151 298 119 295 90Z" fill="#F8F8F8"/>
+  </clipPath>
+  <clipPath id="crest-3-rifle-magazine-mouth-region"><rect id="crest-3-rifle-magazine-mouth-region-clip" x="280" y="83" width="64" height="15" fill="#F8F8F8"/></clipPath>
+  </defs>
+  <g id="crest-3-rifle-full-width-magazine-separator" clip-path="url(#crest-3-rifle-magazine-mouth-region)"><g clip-path="url(#crest-3-rifle-magazine-mouth-silhouette)">
+  <path id="crest-3-rifle-magazine-mouth-straight-separation" d="M280 86.9L347 93.6" fill="none" stroke="#000000" stroke-width="4.5" stroke-linecap="butt"/>
+  </g></g>
+<path id="crest-3-rifle-receiver-slot-straight-separation" d="M288 15H334" fill="none" stroke="#000000" stroke-width="4" stroke-linecap="butt"/></g></g><use id="crest-3-rifle-straight-black-separators-left-mirrored" href="#crest-3-rifle-straight-black-separators-left" transform="translate(788 0) scale(-1 1)"/></g>
+<path id="crest-3-central-rifle-mount-and-tang" d="M394 488L432 520L426 548V570H420V630H400V601H388V630H368V570H362V548L356 520Z" fill="#81BC34"/>
+<g id="crest-3-foreground-rifle-receiver-occlusion" transform="translate(110 306) rotate(38)"><path id="crest-3-foreground-rifle-connected-receiver-opening" d="M283-11H329L340-18L350-23L405-22L414-20L430-18L436-14L435-10L430-9L413-14H350L340-9L336 6H283L280 3V-8Z" fill="#000000"/></g>
+<path id="crest-3-sword-bold-lower-separation" d="M364 468L394 496L424 468" fill="none" stroke="#000000" stroke-width="18" stroke-linejoin="miter"/>
+
+<path id="crest-3-sword-blade" d="M394 80L424 148V468L394 496L364 468V148Z" fill="#F8F8F8"/>
+<path id="crest-3-sword-central-groove" d="M394 132V490" fill="none" stroke="#000000" stroke-width="7"/>
+<g id="crest-3-junction-side-ports-left"><rect id="crest-3-junction-black-port-1" x="376" y="528" width="5" height="4" fill="#000000"/><rect id="crest-3-junction-black-port-2" x="376" y="538" width="5" height="4" fill="#000000"/><rect id="crest-3-junction-black-port-3" x="376" y="548" width="5" height="4" fill="#000000"/></g><use id="crest-3-junction-side-ports-left-mirrored" href="#crest-3-junction-side-ports-left" transform="translate(788 0) scale(-1 1)"/>
+<rect id="crest-3-junction-centered-service-recess" x="392" y="535" width="4" height="4" fill="#000000"/>
+<rect id="crest-3-junction-left-metal-rail" x="386" y="522" width="3" height="29" fill="#859398"/>
+<rect id="crest-3-junction-right-metal-rail" x="399" y="522" width="3" height="29" fill="#859398"/>
+<circle id="crest-3-junction-left-fastener" cx="382" cy="564" r="4.5" fill="#372126"/>
+<circle id="crest-3-junction-right-fastener" cx="406" cy="564" r="4.5" fill="#372126"/>
+<rect id="crest-3-junction-centered-opening" x="389" y="573" width="10" height="15" fill="#000000" rx="1.5"/>
+<rect id="crest-3-sword-crossguard" x="340" y="639" width="108" height="22" fill="#F8F8F8" rx="11"/>
+<g id="crest-3-v19-sword-handle">
+  <path id="crest-3-v19-sword-red-collar" d="M376 668 H412 L410 679 H378 Z" fill="#E5302B"/>
+  <path id="crest-3-v19-sword-grip-backing" d="M377 679 H411 L405 762 H383 Z" fill="#000000"/>
+  <path id="crest-3-v19-sword-grip-band-1" d="M377.217 682 H410.783 L410.06 692 H377.94 Z" fill="#859398"/>
+  <path id="crest-3-v19-sword-grip-band-2" d="M378.084 694 H409.916 L409.482 700 H378.518 Z" fill="#F8F8F8"/>
+  <path id="crest-3-v19-sword-grip-band-3" d="M378.735 703 H409.265 L408.398 715 H379.602 Z" fill="#859398"/>
+  <path id="crest-3-v19-sword-grip-band-4" d="M379.747 717 H408.253 L407.747 724 H380.253 Z" fill="#F8F8F8"/>
+  <path id="crest-3-v19-sword-grip-band-5" d="M380.398 726 H407.602 L406.88 736 H381.12 Z" fill="#859398"/>
+  <path id="crest-3-v19-sword-grip-band-6" d="M381.265 738 H406.735 L406.229 745 H381.771 Z" fill="#F8F8F8"/>
+  <path id="crest-3-v19-sword-grip-band-7" d="M381.988 748 H406.012 L405.217 759 H382.783 Z" fill="#859398"/>
+</g>
+
+<circle id="crest-3-sword-pommel" cx="394" cy="791" r="26" fill="#F8F8F8"/>
+<circle id="crest-3-sword-pommel-opening" cx="394" cy="791" r="15" fill="#000000"/>
+</g>
+</g><g transform="translate(580 248) scale(1.203522504892368) translate(-341.0 -811.0)"><path fill="#F8F8F8" fill-rule="evenodd" d="M630.25,911.642 L620,911.785 L620,873.672 L620,834.567 L629.63,834.214 L639.26,834.214 L640.142,834.742 L640.762,835.624 L640.631,873.562 L640.631,911.642 Z M377.5,893 L366.118,893 L365.69,892.25 L365.261,891.5 L353.131,851.894 L341,812.287 L341,811.644 L341,811 L353.941,811 L366.882,811 L367.378,811.802 L367.874,812.605 L373.054,831.052 L378.234,849.5 L384.075,870.413 L389.916,891.326 L389.399,892.163 L388.882,893 Z M437.5,892.5 L427.5,892.5 L425.892,892.204 L424.284,891.908 L417.993,870.204 L411.702,848.5 L410.526,845.073 L409.35,841.647 L408.822,843.073 L408.294,844.5 L401.009,866.279 L393.724,888.058 L393.285,887.618 L392.845,887.178 L388.271,871.839 L383.31,856.5 L383.117,853.5 L383.117,850.5 L389.276,831 L395.63,811.5 L410.565,811.5 L425.5,811.5 L429.189,824.5 L432.877,837.5 L440.062,863.5 L447.374,889.5 L447.437,891 L447.437,892.5 Z M512.166,892.829 L489.332,892.924 L483.166,887.9 L477,882.685 L477,863.464 L477,844.243 L482.284,839.728 L487.569,834.857 L495.534,834.678 L503.792,834.678 L503.938,842.25 L503.938,850 L501.042,850 L498,850 L498,861.845 L498,873.69 L499.829,875.345 L501.657,877 L518.329,877 L535,877 L535,884.867 L535,892.829 Z M567.615,892.988 L558.5,892.976 L552.722,887.726 L546.972,882.5 L546.986,873.828 L546.986,865.155 L552.233,860.578 L557.466,856 L569.783,856 L581.8,856 L581.65,861.75 L581.65,868 L575,868.25 L568.195,868.25 L568.042,872.703 L568.042,877.203 L574.695,877.352 L581.797,877.352 L581.945,883.141 L581.945,888.781 L579.412,890.891 L576.73,892.988 Z M597.667,893 L587.333,893 L586.667,892.333 L586,891.667 L586,871.988 L586,852.31 L584.171,850.655 L582.343,849 L568.171,849 L554,849 L554,842.107 L554,835.214 L555.386,834.682 L556.771,834.041 L577.392,833.987 L598.013,833.987 L603.007,838.603 L608,843.274 L608,868.137 L608,893 Z M659.238,892.993 L650.5,892.985 L648,891.709 L645.208,890.448 L645.062,882.724 L645.062,875 L650.258,875 L655.6,875 L656.8,873.8 L658,872.6 L658,862.5 L658,852.4 L656.8,851.2 L655.6,850 L650.3,850 L645,850 L645,843.655 L645,837.31 L646.798,835.683 L648.596,834.129 L658.949,834.165 L669.301,834.165 L674.151,838.738 L678.918,843.274 L678.877,863.387 L678.877,883.5 L673.407,888.25 L667.977,892.993 Z M706.748,892.499 L698.995,892.645 L693.748,888.308 L688.5,883.679 L687.765,882.59 L687.015,881.5 L687.008,862.865 L687.008,844.23 L693.25,839.09 L699.5,834.225 L707,834.363 L714.791,834.363 L714.936,842.184 L714.936,850.184 L711.791,850.342 L708.22,850.342 L708.08,862.673 L708.08,874.846 L709.866,875.458 L711.793,876.069 L713.146,875.785 L714.5,875.5 L714.5,883.927 L714.5,892.499 Z M726.865,892.47 L719,892.592 L719,883.981 L719,874.813 L722.25,874.657 L725.785,874.657 L725.927,863.645 L725.927,852.789 L724.912,851.395 L723.755,850 L721.335,850 L719.208,850 L719.354,842.25 L719.354,834.207 L727.29,834.061 L735.081,834.061 L740.54,838.579 L746,843.243 L746,862.931 L746,882.619 L740.365,887.483 L734.73,892.47 Z M759.25,892.987 L754,892.991 L754,864.09 L754,834.485 L762.337,834.138 L770.674,834.148 L772.587,834.148 L774.765,834.527 L774.898,863.122 L774.898,892.35 L769.765,892.827 L764.5,892.987 Z M804.75,892.92 L797.5,892.277 L794.25,892.075 L791,892.075 L791,872.137 L791,852.4 L789.8,851.2 L788.6,850 L783.3,850 L778,850 L778,843.622 L778,837.245 L779.25,836.225 L780.5,834.489 L791.171,834.13 L801.842,834.13 L806.921,838.523 L812,843.274 L812,868.137 L812,892.92 Z M861,893 L850,893 L850,853 L850,813 L861,813 L872,813 L872,853 L872,893 Z M894.723,892.666 L878.497,892.832 L877.748,892.415 L877,891.667 L877,881.833 L877,872 L886.8,872 L896.6,872 L897.8,870.8 L899,869.6 L899,852.319 L899,835.038 L896.75,834.52 L894.5,833.751 L886,833.625 L877.5,833.625 L877.5,823.5 L877.5,813.225 L893.859,813.087 L910.217,813.087 L917.609,819.565 L925,826.18 L925,852.367 L925,878.554 L917.975,885.527 L910.95,892.666 Z M951.184,893.001 L942.5,892.869 L937.25,887.658 L932.074,882.71 L932.11,873.605 L932.11,864.5 L937.111,860.25 L942.074,856 L953.537,856 L965,856 L965,861.952 L965,868.202 L958.75,868.351 L952.5,868.351 L952.5,872.5 L952.5,876.798 L958.75,876.947 L965,876.947 L965,883.433 L965,889.77 L962.434,891.451 L959.868,893.001 Z M980.449,893 L970,893 L970,872.622 L970,852.245 L968.335,850.872 L966.669,849.443 L953.585,849.352 L940.5,849.193 L938.75,849.096 L937,849.096 L937,842.107 L937,835.214 L938.306,834.713 L939.612,834.089 L960.573,834.027 L981.534,834.027 L986.517,839.233 L991.199,844.5 L991.049,868.75 L991.049,893 Z M1027.5,892.606 L1014.5,892.72 L1009.25,887.903 L1004,882.858 L1004,866.429 L1004,850 L1000,850 L996,850 L996,842.588 L996,835.176 L1000,834.5 L1004,833.824 L1004,826.912 L1004,820 L1015,820 L1026,820 L1026,826.893 L1026,833.786 L1027.416,834.329 L1028.832,834.297 L1034.416,834.008 L1040,834.008 L1040,841.86 L1040,850 L1033,850 L1026,850 L1026,861.465 L1026,872.93 L1027.934,873.965 L1029.869,875 L1035.473,875 L1040.789,875 L1040.644,883.746 L1040.644,892.606 Z M1067.576,892.984 L1058.5,892.968 L1053.23,888.218 L1047.98,883.5 L1047.99,874.162 L1047.99,864.825 L1052.75,860.452 L1057.5,856.04 L1069.25,856.02 L1081,856.02 L1081,861.5 L1081,867 L1076.223,867 L1071.445,867 L1069.166,868.596 L1067.194,870.192 L1067.347,873.346 L1067.347,877 L1074,877.25 L1080.807,877.25 L1080.96,882.875 L1080.96,888.251 L1078.882,890.625 L1076.651,892.984 Z M1096.5,893 L1086,893 L1086,872.622 L1086,852.245 L1084.682,851.151 L1083.364,849.779 L1068.932,849.639 L1054.201,849.639 L1054.051,842.59 L1054.051,835.679 L1055.201,834.855 L1056.5,834.015 L1076.793,834.008 L1097.086,834.008 L1102.043,838.637 L1107,843.274 L1107,868.137 L1107,893 Z M1150.701,893 L1141.245,893 L1139.872,891.326 L1138.5,889.652 L1138.5,882.576 L1138.5,875 L1144.5,874.75 L1150.5,874.75 L1150.5,862.5 L1150.5,850.202 L1144.25,850.053 L1138,850.053 L1138,843.509 L1138,837.113 L1140.223,835.557 L1142.445,834 L1151.782,834 L1161.12,834 L1166.56,839.145 L1172,844.29 L1172,863.495 L1172,882.7 L1166.079,887.85 L1160.158,893 Z M1198.527,892.977 L1189.5,892.955 L1184.25,888.125 L1179,883.341 L1179,873.764 L1179,864.186 L1183.889,860.093 L1188.778,856 L1200.389,856 L1212,856 L1212,861.5 L1212,867 L1207.191,867 L1202.382,867 L1200.612,868.294 L1199.171,869.588 L1199.336,873.044 L1199.336,876.798 L1205.75,876.947 L1212,876.947 L1212,883.491 L1212,889.887 L1209.777,891.443 L1207.555,892.977 Z M1228.469,893 L1217.937,893 L1217.475,891.75 L1216.757,890.5 L1216.628,870.5 L1216.628,850.256 L1203,850.134 L1189.5,850.134 L1187.25,849.487 L1185,848.962 L1185,842.088 L1185,835.214 L1186.25,834.779 L1187.5,834.142 L1208.5,834.041 L1229.5,834.041 L1234.25,838.525 L1239,843.11 L1239,868.055 L1239,893 Z M1258,893 L1247,893 L1247,885 L1247,877 L1258,877 L1269,877 L1269,885 L1269,893 Z M1280.757,893 L1274.333,893 L1273.667,892.333 L1273,891.667 L1273,884.333 L1273,877 L1276,877 L1279,877 L1279,873 L1279,869 L1276,869 L1273,869 L1273,862.5 L1273,856.041 L1281.25,856.062 L1289.5,856.062 L1293.75,859.927 L1298,863.772 L1298,873.764 L1298,883.757 L1292.591,888.379 L1287.181,893 Z M1340.561,893 L1318.122,893 L1313.311,888.889 L1308.5,884.779 L1307.705,884.044 L1306.909,883.309 L1306.909,863.664 L1306.909,844.019 L1310.607,840.759 L1314.306,837.5 L1315.936,836.346 L1317.565,834.846 L1325.033,834.673 L1332.5,834.673 L1332.5,841.955 L1332.5,849.41 L1330,849.998 L1327.214,850.586 L1327.07,861.541 L1327.07,872.496 L1328.133,874.748 L1329.338,877 L1346.169,877 L1363,877 L1363,885 L1363,893 Z M1124.808,892 L1124.185,892 L1119.593,886.892 L1115,881.784 L1115,847.392 L1115,813 L1115.557,813 L1116.113,813 L1125.54,819.25 L1134.983,825.5 L1134.991,854.038 L1134.991,882.575 L1130.216,887.288 L1125.431,892 Z M451.131,887.998 L450.5,887.996 L445.251,869.68 L440.003,851.368 L446.751,831.434 L453.5,811.219 L466.366,811.079 L479.232,811.079 L478.544,813.719 L477.856,816.5 L468.347,842.5 L458.838,868.5 L455.3,878.25 L451.763,887.998 Z M519,869 L502,869 L502,863.546 L502,857.796 L508.75,857.648 L515.5,857.648 L515.5,854 L515.5,850.184 L512.209,850.025 L509.209,850.025 L509.355,842.184 L509.355,834.205 L517.423,834.057 L525.346,834.057 L530.673,839.171 L536,844.432 L536,856.716 L536,869 Z M1262.75,868.997 L1256.5,868.994 L1251.714,864.885 L1247.214,860.783 L1247.357,851.75 L1247.357,842.717 L1252.279,838.67 L1257.058,834.192 L1263.029,833.976 L1269,833.976 L1269,841.987 L1269,850.214 L1267.573,849.666 L1266.146,849.119 L1264.961,850.547 L1263.776,851.975 L1264.393,853.582 L1265.01,855.19 L1267.005,855.712 L1269,856.233 L1269,862.617 L1269,868.997 Z M1347,869 L1331,869 L1331,863.548 L1331,857.798 L1337.25,857.649 L1343.5,857.649 L1343.5,854 L1343.5,850.184 L1340.209,850.025 L1337.209,850.025 L1337.355,842.184 L1337.355,834.205 L1345.42,834.057 L1353.34,834.057 L1358.17,838.667 L1363,843.425 L1363,856.212 L1363,869 Z M1282.5,849.316 L1274.5,849.62 L1273.75,849.447 L1273,848.667 L1273,841.852 L1273,835.038 L1275.25,834.476 L1277.5,834.207 L1287,834.353 L1296.794,834.353 L1296.941,841.75 L1296.941,849.006 L1293.794,849.162 L1290.5,849.316 Z"/></g></svg>

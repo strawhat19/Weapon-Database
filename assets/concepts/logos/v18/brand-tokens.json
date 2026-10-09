@@ -1,0 +1,55 @@
+{
+  "name": "Weapon Database Armory Crest",
+  "round": "v18",
+  "format": {
+    "svg": "01-armory-crest-mark.svg",
+    "png": "01-armory-crest-mark.png",
+    "viewBox": [
+      0,
+      0,
+      788,
+      914
+    ],
+    "pngDimensions": [
+      1576,
+      1828
+    ],
+    "construction": "Native vector geometry",
+    "centerline": 394,
+    "surroundingCanvas": "Transparent",
+    "rasterSource": "Rendered directly from the SVG master",
+    "fontDependencies": false,
+    "embeddedBitmaps": false
+  },
+  "palette": {
+    "crestGreen": "#81BC34",
+    "structuralGreen": "#375540",
+    "silverWhite": "#F8F8F8",
+    "hardwareGray": "#859398",
+    "gunmetal": "#565B64",
+    "magazineCharcoal": "#17181A",
+    "shieldField": "#020302",
+    "hardwareBlack": "#000000",
+    "reticleRed": "#E5302B",
+    "junctionPin": "#372126"
+  },
+  "refinements": {
+    "pairedElements": "Exact mirrored native geometry",
+    "swordTip": "Bold black V separation",
+    "barrelGap": 7,
+    "railSpikes": "Uniform angular trapezoids with black spacing",
+    "gripExtensions": "Tapered pointed silhouettes",
+    "magazineRails": "Full-length curves clipped to outlined bodies",
+    "magazineOutlineWidth": 5,
+    "stockBandSeparationWidth": 4.5,
+    "stocks": "Open hooked skeletons with inset gray reinforcement",
+    "scopeBlackInlayWidth": 5.5,
+    "jetBlackBoundaryWidth": 2,
+    "jetWingSlots": "Slim angled apertures with gently rounded outside ends",
+    "jetTail": "White fins and exhaust with black linework",
+    "jetRearWingFacet": {
+      "color": "#859398",
+      "opacity": 0.35
+    }
+  }
+}

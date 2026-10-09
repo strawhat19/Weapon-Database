@@ -1,0 +1,52 @@
+{
+  "version": 15,
+  "name": "Weapon Database",
+  "direction": "Original Armory Crest — Genuine Vector Traces",
+  "sources": {
+    "logo": "../v13/03-armory-crest-v13.png",
+    "card": "../v13/04-armory-crest-brand-card.png"
+  },
+  "colors": {
+    "red": "#B54A43",
+    "black": "#090E0B",
+    "green": "#8AAD45",
+    "silver": "#E6EDDF",
+    "charcoal": "#1B2026",
+    "graphite": "#2F343B",
+    "gunmetal": "#565D65",
+    "fieldOlive": "#617340",
+    "darkSilver": "#8A929B",
+    "junctionRed": "#713831",
+    "structuralGreen": "#3E5949"
+  },
+  "colorStrategy": {
+    "tokens": "Nominal Original v13 Palette Labels",
+    "tracedColors": "Sampled From Original PNG Artwork",
+    "forcedTokenSnapping": false
+  },
+  "typography": {
+    "ui": "Rajdhani",
+    "display": "Saira Stencil One",
+    "wordmark": "Original Custom Stencil Lettering",
+    "svgTextFormat": "Outlined Paths; No Font Dependency"
+  },
+  "svgArtwork": {
+    "liveFonts": false,
+    "editablePaths": true,
+    "embeddedBitmaps": false,
+    "format": "Genuine Vector SVG",
+    "wordmarkTracing": "Potrace Polygons With Small Straight-Edge Cleanup",
+    "colorTracing": "VTracer Source Contours With Smooth Silver Features",
+    "pixelIdenticalToOriginalPng": false,
+    "limitations": "Simplified Raster Texture And Shading; Anti-Aliasing Differences"
+  },
+  "pngExports": {
+    "vectorRenderScale": 2,
+    "originalCopiesUnchanged": true,
+    "originalLogo": "03-armory-crest-v15.png",
+    "originalCard": "04-armory-crest-brand-card.png",
+    "vectorLogo": "03-armory-crest-v15-vector.png",
+    "vectorCard": "04-armory-crest-brand-card-vector.png"
+  },
+  "cardHeader": "Original v13 Header Preserved"
+}

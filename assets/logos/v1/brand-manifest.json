@@ -1,0 +1,136 @@
+{
+  "name": "Weapon Database Official Identity",
+  "version": "v1",
+  "adoptedCrest": "assets/concepts/logos/v23/01-armory-crest-mark",
+  "crestFiles": [
+    {
+      "file": "01-armory-crest-mark.svg",
+      "source": "assets/concepts/logos/v23/01-armory-crest-mark.svg",
+      "sha256": "cf54b0ec48070adceea386ada8a29da3f948a7ce57f9766521977a214157ddc0",
+      "bytes": 22519
+    },
+    {
+      "file": "01-armory-crest-mark.png",
+      "source": "assets/concepts/logos/v23/01-armory-crest-mark.png",
+      "sha256": "f1b7359027d8af4f7b9310ee1aee98f24e6ebf058022c54fa8fc0ebc4ca7a36d",
+      "bytes": 336745
+    }
+  ],
+  "wordmarkSources": [
+    "assets/concepts/logos/v15/05-weapon-database-wordmark.svg",
+    "assets/concepts/logos/v15/02-armory-crest-horizontal.svg"
+  ],
+  "generatedAssets": [
+    {
+      "file": "02-armory-crest-stacked.svg",
+      "png": "02-armory-crest-stacked.png",
+      "width": 760,
+      "height": 1100,
+      "pngScale": 2
+    },
+    {
+      "file": "03-armory-crest-shield-left-stacked.svg",
+      "png": "03-armory-crest-shield-left-stacked.png",
+      "width": 1700,
+      "height": 700,
+      "pngScale": 2
+    },
+    {
+      "file": "04-armory-crest-horizontal.svg",
+      "png": "04-armory-crest-horizontal.png",
+      "width": 1900,
+      "height": 620,
+      "pngScale": 2
+    },
+    {
+      "file": "05-weapon-database-wordmark.svg",
+      "png": "05-weapon-database-wordmark.png",
+      "width": 725,
+      "height": 263,
+      "pngScale": 2
+    },
+    {
+      "file": "06-weapon-database-wordmark-horizontal.svg",
+      "png": "06-weapon-database-wordmark-horizontal.png",
+      "width": 1046.0,
+      "height": 124.78499999999997,
+      "pngScale": 2
+    },
+    {
+      "file": "variants/02-armory-crest-stacked-dark.svg",
+      "png": "variants/02-armory-crest-stacked-dark.png",
+      "width": 760,
+      "height": 1100,
+      "pngScale": 2
+    },
+    {
+      "file": "variants/03-armory-crest-shield-left-stacked-dark.svg",
+      "png": "variants/03-armory-crest-shield-left-stacked-dark.png",
+      "width": 1700,
+      "height": 700,
+      "pngScale": 2
+    },
+    {
+      "file": "variants/04-armory-crest-horizontal-dark.svg",
+      "png": "variants/04-armory-crest-horizontal-dark.png",
+      "width": 1900,
+      "height": 620,
+      "pngScale": 2
+    },
+    {
+      "file": "variants/05-weapon-database-wordmark-dark.svg",
+      "png": "variants/05-weapon-database-wordmark-dark.png",
+      "width": 725,
+      "height": 263,
+      "pngScale": 2
+    },
+    {
+      "file": "variants/06-weapon-database-wordmark-horizontal-dark.svg",
+      "png": "variants/06-weapon-database-wordmark-horizontal-dark.png",
+      "width": 1046.0,
+      "height": 124.78499999999997,
+      "pngScale": 2
+    },
+    {
+      "file": "cards/01-armory-crest-brand-card-charcoal.svg",
+      "png": "cards/01-armory-crest-brand-card-charcoal.png",
+      "width": 2400,
+      "height": 1600,
+      "pngScale": 1.5
+    },
+    {
+      "file": "cards/02-armory-crest-brand-card-graphite.svg",
+      "png": "cards/02-armory-crest-brand-card-graphite.png",
+      "width": 2400,
+      "height": 1600,
+      "pngScale": 1.5
+    },
+    {
+      "file": "cards/03-armory-crest-brand-card-light.svg",
+      "png": "cards/03-armory-crest-brand-card-light.png",
+      "width": 2400,
+      "height": 1600,
+      "pngScale": 1.5
+    },
+    {
+      "file": "cards/04-palette-and-themes.svg",
+      "png": "cards/04-palette-and-themes.png",
+      "width": 2400,
+      "height": 1600,
+      "pngScale": 1.5
+    },
+    {
+      "file": "cards/05-typography-and-lockups.svg",
+      "png": "cards/05-typography-and-lockups.png",
+      "width": 2400,
+      "height": 1600,
+      "pngScale": 1.5
+    }
+  ],
+  "notes": [
+    "Official crest masters are byte-for-byte copies of the adopted v23 files.",
+    "All logo lockups and cards embed the native v23 geometry with scaling and translation only.",
+    "Primary wordmarks retain the original v15 outlined lettering.",
+    "Card labels and font specimens are outlined for portable, matching SVG and PNG rendering."
+  ]
+}

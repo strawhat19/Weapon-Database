@@ -1,0 +1,43 @@
+{
+  "version": 14,
+  "name": "Weapon Database",
+  "direction": "Armory Crest — Gray Backgrounds",
+  "source": "../v13/04-armory-crest-brand-card.png",
+  "backgrounds": {
+    "canvas": "#1B2026",
+    "shield": "#2F343B",
+    "variants": ["#1B2026", "#2F343B"]
+  },
+  "colors": {
+    "red": "#B54A43",
+    "black": "#090E0B",
+    "green": "#8AAD45",
+    "silver": "#E6EDDF",
+    "charcoal": "#1B2026",
+    "graphite": "#2F343B",
+    "gunmetal": "#565D65",
+    "fieldOlive": "#617340",
+    "darkSilver": "#8A929B",
+    "junctionRed": "#713831",
+    "structuralGreen": "#3E5949"
+  },
+  "details": {
+    "lettering": "Original custom stencil artwork",
+    "layouts": ["Crest Above Stacked Wordmark", "Shield Left Of Stacked Wordmark"],
+    "preservation": "Shared source crest and wordmark; retain colored equipment and tiny black insets",
+    "grayTreatment": "Charcoal canvas and Graphite broad shield field replace the broad black backgrounds"
+  },
+  "typography": {
+    "ui": "Rajdhani",
+    "display": "Saira Stencil One",
+    "wordmark": "Original Custom Stencil Artwork",
+    "wordmarkFormat": "Embedded Raster; No Fallback Font"
+  },
+  "svgArtwork": {
+    "format": "Self-Contained Raster-Backed SVG",
+    "sharedWithPng": true,
+    "editableVectorPaths": false,
+    "resolution": "Limited By Original Raster Source",
+    "components": "Original Crest And Wordmark Embedded As PNG Artwork"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "downloadedOn": "2026-10-09",
+  "fontFilesModified": false,
+  "googleFontsCommit": "51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca",
+  "jetBrainsMonoCommit": "19371302b95d218af43299bce79ddbddd0bc364d",
+  "wordmark": {
+    "type": "Original Custom Outlined SVG",
+    "fontDependent": false,
+    "substituteWithUtilityFont": false,
+    "source": "../../../concepts/logos/v15/05-weapon-database-wordmark.svg"
+  },
+  "fonts": [
+    {
+      "file": "SairaStencilOne-Regular.ttf",
+      "family": "Saira Stencil One",
+      "cssFamily": "Weapon Saira Stencil One",
+      "style": "normal",
+      "weight": 400,
+      "role": "Display Companion",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/sairastencilone/SairaStencilOne-Regular.ttf",
+      "sizeBytes": 109944,
+      "sha256": "781496fdaf8e04cf6741b31025f6b4ba84f66021b097a8e0d85cbea2180cf223",
+      "fontMetadata": {
+        "family": "Saira Stencil One",
+        "style": "Regular",
+        "fullName": "Saira Stencil One Regular",
+        "postscriptName": "SairaStencilOne-Regular",
+        "weight": 400,
+        "variable": false
+      }
+    },
+    {
+      "file": "Rajdhani-Regular.ttf",
+      "family": "Rajdhani",
+      "cssFamily": "Weapon Rajdhani",
+      "style": "normal",
+      "weight": 400,
+      "role": "UI And Data",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/rajdhani/Rajdhani-Regular.ttf",
+      "sizeBytes": 377860,
+      "sha256": "6e1fc228a8318251a6e569502ec57bac1e4656c582f92f59ccecc4688e039b98",
+      "fontMetadata": {
+        "family": "Rajdhani",
+        "style": "Regular",
+        "fullName": "Rajdhani Regular",
+        "postscriptName": "Rajdhani-Regular",
+        "weight": 400,
+        "variable": false
+      }
+    },
+    {
+      "file": "Rajdhani-SemiBold.ttf",
+      "family": "Rajdhani",
+      "cssFamily": "Weapon Rajdhani",
+      "style": "normal",
+      "weight": 600,
+      "role": "UI And Subheadings",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/rajdhani/Rajdhani-SemiBold.ttf",
+      "sizeBytes": 390340,
+      "sha256": "94bbd25a18ca665999feb05a537de9fd2b860dcfb78bbe9ca00270825bf235da",
+      "fontMetadata": {
+        "family": "Rajdhani",
+        "style": "SemiBold",
+        "fullName": "Rajdhani SemiBold",
+        "postscriptName": "Rajdhani-SemiBold",
+        "weight": 600,
+        "variable": false
+      }
+    },
+    {
+      "file": "Rajdhani-Bold.ttf",
+      "family": "Rajdhani",
+      "cssFamily": "Weapon Rajdhani",
+      "style": "normal",
+      "weight": 700,
+      "role": "Headings",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/rajdhani/Rajdhani-Bold.ttf",
+      "sizeBytes": 400680,
+      "sha256": "691470dd3286a14e9677940d0bf75796179841ba5215cbda1a2c8910a3226afd",
+      "fontMetadata": {
+        "family": "Rajdhani",
+        "style": "Bold",
+        "fullName": "Rajdhani Bold",
+        "postscriptName": "Rajdhani-Bold",
+        "weight": 700,
+        "variable": false
+      }
+    },
+    {
+      "file": "Barlow-Regular.ttf",
+      "family": "Barlow",
+      "cssFamily": "Weapon Barlow",
+      "style": "normal",
+      "weight": 400,
+      "role": "Body Text",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/barlow/Barlow-Regular.ttf",
+      "sizeBytes": 104068,
+      "sha256": "95aa02c7c43096e0dd44d787ba6216864a67157e402adab59b35572e0c1577ea",
+      "fontMetadata": {
+        "family": "Barlow",
+        "style": "Regular",
+        "fullName": "Barlow Regular",
+        "postscriptName": "Barlow-Regular",
+        "weight": 400,
+        "variable": false
+      }
+    },
+    {
+      "file": "Barlow-Medium.ttf",
+      "family": "Barlow",
+      "cssFamily": "Weapon Barlow",
+      "style": "normal",
+      "weight": 500,
+      "role": "Body Emphasis",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/barlow/Barlow-Medium.ttf",
+      "sizeBytes": 103536,
+      "sha256": "f8906f762cb73dca441da034bc363b2d8e2e68bc10d5c05e58717646c20cc4b4",
+      "fontMetadata": {
+        "family": "Barlow",
+        "style": "Medium",
+        "fullName": "Barlow Medium",
+        "postscriptName": "Barlow-Medium",
+        "weight": 500,
+        "variable": false
+      }
+    },
+    {
+      "file": "Barlow-SemiBold.ttf",
+      "family": "Barlow",
+      "cssFamily": "Weapon Barlow",
+      "style": "normal",
+      "weight": 600,
+      "role": "Labels And Body Emphasis",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/barlow/Barlow-SemiBold.ttf",
+      "sizeBytes": 108348,
+      "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5",
+      "fontMetadata": {
+        "family": "Barlow",
+        "style": "SemiBold",
+        "fullName": "Barlow SemiBold",
+        "postscriptName": "Barlow-SemiBold",
+        "weight": 600,
+        "variable": false
+      }
+    },
+    {
+      "file": "JetBrainsMono-Regular.ttf",
+      "family": "JetBrains Mono",
+      "cssFamily": "Weapon JetBrains Mono",
+      "style": "normal",
+      "weight": 400,
+      "role": "Monospace Data And Code",
+      "license": "OFL-1.1",
+      "source": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/fonts/ttf/JetBrainsMono-Regular.ttf",
+      "sizeBytes": 270224,
+      "sha256": "e6fd0d7e91550b3ed2b735d4312474362c4716edc4fc0577a0f61ed782d5aed1",
+      "fontMetadata": {
+        "family": "JetBrains Mono",
+        "style": "Regular",
+        "fullName": "JetBrains Mono Regular",
+        "postscriptName": "JetBrainsMono-Regular",
+        "weight": 400,
+        "variable": false
+      }
+    }
+  ],
+  "licenses": [
+    {
+      "family": "saira-stencil-one",
+      "file": "licenses/saira-stencil-one/OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/sairastencilone/OFL.txt"
+    },
+    {
+      "family": "rajdhani",
+      "file": "licenses/rajdhani/OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/rajdhani/OFL.txt"
+    },
+    {
+      "family": "barlow",
+      "file": "licenses/barlow/OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/51303ca9e8ac9dcea7b12d307ba568fd0e6fcfca/ofl/barlow/OFL.txt"
+    },
+    {
+      "family": "jetbrains-mono",
+      "file": "licenses/jetbrains-mono/OFL.txt",
+      "source": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/19371302b95d218af43299bce79ddbddd0bc364d/OFL.txt"
+    }
+  ]
+}

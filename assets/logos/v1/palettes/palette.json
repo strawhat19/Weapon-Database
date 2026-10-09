@@ -1,0 +1,18 @@
+{
+  "name": "Weapon Database Official Crest Palette",
+  "version": "v1",
+  "source": "assets/concepts/logos/v23/brand-tokens.json",
+  "colors": {
+    "crestGreen": { "name": "Crest Green", "hex": "#81BC34", "rgb": [129, 188, 52], "role": "Primary brand accent and shield rim" },
+    "structuralGreen": { "name": "Structural Green", "hex": "#375540", "rgb": [55, 85, 64], "role": "Interior shield panels" },
+    "silverWhite": { "name": "Silver White", "hex": "#F8F8F8", "rgb": [248, 248, 248], "role": "Sword, scope, bow and aircraft highlights" },
+    "hardwareGray": { "name": "Hardware Gray", "hex": "#859398", "rgb": [133, 147, 152], "role": "Metallic inserts and hardware" },
+    "gunmetal": { "name": "Gunmetal", "hex": "#565B64", "rgb": [86, 91, 100], "role": "Secondary metallic detail and graphite theme" },
+    "magazineCharcoal": { "name": "Magazine Charcoal", "hex": "#17181A", "rgb": [23, 24, 26], "role": "Magazine bodies and default brand canvas" },
+    "shieldField": { "name": "Shield Field", "hex": "#020302", "rgb": [2, 3, 2], "role": "Interior shield field and deep surfaces" },
+    "hardwareBlack": { "name": "Hardware Black", "hex": "#000000", "rgb": [0, 0, 0], "role": "Separation lines, openings and linework" },
+    "reticleRed": { "name": "Reticle Red", "hex": "#E5302B", "rgb": [229, 48, 43], "role": "Small targeting and selector accents" },
+    "junctionPin": { "name": "Junction Pin", "hex": "#372126", "rgb": [55, 33, 38], "role": "Receiver pins and secondary dark detail" }
+  },
+  "usage": "Preserve these colors in the official crest. Theme backgrounds and surrounding typography may vary without recoloring the artwork."
+}

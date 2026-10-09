@@ -1,0 +1,54 @@
+:root,
+[data-weapon-theme="charcoal"] {
+  color-scheme: dark;
+  --weapon-crest-green: #81BC34;
+  --weapon-structural-green: #375540;
+  --weapon-silver-white: #F8F8F8;
+  --weapon-hardware-gray: #859398;
+  --weapon-gunmetal: #565B64;
+  --weapon-magazine-charcoal: #17181A;
+  --weapon-shield-field: #020302;
+  --weapon-hardware-black: #000000;
+  --weapon-reticle-red: #E5302B;
+  --weapon-junction-pin: #372126;
+  --weapon-font-display: "Weapon Saira Stencil One", sans-serif;
+  --weapon-font-heading: "Weapon Rajdhani", sans-serif;
+  --weapon-font-body: "Weapon Barlow", sans-serif;
+  --weapon-font-mono: "Weapon JetBrains Mono", monospace;
+  --weapon-background: #17181A;
+  --weapon-surface: #020302;
+  --weapon-surface-raised: #375540;
+  --weapon-text: #F8F8F8;
+  --weapon-text-muted: #859398;
+  --weapon-border: #565B64;
+  --weapon-accent: #81BC34;
+  --weapon-accent-text: #81BC34;
+  --weapon-on-accent: #020302;
+  --weapon-detail: #E5302B;
+}
+[data-weapon-theme="graphite"] {
+  color-scheme: dark;
+  --weapon-background: #565B64;
+  --weapon-surface: #17181A;
+  --weapon-surface-raised: #375540;
+  --weapon-text: #F8F8F8;
+  --weapon-text-muted: #F8F8F8;
+  --weapon-border: #859398;
+  --weapon-accent: #81BC34;
+  --weapon-accent-text: #F8F8F8;
+  --weapon-on-accent: #020302;
+  --weapon-detail: #E5302B;
+}
+[data-weapon-theme="light"] {
+  color-scheme: light;
+  --weapon-background: #F8F8F8;
+  --weapon-surface: #F8F8F8;
+  --weapon-surface-raised: #F8F8F8;
+  --weapon-text: #17181A;
+  --weapon-text-muted: #565B64;
+  --weapon-border: #859398;
+  --weapon-accent: #81BC34;
+  --weapon-accent-text: #375540;
+  --weapon-on-accent: #020302;
+  --weapon-detail: #E5302B;
+}

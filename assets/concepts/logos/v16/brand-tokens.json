@@ -1,0 +1,36 @@
+{
+  "name": "Weapon Database Armory Crest",
+  "round": "v16",
+  "format": {
+    "svg": "01-armory-crest-mark.svg",
+    "png": "01-armory-crest-mark.png",
+    "viewBox": [
+      0,
+      0,
+      788,
+      914
+    ],
+    "pngDimensions": [
+      1576,
+      1828
+    ],
+    "construction": "Native vector geometry",
+    "centerline": 394,
+    "surroundingCanvas": "Transparent",
+    "rasterSource": "Rendered directly from the SVG master",
+    "fontDependencies": false,
+    "embeddedBitmaps": false
+  },
+  "palette": {
+    "crestGreen": "#81BC34",
+    "structuralGreen": "#375540",
+    "silverWhite": "#F8F8F8",
+    "hardwareGray": "#859398",
+    "gunmetal": "#565B64",
+    "magazineCharcoal": "#17181A",
+    "shieldField": "#020302",
+    "hardwareBlack": "#000000",
+    "reticleRed": "#E5302B",
+    "junctionPin": "#372126"
+  }
+}

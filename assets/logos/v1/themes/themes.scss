@@ -1,0 +1,65 @@
+$weapon-crest-green: #81BC34;
+$weapon-structural-green: #375540;
+$weapon-silver-white: #F8F8F8;
+$weapon-hardware-gray: #859398;
+$weapon-gunmetal: #565B64;
+$weapon-magazine-charcoal: #17181A;
+$weapon-shield-field: #020302;
+$weapon-hardware-black: #000000;
+$weapon-reticle-red: #E5302B;
+$weapon-junction-pin: #372126;
+
+:root,
+[data-weapon-theme="charcoal"] {
+  color-scheme: dark;
+  --weapon-crest-green: #{$weapon-crest-green};
+  --weapon-structural-green: #{$weapon-structural-green};
+  --weapon-silver-white: #{$weapon-silver-white};
+  --weapon-hardware-gray: #{$weapon-hardware-gray};
+  --weapon-gunmetal: #{$weapon-gunmetal};
+  --weapon-magazine-charcoal: #{$weapon-magazine-charcoal};
+  --weapon-shield-field: #{$weapon-shield-field};
+  --weapon-hardware-black: #{$weapon-hardware-black};
+  --weapon-reticle-red: #{$weapon-reticle-red};
+  --weapon-junction-pin: #{$weapon-junction-pin};
+  --weapon-font-display: "Weapon Saira Stencil One", sans-serif;
+  --weapon-font-heading: "Weapon Rajdhani", sans-serif;
+  --weapon-font-body: "Weapon Barlow", sans-serif;
+  --weapon-font-mono: "Weapon JetBrains Mono", monospace;
+  --weapon-background: #{$weapon-magazine-charcoal};
+  --weapon-surface: #{$weapon-shield-field};
+  --weapon-surface-raised: #{$weapon-structural-green};
+  --weapon-text: #{$weapon-silver-white};
+  --weapon-text-muted: #{$weapon-hardware-gray};
+  --weapon-border: #{$weapon-gunmetal};
+  --weapon-accent: #{$weapon-crest-green};
+  --weapon-accent-text: #{$weapon-crest-green};
+  --weapon-on-accent: #{$weapon-shield-field};
+  --weapon-detail: #{$weapon-reticle-red};
+}
+[data-weapon-theme="graphite"] {
+  color-scheme: dark;
+  --weapon-background: #{$weapon-gunmetal};
+  --weapon-surface: #{$weapon-magazine-charcoal};
+  --weapon-surface-raised: #{$weapon-structural-green};
+  --weapon-text: #{$weapon-silver-white};
+  --weapon-text-muted: #{$weapon-silver-white};
+  --weapon-border: #{$weapon-hardware-gray};
+  --weapon-accent: #{$weapon-crest-green};
+  --weapon-accent-text: #{$weapon-silver-white};
+  --weapon-on-accent: #{$weapon-shield-field};
+  --weapon-detail: #{$weapon-reticle-red};
+}
+[data-weapon-theme="light"] {
+  color-scheme: light;
+  --weapon-background: #{$weapon-silver-white};
+  --weapon-surface: #{$weapon-silver-white};
+  --weapon-surface-raised: #{$weapon-silver-white};
+  --weapon-text: #{$weapon-magazine-charcoal};
+  --weapon-text-muted: #{$weapon-gunmetal};
+  --weapon-border: #{$weapon-hardware-gray};
+  --weapon-accent: #{$weapon-crest-green};
+  --weapon-accent-text: #{$weapon-structural-green};
+  --weapon-on-accent: #{$weapon-shield-field};
+  --weapon-detail: #{$weapon-reticle-red};
+}
