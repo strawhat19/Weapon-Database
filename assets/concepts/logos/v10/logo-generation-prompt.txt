@@ -1,0 +1,16 @@
+Use case: precise-object-edit
+Asset type: Weapon Database Armory Crest v10, gunmetal equipment variant.
+Input images: Image 1 is the exact nearly approved v9 logo to edit.
+Primary request: replace green EQUIPMENT surfaces with gray shades, dark grays and dark silver, preserving their existing black detailing and the established geometry.
+Color/detail changes:
+- BOTH crossed rifles: replace the green/olive shells, receivers, barrels, stocks and magazine shell lines with Gunmetal #565D65, varying a few coherent edge/rail surfaces to Dark Silver #8A929B and recessed secondary panels to Graphite #2F343B. Retain all current near-black #090E0B receiver slots, handguard cuts, magazine/stock insets and small muted red #B54A43 selectors. No green gun surfaces remain. The rifles should have flat gunmetal bodies with black definition and restrained dark-silver edge accents, not bright white guns.
+- Sword handle: replace its green grip sections with Gunmetal #565D65 and Charcoal #1B2026. Replace a few grip wrap hardware bands with Dark Silver #8A929B. Retain the small red grip band, silver-white guard and pommel. Keep the blade silver-white #E6EDDF, its black groove, original silhouette and blended rifle intersection unchanged.
+- Recessed corner/armor panels within the shield: replace green panels with Graphite #2F343B and a few Charcoal #1B2026 supporting surfaces, with restrained Dark Silver #8A929B panel-edge details only where they clarify geometry.
+- Bow and arrow: their tiny formerly green grip/shaft sections become gunmetal/dark silver; preserve most silver-white surfaces, black grooves and existing tiny red details.
+- Keep the silver jet with its tiny red canopy and black seams exactly as v9. Scope ring stays silver-white with existing black ring grooves/spoke insets, black gap beside blade and tiny red scope tips.
+- Keep the OUTER SHIELD BORDER tactical green #8AAD45 as a restrained identity accent, preserving existing black seams and two tiny red border inlays. The broad equipment area inside is now neutral gray, so green is limited to the frame. Maintain black background #090E0B.
+Preserve exact layout, dimensions, object silhouettes, positions, layers, proportions, original wordmark appearance and entire crest. Keep the connected center where rifle shapes cover the lower sword; do NOT extend a continuous silver blade through the guns.
+Palette: Vault Black #090E0B, Charcoal #1B2026, Graphite #2F343B, Gunmetal #565D65, Dark Silver #8A929B, Silver White #E6EDDF, Tactical Green #8AAD45, Reticle Red #B54A43. Flat colors with gray variation between panels, no gradients/chrome/reflections.
+Text unchanged (verbatim): 'Weapon Database', Weapon on first line and Database on second, plus small 'Armory Crest'. Exact Title Case, same stencil lettering and placement.
+Composition: unchanged square single-logo reference presentation, all artwork and text in-frame, calm margins.
+Avoid: green guns/handle/interior panels, completely white guns, removing black insets, new equipment, moving any motif, continuous exposed blade through rifle crossing, changing typography, bright red surfaces, glowing outlines, photoreal metal, gradients, chrome, 3D, texture, watermarks, cropping.

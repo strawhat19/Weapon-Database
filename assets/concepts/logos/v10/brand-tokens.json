@@ -1,0 +1,21 @@
+{
+  "version": 10,
+  "name": "Weapon Database",
+  "direction": "Armory Crest",
+  "colors": {
+    "red": "#B54A43",
+    "black": "#090E0B",
+    "green": "#8AAD45",
+    "silver": "#E6EDDF",
+    "charcoal": "#1B2026",
+    "graphite": "#2F343B",
+    "gunmetal": "#565D65",
+    "darkSilver": "#8A929B"
+  },
+  "typography": {
+    "ui": "Rajdhani",
+    "display": "Saira Stencil One",
+    "wordmark": "Custom Stencil Lettering",
+    "editableSvgFallback": ["Arial Black", "Impact", "sans-serif"]
+  }
+}

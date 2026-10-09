@@ -1,0 +1,12 @@
+Use case: precise-object-edit
+Asset type: Weapon Database Armory Crest, v8 comparison variant.
+Input images: Image 1 is the exact nearly approved edit target.
+Shared refinements:
+- Add tiny olive/tactical-green inset accents ONLY at the REAR of the silver fighter jet: small tailplane or exhaust-end details at the bottom of its nose-up silhouette. Keep the jet predominantly silver, with existing black panel seams and subtle red canopy/trim. Do not add green to the nose or main wings.
+- The horizontal silver scope spoke near the upper/middle sword currently touches the silver blade and merges visually. Add a very narrow black clearance gap or slim black contour between each spoke end and the blade. Keep the spoke silver, the sword silver, and both clearly separate. Preserve the silver scope circle, black ring grooves, tiny red scope tips and other ticks.
+Preserve: exact green peaked shield and structural panels, the two crossed green/black rifle silhouettes with tiny red hardware and restrained silver details, bow and arrow with small red/green/black accents, main upright sword shape and tip, green/silver/red handle and silver pommel, entire composition and original stencil wordmark. Keep colors #090E0B, #617340, #8AAD45, #3E5949, #E6EDDF, #B54A43. Flat vector-style colors, no gradients or chrome.
+Composition: same square single-logo canvas, shield and all text fully in frame, exact framing, object positions and proportions, near-black background.
+Text (verbatim): 'Weapon Database', Weapon on first line and Database on second; small existing label 'Armory Crest'. Preserve Title Case, original type style, sizes, positions and margins. No extra label or variant text inside the image.
+THIS OUTPUT IS THE BLENDED SWORD VERSION:
+Keep the current joined appearance where the crossed rifles overlap the sword above its handle. The silver upper blade should end or disappear behind the green rifle crossing as in the reference, and the green connected center continues down toward the existing silver crossguard. Preserve that original blend deliberately for comparison. Do NOT extend a new exposed silver blade through the rifle center. Only apply the shared jet-tail and scope-separation refinements.
+Avoid: a fully exposed continuous blade at the gun intersection, moving guns, extra weapons, large green jet areas, new decorations, altered font or layout, photorealism, gradients, shadows, glow, watermarks, cropping.

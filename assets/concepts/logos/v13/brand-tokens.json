@@ -1,0 +1,33 @@
+{
+  "version": 13,
+  "name": "Weapon Database",
+  "direction": "Armory Crest — Green Border",
+  "details": {
+    "panels": "Restored subdued green inner shield corner and side wedges",
+    "equipment": "Green rifles; gray bow, grip, jet rear and border inlays",
+    "junction": "Tiny gunmetal seams and muted dark red pins at the rifle-to-sword blend"
+  },
+  "colors": {
+    "red": "#B54A43",
+    "black": "#090E0B",
+    "green": "#8AAD45",
+    "silver": "#E6EDDF",
+    "charcoal": "#1B2026",
+    "graphite": "#2F343B",
+    "gunmetal": "#565D65",
+    "fieldOlive": "#617340",
+    "darkSilver": "#8A929B",
+    "junctionRed": "#713831",
+    "structuralGreen": "#3E5949"
+  },
+  "typography": {
+    "ui": "Rajdhani",
+    "display": "Saira Stencil One",
+    "wordmark": "Custom Stencil Lettering",
+    "editableSvgFallback": [
+      "Arial Black",
+      "Impact",
+      "sans-serif"
+    ]
+  }
+}

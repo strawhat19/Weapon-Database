@@ -1,0 +1,22 @@
+Use case: logo-brand
+Asset type: a polished landscape Weapon Database brand identity CARD, with logo, wordmark, color palette and font families.
+Input images: Image 1 is the finished v9 LOGO ARTWORK to place on this card. Preserve the emblem geometry, all motif colors and existing custom stencil Weapon Database wordmark exactly. Change layout around the logo only.
+Primary request: present the logo plus its brand palette and proposed font families together on an elegant military vault-style identity card.
+Composition: wide landscape card, roughly 3:2. Flat near-black #090E0B canvas with a quiet olive outline, generous margins and a restrained vertical divider. Left 50%: large unchanged crest above its original two-line Weapon Database wordmark; keep its shield fully visible and retain its connected gun/sword center. Right 50%: neatly organized palette and typography panels with clear silver text and olive labels. Use disciplined spacing and sufficient type size; labels must be legible, not decorative microtext. No extra logo variations or photographed stationery.
+Top small title (verbatim): 'Armory Crest / v9'.
+Palette section title (verbatim): 'Color Palette'. Six flat rectangular swatches in a readable 2-column by 3-row grid, each with exact name and HEX below:
+'Vault Black' '#090E0B'
+'Field Olive' '#617340'
+'Tactical Green' '#8AAD45'
+'Structural Green' '#3E5949'
+'Silver White' '#E6EDDF'
+'Reticle Red' '#B54A43'
+Match each swatch to its exact hex. Give the black swatch a faint structural-green outline. The red is one modest swatch, not a dominant card accent.
+Typography section title (verbatim): 'Font Pairing'. Clearly show two proposed families with small role labels:
+'Saira Stencil One' — 'Display / Stencil Companion'
+'Rajdhani' — 'UI / Data'
+Use a short specimen 'Aa Bb 0123456789' under each family name in a plausible style matching the named family: bold stencil for Saira Stencil One, squared condensed sans serif for Rajdhani. Keep every family name and specimen readable. Do not change the actual logo wordmark to these fonts.
+Small explanatory label near the logo wordmark or typography footer (verbatim): 'Wordmark: Custom Stencil Lettering'.
+Optional tiny bottom label (verbatim): 'Weapon Database'. No other copy.
+Style: professional graphic-design identity card, clean flat artwork, tactical black-and-green with silver text and tiny muted red, no texture or photography, no glow, no chrome, no 3D, no gradients. The crest is the centerpiece and must be the same artwork as the reference, including subtle black scope separation and faint border details.
+Constraints: no cropped logo/type, exact brand spelling and Title Case, exact six palette labels and hex values, preserve the custom logo wordmark rather than claiming it uses an identified font, show named font pairings as proposed companion families.

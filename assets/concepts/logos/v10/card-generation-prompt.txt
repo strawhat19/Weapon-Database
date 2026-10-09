@@ -1,0 +1,26 @@
+Use case: logo-brand
+Asset type: Weapon Database Armory Crest v10 brand identity card, including stacked AND horizontal logo lockups, palette and font families.
+Input images: Image 1 is the authoritative finished v10 LOGO with gray/gunmetal equipment. Preserve that logo and its original custom wordmark appearance. Image 2 is the v9 BRAND CARD, a layout/style reference only. Do NOT use its old green equipment or obsolete olive/structural-green swatches.
+Primary request: update the card for the v10 gunmetal logo, retain everything useful on the current card, and ADD a clear horizontal logo version with 'Weapon Database' positioned to the RIGHT of the crest.
+Layout: spacious wide landscape card, approximately 3:2, near-black canvas and a restrained thin green/gunmetal frame. Enlarge the canvas or rebalance panels so the added horizontal lockup does not crowd the original sections. Upper/main LEFT: a large unchanged v10 crest above the existing two-line Weapon Database custom stencil wordmark, existing Armory Crest caption and small 'Wordmark: Custom Stencil Lettering' label. Upper/main RIGHT: updated Color Palette plus Font Pairing, clearly legible. Bottom full-width band, separated by a thin gunmetal rule: new 'Horizontal Lockup' specimen, a smaller exact SAME crest on the LEFT and large custom-stencil 'Weapon Database' on a SINGLE LINE directly to its RIGHT. The words must visibly sit BESIDE the crest, not underneath it. Preserve the original stacked logo elsewhere on this same card.
+Both crest instances must be identical: gunmetal rifles with black insets and tiny red selectors, gray handle/interior panels, silver blade/jet/bow/scope, green shield border with black and very tiny red details, and the connected gun-to-sword center. No exposed continuous silver lower blade.
+Top label (verbatim): 'Armory Crest / v10'.
+Palette title (verbatim): 'Color Palette'. EIGHT swatches in a neat 4-column by 2-row grid or a readable 2-column by 4-row grid, with names and EXACT hex codes under each. Allocate enough space so names are not cramped:
+'Vault Black' '#090E0B'
+'Charcoal' '#1B2026'
+'Graphite' '#2F343B'
+'Gunmetal' '#565D65'
+'Dark Silver' '#8A929B'
+'Silver White' '#E6EDDF'
+'Tactical Green' '#8AAD45'
+'Reticle Red' '#B54A43'
+Each flat swatch must match its hex. Outline the darkest swatches faintly so they remain visible against the black background. Remove old Field Olive and Structural Green swatches because the equipment palette is neutral now.
+Typography title (verbatim): 'Font Pairing'. Preserve TWO proposed families and roles:
+'Saira Stencil One' with 'Display / Stencil Companion'
+'Rajdhani' with 'UI / Data'
+Specimen under each: 'Aa Bb 0123456789'. Stencil display specimen for Saira, squared condensed sans serif specimen for Rajdhani. Keep original logo wordmarks as Custom Stencil Lettering; don't substitute either font for them.
+Horizontal specimen label (verbatim): 'Horizontal Lockup'. Its actual wordmark (verbatim): 'Weapon Database' — exact Title Case and custom stencil appearance, readable on one line, centered vertically to the RIGHT of the smaller crest.
+Small existing footer (verbatim): 'Weapon Database'.
+Style: polished brand identity card, crisp flat military/vault graphic design, black/gray/dark silver dominant with green frame accents and tiny muted red, generous negative space, consistent dividers and typography, no photography/3D/chrome/glow/gradients.
+Constraints: all required sections and BOTH logo arrangements must fit in-frame with comfortable margins; card must be readable. Preserve motif geometry, exact font family names, exact eight palette labels and hexes, brand spelling and Title Case. Do not change the equipment colors back to green.
+Avoid: missing horizontal lockup, putting horizontal words below the crest, duplicate stacked-only logos, cropped logos/text, extra unrelated mockups, old v9 label, incorrect hex codes, new slogans, clutter, tiny illegible labels, metallic glare, watermarks.

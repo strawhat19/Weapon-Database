@@ -1,0 +1,19 @@
+Use case: compositing
+Asset type: Weapon Database Armory Crest v11 brand design card.
+Input images: Image 1 is the AUTHORITATIVE newly edited v11 logo, including its rifle finish, gray bow/arrow, gray sword grip and new gray fighter jet rear panels. Image 2 is ONLY the v10 brand-card layout and typography reference. Use the identical logo from Image 1 in BOTH logo specimens; do not use the old gray/green equipment from Image 2.
+Create a polished wide landscape identity card matching the v10 reference: black canvas, thin green frame, crisp vector-like military styling and ample spacing.
+Keep ALL the current card sections: large stacked logo/wordmark on upper LEFT; exact custom stencil "Weapon Database" on two lines; "Armory Crest" caption; "Wordmark: Custom Stencil Lettering". Upper RIGHT contains "Color Palette" and "Font Pairing". BOTTOM full-width band retains "Horizontal Lockup", SAME crest on LEFT, and exact custom-stencil "Weapon Database" on ONE LINE to its RIGHT, centered vertically. This horizontal specimen must be present in addition to the stacked specimen.
+Main palette: eight swatches with exact names and hex values:
+Vault Black #090E0B
+Charcoal #1B2026
+Graphite #2F343B
+Gunmetal #565D65
+Dark Silver #8A929B
+Silver White #E6EDDF
+Tactical Green #8AAD45
+Reticle Red #B54A43
+Also show two small supporting green accent swatches/labels neatly below the main palette: Field Olive #617340 and Structural Green #3E5949. Do not omit the original eight palette tokens to make room.
+Font Pairing: "Saira Stencil One", role "Display / Stencil Companion"; "Rajdhani", role "UI / Data". Each specimen reads "Aa Bb 0123456789". Preserve the original custom stencil wordmark as artwork; the named fonts are proposed companions.
+Keep all text clean, legible and exact. Footer: "Weapon Database". Header "Armory Crest / v11 — Green Rifles".
+Constraints: preserve the same crest silhouette, black/red details, green border, gray bow/grip/interior panels, silver scope and sword blade, rifle-over-sword BLENDED center, and new subtle gray jet rear panels in BOTH crest specimens. No new symbols or equipment, no continuous sword in front of rifles, no omitted horizontal specimen, no crop, no texture, glow, or 3D. Slightly expand/rebalance the card to fit supporting swatches if necessary.
+Variant: crossed rifles remain dominantly green with small neutral gray hardware accents, matching Image 1 exactly.

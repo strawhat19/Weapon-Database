@@ -1,0 +1,13 @@
+Use case: precise-object-edit
+Asset type: Weapon Database Armory Crest v9, v7-preserving logo refinement.
+Input images: Image 1 is the EXACT edit target, Armory Crest v7. Image 2 is a DETAIL REFERENCE ONLY for v8's narrow black separation between the silver scope spoke and sword. Do not copy other changes from Image 2.
+Primary request: retain the v7 logo with the original rifles blending into the sword near the handle, add the v8 black scope/sword separation, and add subtle black details and even smaller red accents in the green crest BORDER.
+Changes allowed:
+1. Where the horizontal silver scope spoke behind the upper/middle blade touches the silver sword, introduce a narrow black clearance gap or fine black edge so the silver spoke and silver blade are visually distinct, like Image 2. Preserve both objects and their placement.
+2. Add a few thin near-black #090E0B inset seams IN the existing green shield border, at balanced upper shoulders/lower sides. Keep the green border predominantly intact; insets are narrow and short.
+3. Add only TWO tiny muted-red #B54A43 hardware marks or pinstripe inlays in that green border, substantially smaller than the black seams. Red is barely present; no red border segments, no corner caps or broad red outlines.
+Everything else must match Image 1 v7: silver jet with its original small red canopy and black seams, NO new green rear-jet accents; identical bow and arrow with original small red/green details; identical black ring grooves and spoke insets; original silver sword silhouette and tip; ORIGINAL BLENDED gun-to-sword center where the green rifles interrupt the blade above the existing handle. Do NOT add an exposed silver lower blade through the rifles. The handle, guard and pommel remain identical. Keep existing gun angles, green/black/red details, structural green corner panels, original stencil wordmark, exact sizes and proportions.
+Palette: #090E0B black, #617340 olive, #8AAD45 tactical green, #3E5949 structural green, #E6EDDF silver-white, #B54A43 muted red. Flat colors.
+Composition: preserve the exact square v7 logo presentation, all objects and type in-frame, same calm margins.
+Text unchanged (verbatim): 'Weapon Database', Weapon on first line and Database on second, plus the small label 'Armory Crest'. Preserve existing font appearance and Title Case.
+Avoid: continuous exposed sword through rifles, copying v8 jet-tail green, recoloring the jet, moving/replacing any motif, broader red frame, heavy black outlines, additional weapons, new symbols, new typography, gradients, shadows, chrome, 3D, watermarks, cropping.

@@ -1,0 +1,14 @@
+Use case: compositing
+Asset type: Weapon Database Armory Crest v12 brand design card.
+Input images: Image 1 is the authoritative NEW v12 stacked logo; Image 2 is the v11 GREEN-RIFLE brand-card edit target / layout reference.
+Primary request: Update the card for Green Border with Subtle Gray Inlays. Replace BOTH crest specimens on Image 2 with the exact crest from Image 1: the large stacked specimen at upper left AND the small horizontal specimen at bottom left. Keep the large stacked custom stencil Weapon Database wordmark, Armory Crest caption, original "Wordmark: Custom Stencil Lettering" line and bottom one-line Weapon Database wordmark to the RIGHT of its crest.
+Change top header to "Armory Crest / v12 — Green Border".
+Both crests must retain GREEN rifles with subtle GRAY hardware, gray bow/arrow, gray sword grip and shield panels, gray fighter jet rear panels, silver scope/blade, tiny reds, black insets, scope gaps and blended rifle-over-sword center EXACTLY from Image 1. Use the NEW border treatment in BOTH crests. Do not recolor the guns to gray.
+Retain the entire current card layout, black canvas and thin GREEN outer card frame. The new crest border does not change the card's frame color.
+Keep all current sections and text:
+"Color Palette", "Supporting Accents", "Font Pairing", "Horizontal Lockup", footer "Weapon Database".
+Eight main swatches with exact labels: Vault Black #090E0B; Charcoal #1B2026; Graphite #2F343B; Gunmetal #565D65; Dark Silver #8A929B; Silver White #E6EDDF; Tactical Green #8AAD45; Reticle Red #B54A43.
+Supporting swatches: Field Olive #617340; Structural Green #3E5949.
+Font pairing: "Saira Stencil One" with "Display / Stencil Companion", and "Rajdhani" with "UI / Data". Both specimens read "Aa Bb 0123456789". Keep the original custom stencil wordmark artwork rather than replacing it with a named font.
+Style: same clean flat military identity card, exact readable typography, no extra symbols, no crop, no texture, no glow, no 3D. Keep the stacked AND horizontal logo presentations. Preserve every section of the reference card.
+Border: dominantly green shield band with tiny neutral gray recessed shoulder/flank inlays, as Image 1.

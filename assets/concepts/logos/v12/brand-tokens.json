@@ -1,0 +1,47 @@
+{
+  "version": 12,
+  "name": "Weapon Database",
+  "direction": "Armory Crest",
+  "equipment": "Green rifles with subtle grays; gray bow, grip, shield panels and jet rear panels",
+  "variants": {
+    "greenBorder": {
+      "base": "#8AAD45",
+      "accents": [
+        "#565D65",
+        "#8A929B"
+      ],
+      "role": "Green crest band with small gray recessed inlays"
+    },
+    "grayBorder": {
+      "base": "#565D65",
+      "accents": [
+        "#8A929B",
+        "#8AAD45",
+        "#617340"
+      ],
+      "role": "Gray crest band with small green recessed inlays"
+    }
+  },
+  "colors": {
+    "red": "#B54A43",
+    "black": "#090E0B",
+    "green": "#8AAD45",
+    "silver": "#E6EDDF",
+    "charcoal": "#1B2026",
+    "graphite": "#2F343B",
+    "gunmetal": "#565D65",
+    "fieldOlive": "#617340",
+    "darkSilver": "#8A929B",
+    "structuralGreen": "#3E5949"
+  },
+  "typography": {
+    "ui": "Rajdhani",
+    "display": "Saira Stencil One",
+    "wordmark": "Custom Stencil Lettering",
+    "editableSvgFallback": [
+      "Arial Black",
+      "Impact",
+      "sans-serif"
+    ]
+  }
+}

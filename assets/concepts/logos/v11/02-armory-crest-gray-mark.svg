@@ -1,0 +1,379 @@
+<svg
+  role="img"
+  fill="none"
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-labelledby="armory-crest-v11-gray-mark-title armory-crest-v11-gray-mark-description"
+>
+  <title id="armory-crest-v11-gray-mark-title">Weapon Database — Gray Rifle Armory Crest</title>
+  <desc id="armory-crest-v11-gray-mark-description">The Weapon Database armory crest retains a tactical green shield border, silver scope, sword and aircraft, gray bow and arrow details, gunmetal sword handle, and mostly gunmetal rifles with small olive rail and structural green stock accents. Subtle dark silver rear stabilizer panels and a gunmetal aft fuselage panel add definition inside the silver jet silhouette. Black insets, small muted red hardware, blended rifle-over-sword layering, and black scope separation gaps remain intact.</desc>
+  <g id="armory-crest-v11-gray-mark">
+    <path
+      id="armory-crest-v11-gray-shield"
+      fill="#090E0B"
+      d="M128 22L218 62V142L202 180L128 236L54 180L38 142V62Z"
+    />
+    <path
+      id="armory-crest-v11-gray-shield-border"
+      stroke="#8AAD45"
+      stroke-width="6"
+      d="M128 26L214 65V141L199 178L128 231L57 178L42 141V65Z"
+    />
+    <path
+      id="armory-crest-v11-gray-shield-black-border-seams"
+      stroke="#090E0B"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      d="M78 48.67L98 39.6M158 39.6L178 48.67M74 190.69L92 204.13M164 204.13L182 190.69"
+    />
+    <path
+      id="armory-crest-v11-gray-shield-red-border-inlays"
+      stroke="#B54A43"
+      stroke-width="1.2"
+      d="M42 118V122M214 118V122"
+    />
+    <path
+      id="armory-crest-v11-gray-shield-inset"
+      stroke="#2F343B"
+      stroke-width="3"
+      d="M128 40L201 73V138L188 169L128 214L68 169L55 138V73Z"
+    />
+    <g id="armory-crest-v11-gray-scope" stroke="#565D65" stroke-width="4">
+      <circle id="armory-crest-v11-gray-scope-ring" r="49" cx="128" cy="139" stroke="#E6EDDF" />
+      <path
+        id="armory-crest-v11-gray-scope-black-ring-inlays"
+        stroke="#090E0B"
+        stroke-width="1"
+        stroke-linecap="round"
+        d="M81.4 123.86A49 49 0 0 1 90.46 107.5M90.46 170.5A49 49 0 0 1 81.4 154.14M165.54 107.5A49 49 0 0 1 174.6 123.86M174.6 154.14A49 49 0 0 1 165.54 170.5"
+      />
+      <path
+        id="armory-crest-v11-gray-scope-crosshair"
+        stroke="#E6EDDF"
+        d="M128 90V188M79 139H115M141 139H177"
+      />
+      <path
+        id="armory-crest-v11-gray-scope-cardinal-ticks"
+        stroke="#E6EDDF"
+        stroke-width="6"
+        d="M128 82V100M128 178V196M71 139H89M167 139H185"
+      />
+      <path
+        id="armory-crest-v11-gray-scope-red-inner-tips"
+        stroke="#B54A43"
+        stroke-width="3"
+        d="M86 139H89M167 139H170"
+      />
+      <path
+        id="armory-crest-v11-gray-scope-black-spoke-slots"
+        stroke="#090E0B"
+        stroke-width="1.5"
+        d="M128 85V95M128 183V193M75 139H83M173 139H181"
+      />
+      <path
+        id="armory-crest-v11-gray-scope-precision-ticks"
+        stroke="#E6EDDF"
+        stroke-width="2"
+        d="M117 104V110M139 104V110M97 128H103M97 150H103M153 128H159M153 150H159M117 168V174M139 168V174"
+      />
+      <path
+        id="armory-crest-v11-gray-scope-sword-black-gaps"
+        stroke="#090E0B"
+        stroke-width="6"
+        d="M115 139H120M136 139H141"
+      />
+    </g>
+    <g id="armory-crest-v11-gray-bow-and-arrow">
+      <path
+        id="armory-crest-v11-gray-bow-separation"
+        stroke="#090E0B"
+        stroke-width="13"
+        stroke-linecap="round"
+        d="M75 66C96 79 96 105 75 118M75 66L84 92L75 118M61 92H108M100 84L109 92L100 100M61 85L69 92L61 99"
+      />
+      <path
+        id="armory-crest-v11-gray-bow-limbs"
+        stroke="#E6EDDF"
+        stroke-width="5"
+        stroke-linecap="round"
+        d="M75 66C96 79 96 105 75 118"
+      />
+      <path
+        id="armory-crest-v11-gray-bow-string"
+        stroke="#E6EDDF"
+        stroke-width="2"
+        d="M75 66L84 92L75 118"
+      />
+      <path
+        id="armory-crest-v11-gray-arrow"
+        stroke="#E6EDDF"
+        stroke-width="3"
+        stroke-linejoin="miter"
+        d="M61 92H108M100 84L109 92L100 100M61 85L69 92L61 99"
+      />
+      <path
+        id="armory-crest-v11-gray-arrowhead"
+        fill="#E6EDDF"
+        d="M100 84L111 92L100 100Z"
+      />
+      <path
+        id="armory-crest-v11-gray-bow-grip"
+        fill="#565D65"
+        d="M88 86H94V98H88Z"
+      />
+      <path
+        id="armory-crest-v11-gray-bow-red-joint"
+        stroke="#B54A43"
+        stroke-width="1.8"
+        d="M76 68L80 72"
+      />
+      <path
+        id="armory-crest-v11-gray-arrow-gunmetal-shaft"
+        fill="#565D65"
+        d="M72 90.5H85V93.5H72Z"
+      />
+      <path
+        id="armory-crest-v11-gray-arrow-red-nock"
+        fill="#B54A43"
+        d="M61.75 90.75H64.25V93.25H61.75Z"
+      />
+      <path
+        id="armory-crest-v11-gray-bow-black-limb-groove"
+        stroke="#090E0B"
+        stroke-width="1"
+        d="M75 66C96 79 96 105 75 118"
+      />
+      <path
+        id="armory-crest-v11-gray-arrow-black-shaft-inlay"
+        stroke="#090E0B"
+        stroke-width="1"
+        d="M87 92H97"
+      />
+      <path
+        id="armory-crest-v11-gray-arrow-black-head-inlay"
+        fill="#090E0B"
+        d="M103 90L106 92L103 94Z"
+      />
+    </g>
+    <path
+      id="armory-crest-v11-gray-fighter-jet"
+      fill="#E6EDDF"
+      stroke="#090E0B"
+      stroke-width="5"
+      stroke-linejoin="miter"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M177 52L182 75L199 91V100L183 90V106L191 114V121L177 115L163 121V114L171 106V90L155 100V91L172 75Z"
+    />
+    <path
+      id="armory-crest-v11-gray-jet-dark-silver-rear-panels"
+      fill="#8A929B"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M165 115L171 112L174 114L165 118ZM181 112L189 115V118L180 114Z"
+    />
+    <path
+      id="armory-crest-v11-gray-jet-gunmetal-aft-panel"
+      fill="#565D65"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M174 101H180V108L177 113L174 108Z"
+    />
+    <path
+      id="armory-crest-v11-gray-jet-fuselage"
+      fill="#090E0B"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M176 76H178V108H176Z"
+    />
+    <path
+      id="armory-crest-v11-gray-jet-red-canopy"
+      fill="#B54A43"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M174 77H180V82H174Z"
+    />
+    <path
+      id="armory-crest-v11-gray-jet-black-panel-seams"
+      stroke="#090E0B"
+      stroke-width="1.3"
+      transform="translate(48.1 16) scale(0.7)"
+      d="M177 59V72M172 82L159 94M182 82L195 94M172 110L166 116M182 110L188 116"
+    />
+    <g id="armory-crest-v11-gray-sword-blade-layer">
+      <path
+        id="armory-crest-v11-gray-sword-blade-separation"
+        stroke="#090E0B"
+        stroke-width="9"
+        stroke-linejoin="miter"
+        d="M128 55L136 80V158L128 170L120 158V80Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-blade"
+        fill="#E6EDDF"
+        d="M128 55L136 80V158L128 170L120 158V80Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-fuller"
+        fill="#2F343B"
+        d="M127 82H129V155L128 157L127 155Z"
+      />
+    </g>
+    <g
+      id="armory-crest-v11-gray-mirrored-rifle"
+      transform="translate(230.4 45.8) scale(-0.8 0.8) rotate(-20 128 139)"
+    >
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-silhouette"
+        fill="#565D65"
+        stroke="#090E0B"
+        stroke-width="6"
+        stroke-linejoin="miter"
+        d="M53 125H69L82 132H93V124H145V127H180V130H199V137H180V140H150L143 146H127L135 165H121L112 146H104L103 163H91L94 142H81L67 151H53Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-receiver-cut"
+        fill="#090E0B"
+        d="M100 130H143V140H100Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-green-stock-accent"
+        fill="#3E5949"
+        d="M57 127H66L75 133L74 135L65 130H57Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-stock-cut"
+        fill="#090E0B"
+        d="M59 132H65L74 137L65 145H59Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-black-handguard"
+        fill="#090E0B"
+        d="M149 130H177V135H149Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-black-magazine"
+        fill="#090E0B"
+        d="M118 149H125L131 162H124Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-red-selector"
+        fill="#B54A43"
+        d="M105 142H110V144H105Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-olive-rail"
+        fill="#617340"
+        d="M110 125H126V127H110Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-dark-silver-barrel"
+        fill="#8A929B"
+        d="M153 130H196V132H153Z"
+      />
+      <path
+        id="armory-crest-v11-gray-mirrored-rifle-dark-silver-magazine"
+        fill="#8A929B"
+        d="M125 152H127L130 160H128Z"
+      />
+    </g>
+    <g
+      id="armory-crest-v11-gray-rifle"
+      transform="translate(25.6 45.8) scale(0.8) rotate(-20 128 139)"
+    >
+      <path
+        id="armory-crest-v11-gray-rifle-silhouette"
+        fill="#565D65"
+        stroke="#090E0B"
+        stroke-width="6"
+        stroke-linejoin="miter"
+        d="M53 125H69L82 132H93V124H145V127H180V130H199V137H180V140H150L143 146H127L135 165H121L112 146H104L103 163H91L94 142H81L67 151H53Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-receiver-cut"
+        fill="#090E0B"
+        d="M100 130H143V140H100Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-green-stock-accent"
+        fill="#3E5949"
+        d="M57 127H66L75 133L74 135L65 130H57Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-stock-cut"
+        fill="#090E0B"
+        d="M59 132H65L74 137L65 145H59Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-black-handguard"
+        fill="#090E0B"
+        d="M149 130H177V135H149Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-black-magazine"
+        fill="#090E0B"
+        d="M118 149H125L131 162H124Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-red-selector"
+        fill="#B54A43"
+        d="M105 142H110V144H105Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-olive-rail"
+        fill="#617340"
+        d="M110 125H126V127H110Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-dark-silver-barrel"
+        fill="#8A929B"
+        d="M153 130H196V132H153Z"
+      />
+      <path
+        id="armory-crest-v11-gray-rifle-dark-silver-magazine"
+        fill="#8A929B"
+        d="M125 152H127L130 160H128Z"
+      />
+    </g>
+    <g id="armory-crest-v11-gray-sword-hilt-layer">
+      <path
+        id="armory-crest-v11-gray-sword-hilt-separation"
+        stroke="#090E0B"
+        stroke-width="9"
+        stroke-linejoin="miter"
+        d="M105 163H151V173H134V196L140 202V209H116V202L122 196V173H105Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-hilt"
+        fill="#565D65"
+        d="M105 163H151V173H134V196L140 202V209H116V202L122 196V173H105Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-grip"
+        fill="#1B2026"
+        d="M126 178H130V195H126Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-silver-crossguard"
+        fill="#E6EDDF"
+        d="M105 163H151V173H105Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-dark-silver-wraps"
+        fill="#8A929B"
+        d="M123 178H133V181H123ZM123 185H133V188H123ZM123 192H133V195H123Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-red-grip-band"
+        fill="#B54A43"
+        d="M123 182H133V184H123Z"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-black-grip-seams"
+        stroke="#090E0B"
+        stroke-width="1"
+        d="M124 181.5H132M124 189.5H132"
+      />
+      <path
+        id="armory-crest-v11-gray-sword-silver-pommel"
+        fill="#E6EDDF"
+        d="M116 202H140V209H116Z"
+      />
+    </g>
+  </g>
+</svg>

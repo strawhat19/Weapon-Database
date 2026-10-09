@@ -1,0 +1,45 @@
+{
+  "version": 11,
+  "name": "Weapon Database",
+  "direction": "Armory Crest",
+  "variants": {
+    "green": {
+      "role": "Green rifles with restrained gray hardware",
+      "riflePrimary": "Tactical Green / Field Olive",
+      "rifleAccents": [
+        "Gunmetal",
+        "Dark Silver"
+      ]
+    },
+    "gray": {
+      "role": "Gray rifles with restrained green hardware",
+      "riflePrimary": "Gunmetal",
+      "rifleAccents": [
+        "Field Olive",
+        "Structural Green"
+      ]
+    }
+  },
+  "colors": {
+    "red": "#B54A43",
+    "black": "#090E0B",
+    "green": "#8AAD45",
+    "silver": "#E6EDDF",
+    "charcoal": "#1B2026",
+    "graphite": "#2F343B",
+    "gunmetal": "#565D65",
+    "fieldOlive": "#617340",
+    "darkSilver": "#8A929B",
+    "structuralGreen": "#3E5949"
+  },
+  "typography": {
+    "ui": "Rajdhani",
+    "display": "Saira Stencil One",
+    "wordmark": "Custom Stencil Lettering",
+    "editableSvgFallback": [
+      "Arial Black",
+      "Impact",
+      "sans-serif"
+    ]
+  }
+}
