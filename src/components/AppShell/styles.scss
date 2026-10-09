@@ -1,0 +1,30 @@
+.armory-app { isolation: isolate; position: relative; min-height: 100vh; --steel-texture: var(--dark-steel); background-color: var(--background); background-image: linear-gradient(90deg, color-mix(in srgb, var(--background) 88%, transparent), color-mix(in srgb, var(--background) 66%, transparent) 45%, color-mix(in srgb, var(--background) 17%, transparent)), var(--steel-texture); background-size: cover; background-attachment: fixed; }
+[data-theme="light"] .armory-app { --steel-texture: var(--light-steel); }
+.scroll-top { position: fixed; bottom: 24px; right: clamp(20px, 4vw, 64px); z-index: 25; display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid var(--rule); border-radius: 50%; color: var(--text); background: color-mix(in srgb, var(--background) 85%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity 220ms, transform 220ms, color 220ms, border-color 220ms; }
+.scroll-top--visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.scroll-top:hover { color: var(--accent); border-color: var(--accent); }
+.app-feedback { position: fixed; left: clamp(20px, 4vw, 64px); bottom: 24px; z-index: 60; display: flex; align-items: center; gap: 14px; max-width: min(560px, calc(100% - 96px)); padding: 14px 18px; color: var(--text); background: var(--background); border: 1px solid var(--rule); box-shadow: 0 12px 40px #0003; font-size: 17px; }
+.app-feedback > .icon { color: var(--accent); }
+.app-feedback .icon-button { width: 28px; height: 28px; border: 0; flex-shrink: 0; }
+.app-feedback--error { border-color: var(--error); }
+.app-feedback--error p { color: var(--error); }
+.weapon-dossier__image { height: 230px; display: grid; place-items: center; margin-bottom: 30px; background: color-mix(in srgb, var(--surface) 65%, transparent); }
+.weapon-dossier__image img { width: 90%; height: 100%; object-fit: contain; }
+.weapon-dossier__image--photo img { width: 100%; object-fit: cover; }
+.weapon-dossier > .eyebrow { color: var(--accent); }
+.weapon-dossier > p:not(.eyebrow) { margin-top: 18px; }
+.weapon-dossier__facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 24px 0; margin: 24px 0; border-block: 1px solid var(--rule); }
+.weapon-dossier__facts dd { margin: 8px 0 0; font-size: 20px; }
+.weapon-dossier__actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.saved-armory__item { display: flex; align-items: center; gap: 18px; border-bottom: 1px solid var(--rule); padding: 16px 0; }
+.saved-armory__open { display: flex; align-items: center; gap: 20px; flex: 1; min-width: 0; padding: 0; text-align: left; color: var(--text); background: transparent; border: 0; }
+.saved-armory__open img { width: 100px; height: 60px; object-fit: contain; }
+.saved-armory__open span { flex: 1; }
+.saved-armory__open strong { display: block; font-size: 24px; }
+.saved-armory__open small { color: var(--muted); font-size: 15px; }
+.saved-armory .empty-state > .icon { display: block; margin: 0 auto 18px; color: var(--accent); }
+.saved-armory__note { margin: 24px 0; font-size: 14px !important; }
+.account-preview > .icon { margin-bottom: 24px; color: var(--accent); }
+.account-preview p { margin-bottom: 24px; }
+#footer-info-contact .button { margin-top: 24px; }
+@media (max-width: 600px) { .weapon-dossier__facts { grid-template-columns: 1fr 1fr; } .weapon-dossier__actions .button { width: 100%; } .saved-armory__open { gap: 12px; } .saved-armory__open img { width: 64px; } .app-feedback { font-size: 15px; padding: 12px; } }

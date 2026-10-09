@@ -1,0 +1,32 @@
+.weapon-model { position: absolute; inset: 10% -3% 12%; }
+.weapon-model__viewport { position: absolute; inset: 0; opacity: 0; cursor: grab; pointer-events: none; transition: opacity 700ms cubic-bezier(.22, 1, .36, 1); }
+.weapon-model__viewport[data-dragging='true'] { cursor: grabbing; }
+.weapon-model__canvas { display: block; width: 100%; height: 100%; outline: none; }
+.weapon-model__fallback { position: absolute; top: 8%; left: -5%; width: 110%; height: 85%; opacity: 0; object-fit: contain; transform: rotate(-8deg); pointer-events: none; user-select: none; transition: opacity 700ms cubic-bezier(.22, 1, .36, 1); }
+.weapon-model[data-skin='graphite'] .weapon-model__fallback { filter: grayscale(1) brightness(.78); }
+.weapon-model[data-skin='silver'] .weapon-model__fallback { filter: grayscale(.95) brightness(1.2); }
+.weapon-model[data-state='ready'] .weapon-model__viewport { opacity: 1; pointer-events: auto; }
+.weapon-model[data-state='fallback'] .weapon-model__fallback { opacity: 1; }
+.weapon-model__instructions { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+.weapon-model__tools { display: flex; align-items: center; position: absolute; left: 3%; bottom: -27px; gap: 14px; min-height: 28px; transition: opacity 500ms ease; }
+.weapon-model[data-state='loading'] .weapon-model__tools { opacity: 0; visibility: hidden; }
+.weapon-model__hint { color: var(--muted); font-size: 8px; font-weight: 400; letter-spacing: .6px; pointer-events: none; }
+.weapon-model__reset, .weapon-model__motion { display: inline-flex; align-items: center; gap: 5px; min-height: 28px; padding: 0 4px; border: 0; color: var(--muted); background: transparent; font-family: 'Weapon JetBrains Mono', monospace; font-size: 9px; font-weight: 400; cursor: pointer; }
+.weapon-model__reset svg, .weapon-model__motion svg { color: var(--accent); }
+.weapon-model__reset:hover, .weapon-model__motion:hover { color: var(--text); }
+.weapon-model__motion { justify-content: center; width: 28px; padding: 0; }
+.weapon-model__viewport:focus-visible { outline: 1px solid var(--accent); outline-offset: -3px; border-radius: 12px; }
+@media (max-width: 900px) {
+  .weapon-model { inset: -5% -2% 14%; }
+  .weapon-model__tools { left: 2%; bottom: -23px; gap: 10px; }
+  .weapon-model__hint { font-size: 7px; letter-spacing: .2px; }
+  .weapon-model__reset { gap: 4px; font-size: 8px; }
+  .weapon-model__fallback { top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-6deg); }
+}
+@media (max-width: 390px) {
+  .weapon-model__reset { justify-content: center; width: 28px; padding: 0; }
+  .weapon-model__reset span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .weapon-model__tools, .weapon-model__viewport, .weapon-model__fallback { transition: none; }
+}

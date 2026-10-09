@@ -1,0 +1,39 @@
+.archive-section { padding: 88px 0 96px; border-top: 1px solid var(--rule); background: var(--surface); scroll-margin-top: 96px; }
+.archive-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 44px; }
+.archive-title { margin: 12px 0 0; font-family: "Weapon Rajdhani", sans-serif; font-size: clamp(36px, 3.8vw, 52px); font-weight: 600; line-height: 1.05; letter-spacing: -.7px; }
+.archive-introduction { max-width: 330px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.archive-timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0; padding: 0; list-style: none; }
+.archive-chapter { padding-right: 28px; }
+.archive-chapter:last-child { padding-right: 0; }
+.archive-chapter-marker { position: relative; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+.archive-chapter-number { color: var(--muted); font-size: 11px; }
+.archive-chapter-dot { position: absolute; bottom: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 6px var(--surface); }
+.archive-chapter-label { margin: 26px 0 10px; color: var(--muted); font-size: 9px; line-height: 1.5; }
+.archive-chapter-title { margin: 0; color: var(--text); font-family: "Weapon Rajdhani", sans-serif; font-size: 28px; font-weight: 600; line-height: 1.12; }
+.archive-chapter-copy { min-height: 112px; margin: 14px 0 24px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.archive-chapter-open { display: inline-flex; align-items: center; gap: 10px; padding: 0; border: 0; color: var(--text); background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+.archive-closing { display: flex; align-items: center; gap: 16px; margin-top: 48px; padding-top: 30px; border-top: 1px solid var(--rule); }
+.archive-closing > svg { flex-shrink: 0; color: var(--muted); }
+.archive-closing-copy { flex: 1; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.archive-closing .button { flex-shrink: 0; font-size: 12px; }
+@media (max-width: 1050px) {
+  .archive-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px 24px; }
+  .archive-chapter { padding-right: 0; }
+  .archive-chapter-copy { min-height: 72px; }
+}
+@media (max-width: 650px) {
+  .archive-section { padding: 64px 0; scroll-margin-top: 80px; }
+  .archive-heading { align-items: flex-start; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+  .archive-title { font-size: 36px; }
+  .archive-introduction { max-width: 100%; }
+  .archive-timeline { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .archive-chapter { position: relative; padding-left: 28px; border-left: 1px solid var(--rule); }
+  .archive-chapter:last-child { padding-right: 0; }
+  .archive-chapter-marker { padding: 0; border-bottom: 0; }
+  .archive-chapter-dot { top: 4px; bottom: auto; left: -32px; }
+  .archive-chapter-label { margin-top: 12px; }
+  .archive-chapter-copy { min-height: 0; margin-bottom: 18px; }
+  .archive-closing { align-items: flex-start; flex-wrap: wrap; margin-top: 36px; gap: 12px; }
+  .archive-closing-copy { flex-basis: calc(100% - 36px); }
+  .archive-closing .button { margin-top: 6px; }
+}

@@ -1,0 +1,7 @@
+.armory-modal { width: min(780px, calc(100% - 32px)); max-height: calc(100dvh - 48px); margin: auto; padding: 0; border: 1px solid var(--rule); color: var(--text); background: var(--background); box-shadow: 0 24px 100px #0005; overscroll-behavior: contain; }
+.armory-modal::backdrop { background: #080a0980; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.armory-modal__content { padding: clamp(24px, 4vw, 44px); }
+.armory-modal__heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 28px; }
+.armory-modal__heading h2 { margin: 8px 0 0; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; }
+.armory-modal__heading .icon-button { flex-shrink: 0; }
+.armory-modal p:not(.eyebrow) { color: var(--muted); font-family: "Weapon Barlow", sans-serif; font-size: 16px; line-height: 1.8; }

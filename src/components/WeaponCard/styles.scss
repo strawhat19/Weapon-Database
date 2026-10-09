@@ -1,0 +1,41 @@
+.weapon-card { --card-corner: 16px; --card-inner-corner: calc(var(--card-corner) - .6px); position: relative; isolation: isolate; overflow: hidden; padding: 1px; background: var(--rule); clip-path: polygon(var(--card-corner) 0, calc(100% - var(--card-corner)) 0, 100% var(--card-corner), 100% calc(100% - var(--card-corner)), calc(100% - var(--card-corner)) 100%, var(--card-corner) 100%, 0 calc(100% - var(--card-corner)), 0 var(--card-corner)); transition: background 200ms ease, transform 200ms ease; }
+.weapon-card::before { position: absolute; z-index: -1; inset: 1px; content: ""; pointer-events: none; background: linear-gradient(145deg, color-mix(in srgb, var(--surface) 96%, var(--green)), var(--surface) 45%); clip-path: polygon(var(--card-inner-corner) 0, calc(100% - var(--card-inner-corner)) 0, 100% var(--card-inner-corner), 100% calc(100% - var(--card-inner-corner)), calc(100% - var(--card-inner-corner)) 100%, var(--card-inner-corner) 100%, 0 calc(100% - var(--card-inner-corner)), 0 var(--card-inner-corner)); }
+.weapon-card:hover { background: color-mix(in srgb, var(--rule) 55%, var(--accent)); transform: translateY(-2px); }
+.weapon-card:focus-within { background: var(--green); }
+.weapon-card-media { position: relative; height: 230px; overflow: hidden; border-bottom: 1px solid var(--rule); }
+.weapon-card-media::before { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; background: linear-gradient(115deg, color-mix(in srgb, var(--surface-deep) 88%, transparent), color-mix(in srgb, var(--surface-deep) 68%, transparent)), var(--steel-texture); background-position: center; background-size: cover; clip-path: polygon(var(--card-inner-corner) 0, calc(100% - var(--card-inner-corner)) 0, 100% var(--card-inner-corner), 100% 100%, 0 100%, 0 var(--card-inner-corner)); }
+.weapon-card-media::after { position: absolute; right: 24px; bottom: 0; width: 42px; height: 2px; content: ""; pointer-events: none; background: var(--green); }
+.weapon-card-preview { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.weapon-card-image { display: block; width: 100%; height: 100%; object-fit: contain; padding: 36px 24px; transition: transform 280ms ease; }
+.weapon-card--photograph .weapon-card-image { padding: 0; object-fit: cover; }
+.weapon-card--arx-27-graphite .weapon-card-image { filter: grayscale(1) brightness(.85) contrast(1.06); }
+.weapon-card--arx-27-silver .weapon-card-image { filter: grayscale(1) brightness(1.2) contrast(.92); }
+.weapon-card-preview:hover .weapon-card-image { transform: scale(1.035); }
+.weapon-card-tag { position: absolute; top: 16px; left: 16px; padding: 6px 9px; color: var(--white); background: var(--black); font-size: 9px; clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px); }
+.weapon-card-save { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border: 0; color: var(--white); background: var(--black); clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px); }
+.weapon-card-save:hover, .weapon-card-save.is-saved { color: var(--black); background: var(--green); }
+.weapon-card-save:focus-visible, .weapon-card-inspect:focus-visible, .weapon-card-preview:focus-visible { outline-offset: -4px; }
+.weapon-card-content { padding: 24px 24px 20px; }
+.weapon-card-category { display: flex; align-items: center; gap: 9px; margin: 0 0 10px; color: var(--muted); font-size: 9px; text-transform: capitalize; }
+.weapon-card-category::before { width: 3px; height: 10px; content: ""; background: var(--green); }
+.weapon-card-category-divider { opacity: .4; }
+.weapon-card-title { margin: 0; font-family: "Weapon Rajdhani", sans-serif; font-size: 29px; font-weight: 600; line-height: 1.1; }
+.weapon-card-title-link { padding: 0; border: 0; color: inherit; background: transparent; font: inherit; text-align: left; cursor: pointer; }
+.weapon-card-subtitle { min-height: 44px; margin: 10px 0 20px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.weapon-card-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding-bottom: 20px; }
+.weapon-card-stat-label { display: block; margin-bottom: 5px; color: var(--muted); font-size: 9px; }
+.weapon-card-stat-value { color: var(--text); font-size: 13px; }
+.weapon-card-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 18px; border-top: 1px solid var(--rule); }
+.weapon-card-inspect, .weapon-card-build { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; border: 0; background: transparent; font-size: 13px; cursor: pointer; transition: color 200ms ease, background 200ms ease; }
+.weapon-card-inspect { padding: 9px 12px; color: var(--white); background: var(--black); clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px); }
+.weapon-card-inspect > .icon { color: var(--green); }
+.weapon-card-inspect:hover { color: var(--black); background: var(--green); }
+.weapon-card-inspect:hover > .icon { color: inherit; }
+.weapon-card-build { color: var(--muted); }
+.weapon-card-build > .icon { color: var(--accent); }
+.weapon-card-build:hover { color: var(--text); }
+@media (max-width: 650px) {
+  .weapon-card-media { height: 235px; }
+  .weapon-card-content { padding: 22px 20px 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .weapon-card, .weapon-card-image, .weapon-card-inspect, .weapon-card-build { transition: none; } .weapon-card:hover { transform: none; } }

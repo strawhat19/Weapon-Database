@@ -1,0 +1,7 @@
+.armory-brand { display: inline-flex; align-items: center; gap: 18px; flex-shrink: 0; }
+.armory-brand__crest { width: 50px; height: 58px; object-fit: contain; }
+.armory-brand__wordmark { display: block; width: 158px; height: 58px; background: var(--text); -webkit-mask: var(--brand-wordmark) center / contain no-repeat; mask: var(--brand-wordmark) center / contain no-repeat; }
+.armory-brand--compact { gap: 14px; }
+.armory-brand--compact .armory-brand__crest { width: 40px; height: 47px; }
+.armory-brand--compact .armory-brand__wordmark { width: 124px; height: 46px; }
+@media (max-width: 800px) { .armory-brand { gap: 12px; } .armory-brand__crest { width: 40px; height: 47px; } .armory-brand__wordmark { width: 126px; height: 47px; } }

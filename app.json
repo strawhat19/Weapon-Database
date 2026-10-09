@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Weapon Database",
+    "slug": "weapon-database",
+    "scheme": "weapon-database",
+    "version": "1.0.0",
+    "platforms": ["web"],
+    "plugins": ["expo-router"],
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./public/media/brand/app-icons/v2/01-crest-steel-shield-192.png"
+    }
+  }
+}

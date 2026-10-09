@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="app-icon-title app-icon-description">
+<title id="app-icon-title">Weapon Database — Crest-Shaped Silver Steel Badge</title>
+<desc id="app-icon-description">The exact approved armory crest on a larger brushed silver steel backing made from the same shield contour. A silver rim follows the crest silhouette; the surrounding square canvas is transparent. Original crest geometry and colors are unchanged.</desc>
+<defs>
+<linearGradient id="steel-base" x1="0" y1="0" x2="788" y2="914" gradientUnits="userSpaceOnUse"><stop stop-color="#CBD3D7"/><stop offset=".19" stop-color="#F1F4F5"/><stop offset=".45" stop-color="#B9C3C8"/><stop offset=".70" stop-color="#E1E6E8"/><stop offset="1" stop-color="#AAB7BE"/></linearGradient>
+<linearGradient id="steel-light" x1="0" y1="0" x2="788" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF" stop-opacity=".02"/><stop offset=".32" stop-color="#FFFFFF" stop-opacity=".25"/><stop offset=".63" stop-color="#FFFFFF" stop-opacity=".02"/><stop offset="1" stop-color="#202A30" stop-opacity=".10"/></linearGradient>
+<pattern id="steel-brushing" width="8" height="64" patternUnits="userSpaceOnUse"><path d="M1 0V64M6 0V64" stroke="#FFFFFF" stroke-width=".7" opacity=".18"/><path d="M3 0V64" stroke="#4E606A" stroke-width=".6" opacity=".12"/></pattern>
+</defs>
+<g transform="translate(118 55)">
+<g id="crest-shaped-steel-backing" transform="translate(394 457) scale(1.10) translate(-394 -457)">
+<path d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="url(#steel-base)" stroke="#52626A" stroke-opacity=".28" stroke-width="42" stroke-linejoin="miter"/>
+<path d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="url(#steel-base)" stroke="#FFFFFF" stroke-opacity=".65" stroke-width="38" stroke-linejoin="miter"/>
+<path d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="url(#steel-base)" stroke="url(#steel-base)" stroke-width="34" stroke-linejoin="miter"/>
+<path d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="url(#steel-light)" stroke="url(#steel-light)" stroke-width="34" stroke-linejoin="miter"/>
+<path d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="url(#steel-brushing)" stroke="url(#steel-brushing)" stroke-width="34" stroke-linejoin="miter"/>
+</g>
+
+<title id="crest-title">Weapon Database Armory Crest — v23</title>
+<desc id="crest-description">The v22 crest refined with a connected receiver opening that establishes the foreground rifle edge and merges naturally into the blade V and rear trigger pocket, without a separate rectangular crossing bar. Three mirrored rows of black ports and a centered service recess add detail beside the unbordered gray joining rails. The full-width magazine separators, current colors, native vector construction and transparent surrounding canvas are preserved.</desc>
+<g id="armory-crest-v23">
+<path id="shield-contour" d="M394 46L742 159V450C742 627 637 770 394 868C151 770 46 627 46 450V159Z" fill="#020302" stroke="#81BC34" stroke-width="28" stroke-linejoin="miter"/>
+<g id="shield-panels-left"><path id="shield-upper-panel" d="M218 137L320 103L254 211Z" fill="#375540"/>
+<path id="shield-upper-side-panel" d="M74 177L122 162L74 220Z" fill="#375540"/>
+<path id="shield-middle-side-panel" d="M74 246L106 284L74 318Z" fill="#375540"/>
+<path id="shield-central-side-panel" d="M74 328L136 389L74 464Z" fill="#375540"/>
+<path id="shield-lower-side-panel" d="M78.121 507L169 612L128.162 640C101.518 598.768 85.238 554.678 78.121 507Z" fill="#375540"/>
+<path id="shield-bottom-panel" d="M225 701L323.503 805C287.835 786.467 256.434 766.754 229.066 746Z" fill="#375540"/></g><use id="shield-panels-left-mirrored" href="#shield-panels-left" transform="translate(788 0) scale(-1 1)"/>
+<g id="shield-hardware-left"><path id="shield-top-black-slot" d="M55 151L124 129L127 137L58 159Z" fill="#000000"/>
+<rect id="shield-red-marker" x="132" y="121" width="10" height="10" fill="#E5302B" transform="rotate(-18.5 137 126)"/>
+<path id="shield-top-metal-frame" d="M169 111L319 64L323 75L173 122Z" fill="#565B64"/>
+<path id="shield-top-metal-inlay" d="M190 105L271 80L273 87L192 112Z" fill="#859398"/>
+<rect id="shield-side-metal-frame" x="42" y="191" width="10" height="100" fill="#565B64"/>
+<rect id="shield-side-metal-inlay" x="44" y="194" width="6" height="58" fill="#859398"/>
+<path id="shield-lower-metal-frame" d="M48.152 493C51.708 527.805 59.709 561.169 72.431 593" fill="none" stroke="#565B64" stroke-width="12" stroke-linecap="butt"/>
+<path id="shield-lower-metal-inlay" d="M53.728 530C57.792 550.201 63.483 569.874 70.861 589" fill="none" stroke="#859398" stroke-width="6" stroke-linecap="butt"/>
+<path id="shield-lower-black-slot" d="M95.914 641C105.542 657.474 116.615 673.479 129.178 689" fill="none" stroke="#000000" stroke-width="9" stroke-linecap="butt"/>
+<path id="shield-bottom-metal-frame" d="M175.62 738C192.737 753.589 211.646 768.595 232.403 783" fill="none" stroke="#565B64" stroke-width="12" stroke-linecap="butt"/>
+<path id="shield-bottom-metal-inlay" d="M201.459 760C209.973 766.788 218.858 773.455 228.119 780" fill="none" stroke="#859398" stroke-width="6" stroke-linecap="butt"/></g><use id="shield-hardware-left-mirrored" href="#shield-hardware-left" transform="translate(788 0) scale(-1 1)"/>
+<g id="scope-left"><path id="scope-upper-arc" d="M199.042 339.489A238 238 0 0 1 352.672 241.616L355.797 259.342A220 220 0 0 0 213.787 349.813Z" fill="#F8F8F8"/>
+<path id="scope-upper-inlay" d="M221.172 325.762A229 229 0 0 1 282.979 275.712" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="scope-side-upper-arc" d="M156.58 459.398A238 238 0 0 1 167.649 402.454L184.768 408.016A220 220 0 0 0 174.536 460.654Z" fill="#F8F8F8"/>
+<path id="scope-side-upper-inlay" d="M165.871 456.041A229 229 0 0 1 172.803 416.73" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="scope-side-lower-arc" d="M199.042 612.511A238 238 0 0 1 156.58 492.602L174.536 491.346A220 220 0 0 0 213.787 602.187Z" fill="#F8F8F8"/>
+<path id="scope-side-lower-inlay" d="M199.797 597.352A229 229 0 0 1 180.21 558.066" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="scope-bottom-arc" d="M352.672 710.384A238 238 0 0 1 254.107 668.546L264.687 653.984A220 220 0 0 0 355.797 692.658Z" fill="#F8F8F8"/>
+<path id="scope-bottom-inlay" d="M315.677 691.19A229 229 0 0 1 279.5 674.32" fill="none" stroke="#000000" stroke-width="5.5" stroke-linecap="round"/>
+<path id="scope-black-notch-1" d="M334.462 268.367L328.95 249.142" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="scope-black-notch-2" d="M189.768 546.323L170.858 552.834" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="scope-black-notch-3" d="M299.312 670.14L290.544 688.115" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="scope-radial-tick-1" d="M272.715 320.762L253.014 295.546" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="scope-radial-tick-2" d="M339.699 286.631L330.879 255.871" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="scope-radial-tick-3" d="M207.733 540.137L177.476 550.555" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="scope-radial-tick-4" d="M226.935 580.394L199.797 597.352" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="scope-radial-tick-5" d="M307.641 653.062L293.613 681.824" fill="none" stroke="#F8F8F8" stroke-width="6"/>
+<path id="scope-horizontal-register" d="M100 468H199L193 476L199 484H100Z" fill="#F8F8F8"/>
+<rect id="scope-horizontal-inlay" x="119" y="473.5" width="54" height="5" fill="#000000" rx="0.75"/>
+<rect id="scope-red-register" x="201" y="468" width="4" height="16" fill="#E5302B"/>
+<rect id="scope-inner-register" x="334" y="354" width="21" height="13" fill="#F8F8F8"/></g><use id="scope-left-mirrored" href="#scope-left" transform="translate(788 0) scale(-1 1)"/>
+<g id="armory-bow-arrow-clean">
+    <path id="bow-outer-limb" fill="none" stroke="#F8F8F8" stroke-width="3" stroke-linecap="round" d="M193 154C217 174 230 202 230 230C230 258 217 286 193 306"/>
+    <path id="bow-inner-limb" fill="none" stroke="#F8F8F8" stroke-width="3" stroke-linecap="round" d="M193 154C213 174 224 202 224 230C224 258 213 286 193 306"/>
+    <path id="bow-straight-string" fill="none" stroke="#F8F8F8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M193 154L122 230L193 306"/>
+    <path id="arrow-open-head-white" fill="#F8F8F8" fill-rule="evenodd" d="M243 222L270 230L243 238L248 230ZM249 226L262 230L249 234L252 230Z"/>
+    <path id="arrow-horizontal-shaft" fill="none" stroke="#F8F8F8" stroke-width="3.4" d="M116 230H248"/>
+    <path id="arrow-dark-silver-hardware" fill="none" stroke="#859398" stroke-width="3.4" d="M205 230H230"/>
+    <path id="arrow-white-fletching-outline" fill="#F8F8F8" d="M94 222H111L121 230L111 238H94L101 230Z"/>
+    <path id="arrow-red-fletching" fill="#E5302B" d="M98 225H109L115 230L109 235H98L104 230Z"/>
+    <circle id="bow-upper-white-cap" r="5" cx="193" cy="154" fill="#F8F8F8"/>
+    <circle id="bow-lower-white-cap" r="5" cx="193" cy="306" fill="#F8F8F8"/>
+    <path id="bow-upper-red-attachment" fill="#E5302B" d="M193 155L197 160L193 165L189 160Z"/>
+    <path id="bow-lower-red-attachment" fill="#E5302B" d="M193 295L197 300L193 305L189 300Z"/>
+  </g>
+<g id="v18-crest-jet" stroke-linejoin="round" stroke-linecap="round">
+  <defs>
+    <g id="v18-crest-jet-left-wing">
+      <path id="v18-crest-jet-left-tail-fin" d="M597 256 L608 278 L592 295 L578 292 L575 282 Z" fill="#F8F8F8" stroke="#000000" stroke-width="2"/>
+      <path id="v18-crest-jet-left-tail-seam" d="M598 266 L579 291" fill="none" stroke="#000000" stroke-width="1.8"/>
+      <path id="v18-crest-jet-left-inner-pylon" d="M586 220 V205 H590 V218" fill="#F8F8F8" stroke="#000000" stroke-width="1.2"/>
+      <path id="v18-crest-jet-left-inner-pylon-cap" d="M586 205 H590" fill="none" stroke="#E5302B" stroke-width="0.8"/>
+      <path id="v18-crest-jet-left-outer-pylon" d="M558 238 V226 C558 221 564 221 564 226 V235 Z" fill="#F8F8F8"/>
+      <path id="v18-crest-jet-left-outer-pylon-cap" d="M558 229 V225 C558 220.5 564 220.5 564 225 V229 Z" fill="#E5302B"/>
+      <path id="v18-crest-jet-left-wing-surface" d="M598 214 L545 244 V260 H586 L605 254 L598 247 Z" fill="#F8F8F8" stroke="#000000" stroke-width="2"/>
+      <path id="v18-crest-jet-left-wing-rear-facet" d="M549 257 L598 246 L603 252 L586 258 H549 Z" fill="#859398" opacity="0.35"/>
+      <path id="v18-crest-jet-left-wing-slot" d="M559 240 L587 227 L586.5 232.5 L560 244.8 C558.6 245.5 557.5 245 557.5 243.5 C557.5 241.9 558 240.6 559 240 Z" fill="#000000"/>
+      <path id="v18-crest-jet-left-wing-trailing-seam" d="M548 257 L598 246" fill="none" stroke="#000000" stroke-width="2"/>
+    </g>
+  </defs>
+  <use id="v18-crest-jet-left-wing-instance" href="#v18-crest-jet-left-wing"/>
+  <use id="v18-crest-jet-right-wing-instance" href="#v18-crest-jet-left-wing" transform="translate(1228 0) scale(-1 1)"/>
+  <path id="v18-crest-jet-fuselage" d="M614 149 L622 166 L624 199 L631 218 L628 248 L614 296 L600 248 L597 218 L604 199 L606 166 Z" fill="#F8F8F8" stroke="#000000" stroke-width="2"/>
+  <path id="v18-crest-jet-rear-engine" d="M608 260 Q614 258.5 620 260 L618 278 L614 296 L610 278 Z" fill="#F8F8F8" stroke="#000000" stroke-width="1.6"/>
+  <path id="v18-crest-jet-rear-engine-seam" d="M614 261 V293" fill="none" stroke="#000000" stroke-width="1.2"/>
+  <path id="v18-crest-jet-center-seam" d="M614 155 V178 M614 216 V260" fill="none" stroke="#000000" stroke-width="1.6"/>
+  <path id="v18-crest-jet-cockpit" d="M614 179 C607.8 179 607.8 215 614 215 C620.2 215 620.2 179 614 179 Z" fill="#000000" stroke="#E5302B" stroke-width="1.35"/>
+</g>
+
+<g id="rifle-magazines"><g id="rifle-magazines-left"><g transform="translate(110 306) rotate(38)"><defs><clipPath id="rifle-magazine-clip"><path id="rifle-magazine-clip-outline" d="M295 90H340C345 125 343 165 336 196L281 183C294 151 298 119 295 90Z" fill="#F8F8F8"/></clipPath></defs>
+<path id="rifle-magazine-body" d="M295 90H340C345 125 343 165 336 196L281 183C294 151 298 119 295 90Z" fill="#17181A" stroke="#000000" stroke-width="5" stroke-linejoin="round"/>
+<g id="rifle-magazine-full-length-rails" clip-path="url(#rifle-magazine-clip)">
+<path id="rifle-magazine-rail-1" d="M301 80C307 115 306 157 289 201" fill="none" stroke="#859398" stroke-width="4.5"/>
+<path id="rifle-magazine-rail-2" d="M317 80C323 115 322 157 305 201" fill="none" stroke="#859398" stroke-width="4.5"/>
+<path id="rifle-magazine-rail-3" d="M333 80C339 115 338 157 321 201" fill="none" stroke="#859398" stroke-width="4.5"/>
+<path id="rifle-magazine-leading-highlight" d="M301.53 84C302.8 95 303.6 101 304.2 108" fill="none" stroke="#F8F8F8" stroke-width="2"/>
+</g></g></g><use id="rifle-magazines-left-mirrored" href="#rifle-magazines-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="rifle-green-frames"><g id="rifle-green-frames-left"><g transform="translate(110 306) rotate(38)"><rect id="rifle-muzzle-frame" x="0" y="-12" width="42" height="24" fill="#81BC34"/>
+<rect id="rifle-barrel-shroud" x="48" y="-9" width="55" height="18" fill="#81BC34"/>
+<path id="rifle-forearm" d="M110-24H252V27H178V29H126V25H110Z" fill="#81BC34"/>
+<path id="rifle-receiver" d="M250-22H255L259-12H273L284-20H354V24L337 32H267L258 23H250Z" fill="#81BC34"/>
+<path id="rifle-trigger-frame" d="M282 24H333L343 48V81L347 87H375L378 90.5L347 94L335 87H287L282 81V50Z" fill="#81BC34"/>
+<path id="rifle-grip-upper-casing" d="M328 24H354L357 36V57H336L331 49Z" fill="#81BC34"/>
+<path id="rifle-curved-stock-neck" d="M283 82H295C300 120 293 154 284 183L273 180C284 149 288 117 283 82Z" fill="#81BC34"/>
+<path id="rifle-rear-stock-pad" d="M268 188L327 202L322 221L263 207Z" fill="#81BC34"/>
+<path id="rifle-fork-stock" d="M273 213L284 216L281 234L300 240L315 253L312 221H318L324 254L325 270L302 265V258Q302 252 297 249L292 247Q288 247 285 252L283 260L265 256L258 251V240L264 234Z" fill="#81BC34"/></g></g><use id="rifle-green-frames-left-mirrored" href="#rifle-green-frames-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="rifle-black-cutouts"><g id="rifle-black-cutouts-left"><g transform="translate(110 306) rotate(38)"><rect id="rifle-muzzle-opening" x="5" y="-7" width="30" height="14" fill="#000000"/>
+<rect id="rifle-barrel-slot" x="59" y="-3" width="31" height="6" fill="#000000" rx="1.5"/>
+<rect id="rifle-top-vent-1" x="126" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="rifle-top-vent-2" x="148" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="rifle-top-vent-3" x="170" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="rifle-top-vent-4" x="192" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="rifle-top-vent-5" x="214" y="-17" width="14" height="7" fill="#000000"/>
+<rect id="rifle-top-vent-6" x="236" y="-17" width="14" height="7" fill="#000000"/>
+<path id="rifle-front-window" d="M130 0H170L177 5V24L174 27H131L128 23V3Z" fill="#000000"/>
+<path id="rifle-rear-window" d="M183 0H242L248 7V22L245 25H183L180 22V3Z" fill="#000000"/>
+<path id="rifle-front-collar-separation" d="M117-5H126V22L124 25H119L117 22Z" fill="#000000"/>
+<path id="rifle-receiver-slot" d="M283-11H332L336-7V6H283L280 3V-8Z" fill="#000000"/>
+<path id="rifle-receiver-lower-recess" d="M288 13H334V17H288Z" fill="#000000"/>
+<path id="rifle-magazine-stock-band-separation" d="M268 188L327 202" fill="none" stroke="#000000" stroke-width="4.5"/>
+<path id="rifle-stock-pad-bottom-separation" d="M263 207L322 221" fill="none" stroke="#000000" stroke-width="6"/>
+<path id="rifle-stock-hook-separation" d="M283 260L285 252Q288 247 292 247L297 249Q302 252 302 258V265" fill="none" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/>
+<path id="rifle-trigger-opening" d="M290 29H296L302 35V39H313L319 33H322L324 45L328 49H332L335 53V70Q335 73 332 73H325L321 61H316L312 58L309 64L303 67V72H290Q287 72 287 67V36Z" fill="#000000"/>
+<circle id="rifle-selector-clearance" cx="316" cy="57" r="6.5" fill="#000000"/>
+<path id="rifle-grip-upper-recess" d="M342 43H352L355 47L353 53H343L340 50V46Z" fill="#000000"/>
+<path id="rifle-receiver-shoulder-relief" d="M253 23H268L273 27H264L259 25Z" fill="#000000"/></g></g><use id="rifle-black-cutouts-left-mirrored" href="#rifle-black-cutouts-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="rifle-gray-hardware"><g id="rifle-gray-hardware-left"><g transform="translate(110 306) rotate(38)"><rect id="rifle-muzzle-rear-ring" x="35" y="-12" width="7" height="24" fill="#859398"/>
+<rect id="rifle-top-rail" x="116" y="-27" width="134" height="4.5" fill="#859398"/>
+<path id="rifle-rail-spike-1" d="M116-26.5L117.8-33.5H123L125-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-2" d="M127.4-26.5L129.2-33.5H134.4L136.4-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-3" d="M138.8-26.5L140.6-33.5H145.8L147.8-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-4" d="M150.2-26.5L152-33.5H157.2L159.2-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-5" d="M161.6-26.5L163.4-33.5H168.6L170.6-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-6" d="M173-26.5L174.8-33.5H180L182-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-7" d="M184.4-26.5L186.2-33.5H191.4L193.4-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-8" d="M195.8-26.5L197.6-33.5H202.8L204.8-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-9" d="M207.2-26.5L209-33.5H214.2L216.2-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-10" d="M218.6-26.5L220.4-33.5H225.6L227.6-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-11" d="M230-26.5L231.8-33.5H237L239-26.5Z" fill="#859398"/>
+<path id="rifle-rail-spike-12" d="M241.4-26.5L243.2-33.5H248.4L250.4-26.5Z" fill="#859398"/>
+<rect id="rifle-underbarrel-rail" x="177" y="26" width="71" height="5" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-1" d="M179 30H186V34H182L179 31Z" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-2" d="M189 30H196V34H192L189 31Z" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-3" d="M199 30H206V34H202L199 31Z" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-4" d="M209 30H216V34H212L209 31Z" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-5" d="M219 30H226V34H222L219 31Z" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-6" d="M229 30H236V34H232L229 31Z" fill="#859398"/>
+<path id="rifle-underbarrel-tooth-7" d="M239 30H246V34H242L239 31Z" fill="#859398"/>
+<path id="rifle-silver-insert" d="M136 3H163L167 6V10L164 12H136L133 9V6Z" fill="#859398"/>
+<path id="rifle-receiver-insert" d="M286 6H334V12H289Z" fill="#859398"/>
+<path id="rifle-window-leading-clip" d="M126 0H129V22L132 26H128L125 22V3Z" fill="#859398"/>
+<path id="rifle-window-trailing-clip" d="M171 7H175V24L173 27H169L171 23Z" fill="#859398"/>
+<path id="rifle-forearm-front-clip" d="M110 21H118L120 24L117 27H110Z" fill="#859398"/>
+<rect id="rifle-forearm-rear-clip" x="235" y="21" width="10" height="6" fill="#859398"/>
+<path id="rifle-stock-inlay" d="M313.55 223H317.05L321.89 251H316.39Z" fill="#859398" stroke="#000000" stroke-width="1" stroke-linejoin="round"/>
+<circle id="rifle-stock-bolt" cx="269" cy="243" r="6.5" fill="#859398"/>
+<circle id="rifle-stock-bolt-center" cx="269" cy="243" r="2.8" fill="#000000"/></g></g><use id="rifle-gray-hardware-left-mirrored" href="#rifle-gray-hardware-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="rifle-white-details"><g id="rifle-white-details-left"><g transform="translate(110 306) rotate(38)"><path id="rifle-silver-insert-highlight" d="M136 4.5H162L164.5 6.5V9.5L162.5 10.5H137L135 8.5V6.5Z" fill="none" stroke="#F8F8F8" stroke-width="1.5" stroke-linejoin="miter"/>
+<rect id="rifle-receiver-insert-highlight" x="288" y="6" width="36" height="1.5" fill="#F8F8F8"/>
+<rect id="rifle-indicator" x="222" y="12" width="18" height="5" fill="#F8F8F8" rx="0.5"/>
+<path id="rifle-trigger" d="M296 43H319L320 47H296Z" fill="#F8F8F8"/></g></g><use id="rifle-white-details-left-mirrored" href="#rifle-white-details-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="rifle-red-selectors"><g id="rifle-red-selectors-left"><g transform="translate(110 306) rotate(38)"><circle id="rifle-selector" cx="316" cy="57" r="4.5" fill="#E5302B"/><circle id="rifle-stock-pin" cx="309" cy="259" r="3" fill="#372126"/></g></g><use id="rifle-red-selectors-left-mirrored" href="#rifle-red-selectors-left" transform="translate(788 0) scale(-1 1)"/></g>
+<g id="rifle-straight-black-separators"><g id="rifle-straight-black-separators-left"><g transform="translate(110 306) rotate(38)"><defs>
+  <clipPath id="rifle-magazine-mouth-silhouette">
+  <path id="rifle-magazine-mouth-trigger-frame-clip" d="M282 24H333L343 48V81L347 87H375L378 90.5L347 94L335 87H287L282 81V50Z" fill="#F8F8F8"/>
+  <path id="rifle-magazine-mouth-stock-neck-clip" d="M283 82H295C300 120 293 154 284 183L273 180C284 149 288 117 283 82Z" fill="#F8F8F8"/>
+  <path id="rifle-magazine-mouth-body-clip" d="M295 90H340C345 125 343 165 336 196L281 183C294 151 298 119 295 90Z" fill="#F8F8F8"/>
+  </clipPath>
+  <clipPath id="rifle-magazine-mouth-region"><rect id="rifle-magazine-mouth-region-clip" x="280" y="83" width="64" height="15" fill="#F8F8F8"/></clipPath>
+  </defs>
+  <g id="rifle-full-width-magazine-separator" clip-path="url(#rifle-magazine-mouth-region)"><g clip-path="url(#rifle-magazine-mouth-silhouette)">
+  <path id="rifle-magazine-mouth-straight-separation" d="M280 86.9L347 93.6" fill="none" stroke="#000000" stroke-width="4.5" stroke-linecap="butt"/>
+  </g></g>
+<path id="rifle-receiver-slot-straight-separation" d="M288 15H334" fill="none" stroke="#000000" stroke-width="4" stroke-linecap="butt"/></g></g><use id="rifle-straight-black-separators-left-mirrored" href="#rifle-straight-black-separators-left" transform="translate(788 0) scale(-1 1)"/></g>
+<path id="central-rifle-mount-and-tang" d="M394 488L432 520L426 548V570H420V630H400V601H388V630H368V570H362V548L356 520Z" fill="#81BC34"/>
+<g id="foreground-rifle-receiver-occlusion" transform="translate(110 306) rotate(38)"><path id="foreground-rifle-connected-receiver-opening" d="M283-11H329L340-18L350-23L405-22L414-20L430-18L436-14L435-10L430-9L413-14H350L340-9L336 6H283L280 3V-8Z" fill="#000000"/></g>
+<path id="sword-bold-lower-separation" d="M364 468L394 496L424 468" fill="none" stroke="#000000" stroke-width="18" stroke-linejoin="miter"/>
+
+<path id="sword-blade" d="M394 80L424 148V468L394 496L364 468V148Z" fill="#F8F8F8"/>
+<path id="sword-central-groove" d="M394 132V490" fill="none" stroke="#000000" stroke-width="7"/>
+<g id="junction-side-ports-left"><rect id="junction-black-port-1" x="376" y="528" width="5" height="4" fill="#000000"/><rect id="junction-black-port-2" x="376" y="538" width="5" height="4" fill="#000000"/><rect id="junction-black-port-3" x="376" y="548" width="5" height="4" fill="#000000"/></g><use id="junction-side-ports-left-mirrored" href="#junction-side-ports-left" transform="translate(788 0) scale(-1 1)"/>
+<rect id="junction-centered-service-recess" x="392" y="535" width="4" height="4" fill="#000000"/>
+<rect id="junction-left-metal-rail" x="386" y="522" width="3" height="29" fill="#859398"/>
+<rect id="junction-right-metal-rail" x="399" y="522" width="3" height="29" fill="#859398"/>
+<circle id="junction-left-fastener" cx="382" cy="564" r="4.5" fill="#372126"/>
+<circle id="junction-right-fastener" cx="406" cy="564" r="4.5" fill="#372126"/>
+<rect id="junction-centered-opening" x="389" y="573" width="10" height="15" fill="#000000" rx="1.5"/>
+<rect id="sword-crossguard" x="340" y="639" width="108" height="22" fill="#F8F8F8" rx="11"/>
+<g id="v19-sword-handle">
+  <path id="v19-sword-red-collar" d="M376 668 H412 L410 679 H378 Z" fill="#E5302B"/>
+  <path id="v19-sword-grip-backing" d="M377 679 H411 L405 762 H383 Z" fill="#000000"/>
+  <path id="v19-sword-grip-band-1" d="M377.217 682 H410.783 L410.06 692 H377.94 Z" fill="#859398"/>
+  <path id="v19-sword-grip-band-2" d="M378.084 694 H409.916 L409.482 700 H378.518 Z" fill="#F8F8F8"/>
+  <path id="v19-sword-grip-band-3" d="M378.735 703 H409.265 L408.398 715 H379.602 Z" fill="#859398"/>
+  <path id="v19-sword-grip-band-4" d="M379.747 717 H408.253 L407.747 724 H380.253 Z" fill="#F8F8F8"/>
+  <path id="v19-sword-grip-band-5" d="M380.398 726 H407.602 L406.88 736 H381.12 Z" fill="#859398"/>
+  <path id="v19-sword-grip-band-6" d="M381.265 738 H406.735 L406.229 745 H381.771 Z" fill="#F8F8F8"/>
+  <path id="v19-sword-grip-band-7" d="M381.988 748 H406.012 L405.217 759 H382.783 Z" fill="#859398"/>
+</g>
+
+<circle id="sword-pommel" cx="394" cy="791" r="26" fill="#F8F8F8"/>
+<circle id="sword-pommel-opening" cx="394" cy="791" r="15" fill="#000000"/>
+</g>
+
+</g>
+</svg>

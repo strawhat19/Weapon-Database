@@ -1,0 +1,40 @@
+.catalog-section { padding: 100px 0 104px; scroll-margin-top: 96px; }
+.catalog-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 36px; }
+.catalog-title { margin: 12px 0 0; max-width: 580px; font-family: "Weapon Rajdhani", sans-serif; font-size: clamp(36px, 3.8vw, 52px); font-weight: 600; line-height: 1.05; letter-spacing: -.7px; }
+.catalog-introduction { max-width: 320px; margin: 0 0 3px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.catalog-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.catalog-categories { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.catalog-category { padding: 10px 13px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: var(--muted); font-size: 14px; cursor: pointer; transition: color 180ms, background 180ms, border-color 180ms; }
+.catalog-category:hover { color: var(--text); }
+.catalog-category.is-active { border-color: var(--rule); background: var(--surface); color: var(--text); }
+.catalog-category.is-active::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 8px; border-radius: 50%; background: var(--accent); vertical-align: middle; }
+.catalog-search { display: flex; align-items: center; gap: 10px; width: 260px; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 3px; color: var(--muted); background: var(--surface); }
+.catalog-search-input { width: 100%; min-width: 0; border: 0; outline: none; color: var(--text); background: transparent; font: inherit; font-size: 14px; }
+.catalog-search-input::placeholder { color: var(--muted); }
+.catalog-search:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
+.catalog-results-summary { display: flex; align-items: center; justify-content: space-between; min-height: 62px; gap: 16px; color: var(--muted); font-size: 11px; }
+.catalog-reset { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; border: 0; color: var(--text); background: transparent; font: inherit; cursor: pointer; }
+.catalog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.catalog-skeleton { overflow: hidden; border: 1px solid var(--rule); background: var(--surface); }
+.catalog-skeleton__image { height: 230px; background: var(--surface-deep); }
+.catalog-skeleton__copy { display: grid; gap: 18px; padding: 28px; }
+.catalog-skeleton__copy span { width: 80%; height: 12px; background: var(--rule); opacity: .4; }
+.catalog-skeleton__copy span:nth-child(2) { width: 56%; height: 24px; }
+.catalog-empty { display: flex; align-items: center; flex-direction: column; padding: 64px 24px; border: 1px solid var(--rule); color: var(--muted); text-align: center; }
+.catalog-empty-title { margin: 18px 0 8px; color: var(--text); font-family: "Weapon Rajdhani", sans-serif; font-size: 28px; }
+.catalog-empty-copy { margin: 0 0 24px; font-size: 16px; }
+@media (max-width: 1050px) {
+  .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .catalog-toolbar { align-items: stretch; flex-direction: column; gap: 14px; }
+  .catalog-search { width: 100%; }
+}
+@media (max-width: 650px) {
+  .catalog-section { padding: 64px 0; scroll-margin-top: 80px; }
+  .catalog-heading { align-items: flex-start; flex-direction: column; gap: 18px; margin-bottom: 28px; }
+  .catalog-introduction { max-width: 100%; }
+  .catalog-title { font-size: 36px; }
+  .catalog-categories { gap: 3px; }
+  .catalog-category { padding: 9px 10px; font-size: 13px; }
+  .catalog-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .catalog-category { transition: none; } }

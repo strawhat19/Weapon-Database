@@ -1,0 +1,15 @@
+.archive-index { padding: 26px 0 32px; border-top: 1px solid var(--rule); }
+.archive-index__row { display: grid; grid-template-columns: 2.1fr 1fr; align-items: center; gap: 40px; margin-top: 20px; }
+.archive-index__categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.archive-index__category { display: flex; gap: 18px; padding: 0; color: var(--text); background: transparent; border: 0; text-align: left; }
+.archive-index__category:hover strong { color: var(--accent); }
+.archive-index__number { padding-top: 8px; color: var(--accent); font-size: 11px; font-weight: 400; }
+.archive-index__category strong { display: block; font-size: clamp(22px, 2vw, 28px); line-height: 1.1; transition: color 200ms; }
+.archive-index__category small { display: block; margin-top: 10px; color: var(--muted); font-family: "Weapon Barlow", sans-serif; font-size: 14px; font-weight: 400; white-space: nowrap; }
+.archive-index__journal { display: flex; justify-content: space-between; align-items: center; gap: 20px; border: 0; border-left: 1px solid var(--rule); padding: 6px 0 6px 36px; color: var(--text); background: transparent; text-align: left; }
+.archive-index__journal .eyebrow { display: block; margin-bottom: 12px; color: var(--accent); font-size: 9px; }
+.archive-index__journal strong, .archive-index__journal span span { display: block; font-size: 24px; line-height: 1.05; }
+.archive-index__journal span span { margin-top: 4px; color: var(--muted); font-size: 21px; }
+.archive-index__journal .icon { color: var(--accent); }
+@media (max-width: 1050px) { .archive-index__row { grid-template-columns: 1fr; } .archive-index__journal { border-left: 0; border-top: 1px solid var(--rule); padding: 22px 0 0; } }
+@media (max-width: 600px) { .archive-index { padding-top: 24px; } .archive-index > .eyebrow { display: none; } .archive-index__row { gap: 24px; margin: 0; } .archive-index__categories { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; } .archive-index__category small { display: none; } .archive-index__category strong { font-size: 25px; } .archive-index__category { gap: 16px; } .archive-index__journal strong { display: inline; font-size: 21px; } .archive-index__journal span span { display: inline; margin-left: 4px; font-size: 19px; } }

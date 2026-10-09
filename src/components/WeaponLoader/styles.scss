@@ -1,0 +1,52 @@
+.weapon-loader { display: grid; justify-items: center; align-content: center; position: absolute; inset: 0; z-index: 1; gap: 14px; opacity: 1; visibility: visible; pointer-events: none; transition: opacity 500ms ease, visibility 0s; }
+.weapon-loader[data-active='false'] { opacity: 0; visibility: hidden; transition: opacity 500ms ease, visibility 0s 500ms; }
+.weapon-loader__crest { position: relative; width: clamp(128px, 12vw, 176px); aspect-ratio: 788 / 914; overflow: hidden; animation: weapon-crest-spectrum 4s steps(1, end) infinite; }
+.weapon-loader__mark, .weapon-loader__scan, .weapon-loader__slice { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; user-select: none; }
+.weapon-loader__mark { animation: weapon-crest-glitch 4s steps(1, end) infinite; }
+.weapon-loader__slice { opacity: 0; animation: weapon-crest-slice 4s steps(1, end) infinite; }
+.weapon-loader__slice--upper { --glitch-shift: 10px; clip-path: inset(18% 0 59%); filter: drop-shadow(-3px 0 var(--green)); }
+.weapon-loader__slice--lower { --glitch-shift: -8px; clip-path: inset(60% 0 14%); animation-delay: -.12s; filter: drop-shadow(3px 0 var(--white)); }
+.weapon-loader__slice--bands { --glitch-shift: 14px; animation-delay: -.24s; filter: grayscale(1) contrast(1.8); -webkit-mask-image: repeating-linear-gradient(0deg, transparent 0 8px, #000 8px 13px, transparent 13px 22px); mask-image: repeating-linear-gradient(0deg, transparent 0 8px, #000 8px 13px, transparent 13px 22px); }
+.weapon-loader__scan { opacity: 0; filter: grayscale(1) brightness(2) contrast(1.5); clip-path: inset(0 0 98%); animation: weapon-crest-scan 4s linear infinite; }
+.weapon-loader__label { color: var(--text); font-size: 11px; font-weight: 400; line-height: 1.5; letter-spacing: 1.2px; }
+.weapon-loader__signal { position: relative; width: 56px; height: 2px; overflow: hidden; background: color-mix(in srgb, var(--accent) 18%, transparent); }
+.weapon-loader__signal::after { position: absolute; inset: 0; content: ''; background: var(--green); transform: translateX(-100%); animation: weapon-loader-signal 1.8s ease-in-out infinite; }
+.weapon-loader[data-active='false'] .weapon-loader__mark, .weapon-loader[data-active='false'] .weapon-loader__scan, .weapon-loader[data-active='false'] .weapon-loader__crest, .weapon-loader[data-active='false'] .weapon-loader__slice, .weapon-loader[data-active='false'] .weapon-loader__signal::after { animation-play-state: paused; }
+@keyframes weapon-crest-spectrum {
+  0%, 5%, 11%, 62%, 70%, 100% { filter: grayscale(0) contrast(1) brightness(1); }
+  2%, 8%, 59%, 67% { filter: grayscale(1) contrast(1.8) brightness(1.1); }
+  3%, 9%, 60%, 68% { filter: grayscale(1) contrast(2.2) brightness(1.2); }
+}
+@keyframes weapon-crest-glitch {
+  0%, 5%, 11%, 62%, 70%, 100% { opacity: 1; transform: translate(0) skewX(0) scaleX(1); }
+  2%, 59% { opacity: .9; transform: translate(4px, -2px) skewX(-6deg) scaleX(1.025); }
+  3%, 60% { opacity: .2; transform: translate(-3px, 1px) skewX(3deg) scaleX(.98); }
+  4%, 61% { opacity: 1; transform: translate(1px, 0) skewX(-2deg) scaleX(1); }
+  8%, 67% { opacity: .85; transform: translate(-4px, 1px) skewX(5deg) scaleX(.985); }
+  9%, 68% { opacity: .5; transform: translate(3px, -1px) skewX(-3deg) scaleX(1.03); }
+  10%, 69% { opacity: 1; transform: translate(-1px, 0) skewX(1deg) scaleX(1); }
+}
+@keyframes weapon-crest-slice {
+  0%, 5%, 11%, 62%, 70%, 100% { opacity: 0; transform: translateX(0) skewX(0); }
+  2%, 8%, 59%, 67% { opacity: .95; transform: translateX(var(--glitch-shift)) skewX(-5deg); }
+  3%, 9%, 60%, 68% { opacity: .85; transform: translateX(calc(var(--glitch-shift) * -1)) skewX(4deg); }
+  4%, 10%, 61%, 69% { opacity: .6; transform: translateX(calc(var(--glitch-shift) * .5)) skewX(0); }
+}
+@keyframes weapon-crest-scan {
+  0%, 11%, 58%, 70%, 100% { opacity: 0; clip-path: inset(0 0 98%); }
+  12%, 71% { opacity: .7; clip-path: inset(0 0 98%); }
+  29%, 88% { opacity: .7; clip-path: inset(98% 0 0); }
+  30%, 89% { opacity: 0; clip-path: inset(98% 0 0); }
+}
+@keyframes weapon-loader-signal { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+@media (max-width: 900px) {
+  .weapon-loader { gap: 10px; }
+  .weapon-loader__crest { width: clamp(88px, 20vw, 116px); }
+  .weapon-loader__label { font-size: 9px; letter-spacing: .8px; }
+  .weapon-loader__signal { width: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .weapon-loader, .weapon-loader[data-active='false'] { transition: none; }
+  .weapon-loader__mark, .weapon-loader__scan, .weapon-loader__crest, .weapon-loader__slice, .weapon-loader__signal::after { animation: none; }
+  .weapon-loader__signal::after { transform: none; opacity: .6; }
+}

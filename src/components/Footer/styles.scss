@@ -1,0 +1,26 @@
+.site-footer { padding: 54px 0 0; border-top: 1px solid var(--rule); background: var(--background); }
+.footer-main { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-bottom: 42px; }
+.footer-description { max-width: 350px; margin: 18px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.footer-archive-note { min-width: 220px; padding-left: 30px; border-left: 1px solid var(--rule); }
+.footer-archive-label { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 9px; }
+.footer-archive-copy { margin: 12px 0 0; color: var(--text); font-family: "Weapon Rajdhani", sans-serif; font-size: 25px; font-weight: 500; line-height: 1.2; }
+.footer-bottom { display: flex; align-items: center; gap: 28px; min-height: 76px; border-top: 1px solid var(--rule); }
+.footer-copyright { flex: 1; margin: 0; color: var(--muted); font-size: 12px; }
+.footer-info-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+.footer-info-link { padding: 0; border: 0; color: var(--muted); background: transparent; font: inherit; font-size: 12px; cursor: pointer; }
+.footer-info-link:hover { color: var(--text); }
+.footer-piratechs { display: inline-flex; align-items: center; gap: 6px; padding-left: 24px; border-left: 1px solid var(--rule); color: var(--text); font-size: 12px; text-decoration: none; }
+@media (max-width: 800px) {
+  .footer-bottom { flex-wrap: wrap; justify-content: space-between; gap: 22px; padding: 26px 0; }
+  .footer-copyright { flex-basis: 100%; }
+  .footer-info-nav { gap: 18px; }
+}
+@media (max-width: 650px) {
+  .site-footer { padding-top: 40px; }
+  .footer-main { align-items: flex-start; flex-direction: column; gap: 30px; padding-bottom: 34px; }
+  .footer-archive-note { min-width: 0; padding-left: 0; border-left: 0; }
+  .footer-archive-copy { font-size: 23px; }
+  .footer-bottom { gap: 20px; }
+  .footer-info-nav { gap: 16px; }
+  .footer-piratechs { padding-left: 0; border-left: 0; }
+}

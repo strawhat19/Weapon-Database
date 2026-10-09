@@ -1,0 +1,15 @@
+{
+  "name": "Weapon Database",
+  "short_name": "Armory",
+  "id": "./",
+  "scope": "./",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#EDF0F2",
+  "theme_color": "#EDF0F2",
+  "description": "A weapon archive and personal visual loadout collection.",
+  "icons": [
+    { "src": "./media/brand/app-icons/v2/01-crest-steel-shield-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./media/brand/app-icons/v2/01-crest-steel-shield-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
