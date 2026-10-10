@@ -1,0 +1,12 @@
+ai/
+.git/
+.expo/
+.codex/
+.vercel/
+assets/
+dist/
+.env*
+env
+env.local
+node_modules/
+npm-debug.log*
