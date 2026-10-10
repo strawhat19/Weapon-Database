@@ -1,6 +1,6 @@
 # Weapon Database
 
-A responsive, single-page frontend based on the approved Armory Vault v9 direction. It retains the official v23 crest, local brand fonts, brushed steel dark and light themes, and the oval specimen frame.
+A responsive, single-page frontend based on the approved Armory Vault v9 direction. It retains the official v23 crest, local brand fonts, brushed steel dark and light themes, and the oval specimen frame. Guns, Swords, etc.
 
 ## Run locally
 
