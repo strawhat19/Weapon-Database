@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="vanguard-compound-title">
+<title id="vanguard-compound-title">Vanguard Compound — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="vanguard-compound-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="vanguard-compound-paint" x2=".2" y2="1"><stop stop-color="#e4d4af"/><stop offset=".48" stop-color="#c8ad79"/><stop offset="1" stop-color="#a1855d"/></linearGradient>
+<linearGradient id="vanguard-compound-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="vanguard-compound-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="vanguard-compound-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#c8ad79" d="M0 0H96V74H0Z"/><path fill="#a1855d" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#e4d4af" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path fill="none" stroke="#55616a" stroke-width="2" d="M586 76L314 179L586 285M575 86L488 177L575 274"/>
+<path fill="url(#vanguard-compound-camo)" d="M105 186L229 158H449L548 173L533 216L356 213L302 254L223 246L204 224H111L88 204Z"/>
+<path fill="#3f423b" d="M127 188L190 179L203 210L129 214ZM248 170H335L315 191H247ZM349 171H439L465 181L437 192H332Z"/>
+<path fill="url(#vanguard-compound-grip)" d="M242 212L302 216L279 283L253 293L229 276L248 240Z"/>
+<path fill="url(#vanguard-compound-steel)" d="M221 157L543 160L639 174V188L543 199L224 193Z"/>
+<path fill="#253039" d="M251 170H537L608 180L537 188H251Z"/>
+<path fill="none" stroke="#f1e5ca" stroke-width="2" d="M244 163H523"/>
+<path fill="url(#vanguard-compound-paint)" d="M521 171L543 119L561 82L584 86L569 131L550 173ZM521 189L543 241L561 279L584 275L569 229L550 187Z"/>
+<path fill="#3c4548" d="M533 163H557V197H533Z"/>
+<path fill="url(#vanguard-compound-steel)" d="M537 119L553 123L573 87L564 84ZM537 241L553 237L573 273L564 276Z"/>
+<circle cx="586" cy="75" r="31" fill="url(#vanguard-compound-grip)"/><circle cx="586" cy="75" r="21" fill="url(#vanguard-compound-paint)"/><circle cx="586" cy="75" r="9" fill="url(#vanguard-compound-steel)"/>
+<circle cx="586" cy="285" r="31" fill="url(#vanguard-compound-grip)"/><circle cx="586" cy="285" r="21" fill="url(#vanguard-compound-paint)"/><circle cx="586" cy="285" r="9" fill="url(#vanguard-compound-steel)"/>
+<path fill="none" stroke="#d6c18f" stroke-width="3" d="M568 66L604 84M577 93L595 57M568 276L604 294M577 303L595 267"/>
+<path fill="url(#vanguard-compound-grip)" d="M366 193H430L421 213H374Z"/>
+<path fill="url(#vanguard-compound-steel)" d="M352 133H391V157H352Z"/>
+<path fill="#283b46" d="M347 118H411L425 128L409 144H348L336 131Z"/>
+<path fill="#7ba0ad" stroke="none" d="M350 123H398L408 129H346Z"/>
+<path fill="none" stroke="#a08a61" stroke-width="4" d="M129 193L139 216M149 190L158 215M169 185L178 212"/></g>
+</svg>

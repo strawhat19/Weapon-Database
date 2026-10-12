@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="aurelius-longsword-title">
+<title id="aurelius-longsword-title">Aurelius Longsword — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="aurelius-longsword-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="aurelius-longsword-paint" x2=".2" y2="1"><stop stop-color="#e1e9ed"/><stop offset=".48" stop-color="#9cabb3"/><stop offset="1" stop-color="#617581"/></linearGradient>
+<linearGradient id="aurelius-longsword-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="aurelius-longsword-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="aurelius-longsword-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#9cabb3" d="M0 0H96V74H0Z"/><path fill="#617581" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#e1e9ed" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><g transform="rotate(-4 400 180)">
+<path fill="url(#aurelius-longsword-steel)" d="M237 155L642 158L751 180L642 202L237 205Z"/>
+<path fill="#e4edf1" stroke="none" d="M253 163L639 164L723 180L639 180L253 180Z"/>
+<path fill="#526775" stroke="none" d="M254 182L640 182L708 185L638 196L254 197Z"/>
+<path fill="none" stroke="#eef6f8" stroke-width="2" d="M263 169L631 169L693 179"/>
+<path fill="url(#aurelius-longsword-paint)" d="M220 130L239 135L253 161L259 197L240 231L220 236L226 202L223 163Z"/>
+<path fill="url(#aurelius-longsword-gold)" d="M223 157L238 160L244 196L227 204Z"/>
+<path fill="url(#aurelius-longsword-grip)" d="M119 163L219 164L223 202L117 201Z"/>
+<path stroke="#87959c" stroke-width="4" d="M131 166L139 199M147 166L155 199M163 166L171 199M179 166L187 199M195 166L203 200"/>
+<path fill="url(#aurelius-longsword-steel)" d="M105 158L119 164L118 201L104 211L88 203L82 185L89 169Z"/>
+<path fill="url(#aurelius-longsword-gold)" d="M103 170L113 183L104 196L94 184Z"/>
+</g></g>
+</svg>

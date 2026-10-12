@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="crescent-saber-title">
+<title id="crescent-saber-title">Crescent Saber — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="crescent-saber-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="crescent-saber-paint" x2=".2" y2="1"><stop stop-color="#889475"/><stop offset=".48" stop-color="#57674f"/><stop offset="1" stop-color="#28392e"/></linearGradient>
+<linearGradient id="crescent-saber-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="crescent-saber-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="crescent-saber-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#57674f" d="M0 0H96V74H0Z"/><path fill="#28392e" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#889475" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><g transform="rotate(-3 400 180)">
+<path fill="url(#crescent-saber-steel)" d="M234 175C420 193 602 157 709 94L741 110C619 216 417 238 234 201Z"/>
+<path fill="#e7eff2" stroke="none" d="M247 180C433 194 597 157 709 101L724 108C591 176 422 208 246 192Z"/>
+<path fill="#728795" stroke="none" d="M247 197C432 221 609 181 724 121C599 207 419 230 247 204Z"/>
+<path fill="none" stroke="#f0f8fa" stroke-width="2" d="M261 184C433 200 580 165 693 115"/>
+<path fill="url(#crescent-saber-gold)" d="M219 157L237 164L247 192L234 215L216 218L223 193Z"/>
+<path fill="url(#crescent-saber-paint)" d="M120 176L216 168L224 202L127 218L110 204Z"/>
+<path stroke="#19291e" stroke-width="5" d="M134 178L143 212M150 177L159 210M168 175L176 206M186 173L194 204"/>
+<path fill="url(#crescent-saber-gold)" d="M116 174C88 185 95 237 140 244L213 240C229 237 239 219 234 210L221 214C211 230 194 230 169 232L139 232C111 226 107 199 124 190Z"/>
+<path fill="url(#crescent-saber-gold)" d="M108 171L121 174L129 215L114 222L102 209L100 185Z"/>
+</g></g>
+</svg>

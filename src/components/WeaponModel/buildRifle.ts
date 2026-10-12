@@ -1,11 +1,12 @@
 import * as THREE from 'three';
-import type { SkinId } from '../../types/types';
+import { createWeaponFinish } from './weaponFinishes';
+import type { SkinId, OpticId } from '../../types/types';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
 type ProfilePoint = readonly [number, number];
 type RifleMaterial = THREE.MeshStandardMaterial | THREE.MeshPhysicalMaterial;
 
-export const createRifleModel = (skin: SkinId) => {
+export const createRifleModel = (skin: SkinId, optic: OpticId = `precision`) => {
   const object = new THREE.Group();
   const assembly = new THREE.Group();
   const geometries = new Set<THREE.BufferGeometry>();
@@ -319,48 +320,50 @@ export const createRifleModel = (skin: SkinId) => {
     bolt(x, 0.599, -0.213, 0.035);
   }
 
-  cylinder(-0.33, 1.125, 0, 0.165, 2.56, scopeMetal, `x`, `Scope Main Tube`);
-  cylinder(-1.488, 1.125, 0, 0.268, 0.68, scopeMetal, `x`, `Scope Objective Housing`, 0.25);
-  cylinder(-1.06, 1.125, 0, 0.25, 0.2, scopeMetal, `x`, `Scope Objective Taper`, 0.165);
-  cylinder(0.762, 1.125, 0, 0.165, 0.48, scopeMetal, `x`, `Scope Ocular Taper`, 0.217);
-  cylinder(1.067, 1.125, 0, 0.217, 0.19, scopeMetal, `x`, `Scope Ocular Rim`);
-  for (const [x, radius] of [[-1.807, 0.265], [-1.72, 0.262], [-1.157, 0.248], [1.143, 0.216], [1.017, 0.209]]) {
-    ring(x, 1.125, 0, radius, 0.015, edgeSteel, `x`, `Scope Housing Edge`);
-  }
-  for (let index = 0; index < 28; index += 1) {
-    const angle = index * Math.PI * 2 / 28;
-    for (const x of [-1.762, -1.141]) {
-      const ridge = box(x, 1.125 + Math.cos(angle) * 0.267, Math.sin(angle) * 0.267, 0.068, 0.018, 0.028, edgeSteel, `Scope Focus Ring Knurl`);
-      ridge.rotation.x = angle;
+  if (optic === `precision`) {
+    cylinder(-0.33, 1.125, 0, 0.165, 2.56, scopeMetal, `x`, `Scope Main Tube`);
+    cylinder(-1.488, 1.125, 0, 0.268, 0.68, scopeMetal, `x`, `Scope Objective Housing`, 0.25);
+    cylinder(-1.06, 1.125, 0, 0.25, 0.2, scopeMetal, `x`, `Scope Objective Taper`, 0.165);
+    cylinder(0.762, 1.125, 0, 0.165, 0.48, scopeMetal, `x`, `Scope Ocular Taper`, 0.217);
+    cylinder(1.067, 1.125, 0, 0.217, 0.19, scopeMetal, `x`, `Scope Ocular Rim`);
+    for (const [x, radius] of [[-1.807, 0.265], [-1.72, 0.262], [-1.157, 0.248], [1.143, 0.216], [1.017, 0.209]]) {
+      ring(x, 1.125, 0, radius, 0.015, edgeSteel, `x`, `Scope Housing Edge`);
     }
-  }
-  for (const [x, radius] of [[-1.834, 0.22], [1.167, 0.177]]) {
-    const geometry = cachedGeometry(`lens:${radius}`, () => new THREE.CircleGeometry(radius, 48));
-    const glass = mesh(geometry, lens, `Recessed Scope Lens`);
-    glass.position.set(x, 1.125, 0);
-    glass.rotation.y = x < 0 ? -Math.PI / 2 : Math.PI / 2;
-    ring(x, 1.125, 0, radius + 0.008, 0.009, anodized, `x`, `Scope Lens Bezel`);
-  }
-  for (const x of [-0.87, 0.3]) {
-    ring(x, 1.125, 0, 0.194, 0.043, anodized, `x`, `Scope Mount Ring`);
-    profile(polygon([[x - 0.14, 0.562], [x + 0.14, 0.562], [x + 0.105, 1.002], [x - 0.105, 1.002]]), 0.36, -0.18, scopeMetal, `Scope Mount Riser`, 0.019);
-    box(x, 0.594, 0, 0.34, 0.075, 0.44, anodized, `Scope Clamp Base`);
-    for (const side of [-1, 1]) {
-      bolt(x - 0.085, 0.601, side * 0.241, 0.044);
-      bolt(x + 0.085, 0.601, side * 0.241, 0.044);
-      bolt(x, 0.875, side * 0.208, 0.037);
+    for (let index = 0; index < 28; index += 1) {
+      const angle = index * Math.PI * 2 / 28;
+      for (const x of [-1.762, -1.141]) {
+        const ridge = box(x, 1.125 + Math.cos(angle) * 0.267, Math.sin(angle) * 0.267, 0.068, 0.018, 0.028, edgeSteel, `Scope Focus Ring Knurl`);
+        ridge.rotation.x = angle;
+      }
     }
-  }
-  cylinder(-0.356, 1.353, 0, 0.184, 0.225, scopeMetal, `y`, `Scope Elevation Turret`);
-  cylinder(-0.356, 1.494, 0, 0.188, 0.092, anodized, `y`, `Scope Turret Dial`);
-  ring(-0.356, 1.495, 0, 0.184, 0.011, edgeSteel, `y`, `Turret Dial Edge`);
-  cylinder(-0.356, 1.125, 0.19, 0.184, 0.175, scopeMetal, `z`, `Scope Side Turret`);
-  cylinder(-0.356, 1.125, 0.295, 0.166, 0.045, edgeSteel, `z`, `Scope Side Dial Face`);
-  ring(-0.356, 1.125, 0.309, 0.163, 0.012, steel, `z`, `Scope Side Dial Rim`);
-  for (let index = 0; index < 24; index += 1) {
-    const angle = index * Math.PI * 2 / 24;
-    const ridge = box(-0.356 + Math.cos(angle) * 0.19, 1.494, Math.sin(angle) * 0.19, 0.018, 0.065, 0.019, edgeSteel, `Turret Dial Knurl`);
-    ridge.rotation.y = -angle;
+    for (const [x, radius] of [[-1.834, 0.22], [1.167, 0.177]]) {
+      const geometry = cachedGeometry(`lens:${radius}`, () => new THREE.CircleGeometry(radius, 48));
+      const glass = mesh(geometry, lens, `Recessed Scope Lens`);
+      glass.position.set(x, 1.125, 0);
+      glass.rotation.y = x < 0 ? -Math.PI / 2 : Math.PI / 2;
+      ring(x, 1.125, 0, radius + 0.008, 0.009, anodized, `x`, `Scope Lens Bezel`);
+    }
+    for (const x of [-0.87, 0.3]) {
+      ring(x, 1.125, 0, 0.194, 0.043, anodized, `x`, `Scope Mount Ring`);
+      profile(polygon([[x - 0.14, 0.562], [x + 0.14, 0.562], [x + 0.105, 1.002], [x - 0.105, 1.002]]), 0.36, -0.18, scopeMetal, `Scope Mount Riser`, 0.019);
+      box(x, 0.594, 0, 0.34, 0.075, 0.44, anodized, `Scope Clamp Base`);
+      for (const side of [-1, 1]) {
+        bolt(x - 0.085, 0.601, side * 0.241, 0.044);
+        bolt(x + 0.085, 0.601, side * 0.241, 0.044);
+        bolt(x, 0.875, side * 0.208, 0.037);
+      }
+    }
+    cylinder(-0.356, 1.353, 0, 0.184, 0.225, scopeMetal, `y`, `Scope Elevation Turret`);
+    cylinder(-0.356, 1.494, 0, 0.188, 0.092, anodized, `y`, `Scope Turret Dial`);
+    ring(-0.356, 1.495, 0, 0.184, 0.011, edgeSteel, `y`, `Turret Dial Edge`);
+    cylinder(-0.356, 1.125, 0.19, 0.184, 0.175, scopeMetal, `z`, `Scope Side Turret`);
+    cylinder(-0.356, 1.125, 0.295, 0.166, 0.045, edgeSteel, `z`, `Scope Side Dial Face`);
+    ring(-0.356, 1.125, 0.309, 0.163, 0.012, steel, `z`, `Scope Side Dial Rim`);
+    for (let index = 0; index < 24; index += 1) {
+      const angle = index * Math.PI * 2 / 24;
+      const ridge = box(-0.356 + Math.cos(angle) * 0.19, 1.494, Math.sin(angle) * 0.19, 0.018, 0.065, 0.019, edgeSteel, `Turret Dial Knurl`);
+      ridge.rotation.y = -angle;
+    }
   }
   for (const side of [-1, 1]) {
     ring(2.7, -0.411, side * 0.1, 0.073, 0.026, anodized, `z`, `Forward Sling Eyelet`);
@@ -413,12 +416,10 @@ export const createRifleModel = (skin: SkinId) => {
   const center = new THREE.Box3().setFromObject(assembly).getCenter(new THREE.Vector3());
   assembly.position.copy(center).multiplyScalar(-1);
   framingPoints.forEach(point => point.sub(center));
-  const setSkin = (nextSkin: SkinId) => {
-    const colors: Record<SkinId, string> = { olive: `#375540`, silver: `#859398`, graphite: `#17181a` };
-    paint.color.set(colors[nextSkin]);
-    paintInset.color.set(colors[nextSkin]).multiplyScalar(0.78);
-  };
+  const finish = createWeaponFinish([paint, paintInset], object);
+  const setSkin = finish.setSkin;
   const dispose = () => {
+    finish.dispose();
     geometries.forEach(geometry => geometry.dispose());
     materials.forEach(finish => finish.dispose());
     geometryCache.clear();
@@ -427,6 +428,7 @@ export const createRifleModel = (skin: SkinId) => {
     framingPoints.length = 0;
     object.clear();
   };
-  setSkin(skin);
-  return { object, setSkin, dispose, framingPoints };
+  try { setSkin(skin); }
+  catch (error) { dispose(); throw error; }
+  return { object, setSkin, dispose, framingPoints, origin: center.clone() };
 };

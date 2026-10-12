@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="kestrel-quad-title">
+<title id="kestrel-quad-title">Kestrel Quad — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="kestrel-quad-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="kestrel-quad-paint" x2=".2" y2="1"><stop stop-color="#a5afb5"/><stop offset=".48" stop-color="#647078"/><stop offset="1" stop-color="#2e363e"/></linearGradient>
+<linearGradient id="kestrel-quad-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="kestrel-quad-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="kestrel-quad-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#647078" d="M0 0H96V74H0Z"/><path fill="#2e363e" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#a5afb5" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path fill="none" stroke="#19262e" stroke-width="27" d="M346 151L190 90M454 151L610 90M348 204L190 278M452 204L610 278"/>
+<path fill="none" stroke="#8a989f" stroke-width="13" d="M346 151L190 90M454 151L610 90M348 204L190 278M452 204L610 278"/>
+<path fill="url(#kestrel-quad-grip)" d="M320 136L344 117H456L480 136L494 206L456 241H344L306 206Z"/>
+<path fill="url(#kestrel-quad-camo)" d="M335 137L353 125H447L465 138L477 201L450 225H350L323 201Z"/>
+<path fill="url(#kestrel-quad-paint)" d="M367 141H433L446 163L439 205H361L354 163Z"/>
+<path fill="none" stroke="#d1dce0" stroke-width="2" d="M371 148H429L437 164"/>
+<path fill="url(#kestrel-quad-steel)" d="M330 164H349V198H330ZM451 164H470V198H451Z"/>
+<path fill="#14202a" d="M377 224H423L429 247L416 261H384L371 247Z"/>
+<circle cx="400" cy="242" r="14" fill="#304f61"/><circle cx="400" cy="242" r="8" fill="#4b9cb6"/><circle cx="397" cy="238" r="3" fill="#b4efff" stroke="none"/>
+<path fill="none" stroke="#1d2c35" stroke-width="8" d="M335 214L323 251M465 214L477 251"/>
+<g transform="translate(190 90) rotate(-14)"><path fill="url(#kestrel-quad-grip)" d="M-8-8C-48-24-84-18-89-7C-89 6-39 15-5 9L8 8C48 24 84 18 89 7C89-6 39-15 5-9Z"/><circle r="13" fill="url(#kestrel-quad-steel)"/><circle r="5" fill="#17232b"/></g><g transform="translate(610 90) rotate(14)"><path fill="url(#kestrel-quad-grip)" d="M-8-8C-48-24-84-18-89-7C-89 6-39 15-5 9L8 8C48 24 84 18 89 7C89-6 39-15 5-9Z"/><circle r="13" fill="url(#kestrel-quad-steel)"/><circle r="5" fill="#17232b"/></g><g transform="translate(190 278) rotate(14)"><path fill="url(#kestrel-quad-grip)" d="M-8-8C-48-24-84-18-89-7C-89 6-39 15-5 9L8 8C48 24 84 18 89 7C89-6 39-15 5-9Z"/><circle r="13" fill="url(#kestrel-quad-steel)"/><circle r="5" fill="#17232b"/></g><g transform="translate(610 278) rotate(-14)"><path fill="url(#kestrel-quad-grip)" d="M-8-8C-48-24-84-18-89-7C-89 6-39 15-5 9L8 8C48 24 84 18 89 7C89-6 39-15 5-9Z"/><circle r="13" fill="url(#kestrel-quad-steel)"/><circle r="5" fill="#17232b"/></g>
+<path fill="#79c4b1" stroke="none" d="M359 132H376V136H359ZM424 132H441V136H424Z"/></g>
+</svg>

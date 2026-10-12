@@ -1,0 +1,18 @@
+const fs = require('node:fs');
+const write = (file, source) => fs.writeFileSync(file, source.replace(/\r?\n/g, '\r\n'));
+let file = 'src/components/WeaponModel/createWeaponViewer.ts';
+let source = fs.readFileSync(file, 'utf8');
+const anchor = '    camera.lookAt(0, 0, 0);';
+if (!source.includes(anchor)) throw new Error('Inspection Camera Anchor Missing');
+source = source.replace(anchor, '    if (inspection) camera.position.set(span * 1.7, span * .65, span * 1.3);\n' + anchor);
+write(file, source);
+file = 'src/components/WeaponModel/modelAssembly.ts';
+source = fs.readFileSync(file, 'utf8');
+source = source.replace('  const materials = [paint, paintInset, metal, rubber, trim, lens];', '  const reticle = new THREE.MeshBasicMaterial({ color: 0xff453b });\n  const materials = [paint, paintInset, metal, rubber, trim, lens, reticle];');
+source = source.replace('return { paint, paintInset, metal, rubber, trim, lens,', 'return { paint, paintInset, metal, rubber, trim, lens, reticle,');
+write(file, source);
+file = 'src/components/WeaponModel/buildGunEquipment.ts';
+source = fs.readFileSync(file, 'utf8');
+source = source.replace('assembly.ellipsoid(trim, opticX + scale * .05, railY + scale * .435, 0, scale * .015, scale * .015, scale * .015);', 'assembly.ellipsoid(assembly.reticle, opticX + scale * .05, railY + scale * .435, 0, scale * .012, scale * .015, scale * .015);\n    assembly.ring(assembly.reticle, opticX + scale * .05, railY + scale * .435, 0, scale * .055, `x`);');
+source = source.replace('    box(metal, opticX + 0.015 * size, scopeY + 0.11 * size, 0, 0.11 * size, 0.08 * size, 0.11 * size);\r\n    box(trim, opticX + 0.015 * size, scopeY + 0.155 * size, 0, 0.12 * size, 0.025 * size, 0.12 * size);\r\n    box(metal, opticX + 0.015 * size, scopeY, 0.11 * size, 0.1 * size, 0.1 * size, 0.08 * size);', '    assembly.cylinder(rubber, opticX + .015 * size, scopeY + .13 * size, 0, .085 * size, .13 * size);\n    assembly.ring(trim, opticX + .015 * size, scopeY + .2 * size, 0, .085 * size, `y`);\n    assembly.cylinder(rubber, opticX + .015 * size, scopeY, .13 * size, .075 * size, .12 * size, `z`);\n    assembly.ring(metal, opticX + .015 * size, scopeY, .195 * size, .075 * size);\n    for (const offset of [-.45, -.40, -.35]) assembly.ring(rubber, opticX + offset * size, scopeY, 0, .09 * size, `x`);');
+write(file, source);

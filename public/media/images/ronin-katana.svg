@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="ronin-katana-title">
+<title id="ronin-katana-title">Ronin Katana — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="ronin-katana-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="ronin-katana-paint" x2=".2" y2="1"><stop stop-color="#69717a"/><stop offset=".48" stop-color="#34383f"/><stop offset="1" stop-color="#15191f"/></linearGradient>
+<linearGradient id="ronin-katana-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="ronin-katana-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="ronin-katana-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#34383f" d="M0 0H96V74H0Z"/><path fill="#15191f" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#69717a" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><g transform="rotate(2 400 180)">
+<path fill="url(#ronin-katana-steel)" d="M240 174C402 173 566 153 704 91L733 105C621 168 447 202 241 202Z"/>
+<path fill="#e7f1f6" stroke="none" d="M247 178C423 178 577 147 705 98L720 104C582 162 421 188 247 188Z"/>
+<path fill="#5e737f" stroke="none" d="M250 190C432 190 591 157 720 112C579 179 422 199 249 198Z"/>
+<path fill="none" stroke="#f1f7fa" stroke-width="2" d="M258 179C411 179 580 146 698 102"/>
+<path fill="url(#ronin-katana-gold)" d="M224 155C245 150 249 157 248 185C249 213 244 220 224 216L216 204L217 166Z"/>
+<path fill="url(#ronin-katana-paint)" d="M207 159L224 162L226 209L208 211Z"/>
+<path fill="url(#ronin-katana-grip)" d="M90 167L206 162L209 209L91 210Z"/>
+<path fill="#a8b7bd" stroke-width="1.5" d="M101 177L111 187L102 198L94 187ZM123 175L135 186L124 199L113 187ZM147 173L159 185L149 199L136 187ZM172 171L185 184L174 199L161 186ZM195 169L204 181L197 198L186 185Z"/>
+<path fill="url(#ronin-katana-gold)" d="M81 169L92 167L94 209L81 213L74 193L76 178Z"/>
+</g></g>
+</svg>

@@ -1,6 +1,6 @@
 # Weapon Database
 
-A responsive, single-page frontend based on the approved Armory Vault v9 direction. It retains the official v23 crest, local brand fonts, brushed steel dark and light themes, and the oval specimen frame. Guns, Swords, etc.
+A responsive, single-page frontend based on the approved Armory Vault v9 direction. It retains the official v23 crest, local brand fonts, brushed steel dark and light themes, and the oval specimen frame. Guns, swords, drones, and crossbows.
 
 ## Run locally
 
@@ -14,15 +14,15 @@ Expo starts the web app and prints its local URL. Open that URL on your computer
 ## Included
 
 - Sticky header with mobile navigation, theme switch, saved-armory drawer, and inline account preview
-- Hero specimen carousel with a draggable 3D rifle, catalog search, category filters, and weapon dossiers
-- Visual loadout editor with named builds, finishes, optics, accessories, editing, and deletion
+- Hero specimen carousel with twelve draggable 3D models, catalog search, category filters, and weapon dossiers
+- Gunsmith loadout editor with independent attachment slots, original part thumbnails, rotating 3D inspection, zoom, named builds, editing, and deletion
 - Journal articles and weapon-history sections with inline dialogs
 - Footer information dialogs, current-year copyright, Piratechs link, and scroll-to-top control
 - Installable PWA metadata and an offline cache for a production web export
 
 Only the landing page is implemented. The catalog is a small, explicitly configured sample collection; its concepts are labeled as design studies. Account controls explain the current local collection flow rather than simulating authentication.
 
-The hero rifle is an original Three.js mesh modeled from the approved rifle image. It turns slowly with a gentle start, pauses for dragging or keyboard rotation, and resumes after a short idle delay. The pause/play control holds or resumes the view. Automatic rotation stops offscreen and in hidden tabs, and is disabled by default for reduced motion. Drag with a mouse or finger to rotate freely; drag near the viewport edge or twist with two fingers to roll. Keyboard controls are arrow keys for rotation, Q/E for roll, and Home/R to reset. The skin swatches change its finish. The original PNG remains visible while loading or when WebGL is unavailable.
+The 3D collection includes the original ARX-27 rifle, VX-9 compact SMG, Bastion-12 shotgun, Sentinel SR-8 precision rifle, and Kestrel P-9 handgun. The collection also includes Aurelius Longsword, Ronin Katana, Crescent Saber, Kestrel Quad, Peregrine Wing, Ranger Recurve, and Vanguard Compound. Each is an original exterior design study. Both the hero carousel and Loadout Lab use interactive Three.js meshes. Nine finishes include olive, silver, graphite, desert, woodland, arctic, urban, digital, and tiger; camouflage patterns are applied as textures to the painted surfaces. Each model turns slowly with a gentle start, pauses for dragging or keyboard rotation, and resumes after a short idle delay. The pause/play control holds or resumes the view. Automatic rotation stops offscreen and in hidden tabs, and is disabled by default for reduced motion. Drag with a mouse or finger to rotate freely; drag near the viewport edge or twist with two fingers to roll. Keyboard controls are arrow keys for rotation, Q/E for roll, and Home/R to reset. The skin swatches change its finish. Equipment controls change the actual 3D meshes in both previews while preserving the viewing angle and pause state. Gun builds can combine optics, muzzle parts, underbarrels, side rail lights, raised cheek rests, and extended magazine bodies, with choices tailored to each model. Crossbows offer optics, underbarrels and rail lights. Every non-default part has an isolated 3D inspector using the same geometry that mounts on the weapon. Equip and Remove affect one slot at a time; Reset Parts restores the factory configuration. Zoom buttons and pinch gestures let you examine the mounted build. Swords offer display scabbards, tassels and ornate guards; drones offer camera pods, cargo cases and landing kits. Saved configurations retain every slot. Legacy single-attachment records resolve into the corresponding slot without overwriting the original data; an explicitly empty slot takes precedence over its legacy value. Each model has catalog artwork used as an image preview when WebGL is unavailable.
 
 ## Local data
 
@@ -51,4 +51,4 @@ npm run export
 
 Serve the generated `dist/` directory over HTTPS (or localhost). The service worker is registered only in production and caches the landing page, its bundles, and local assets after the first successful visit. Exporting for a subdirectory can use Expo's supported base URL configuration.
 
-This implementation was authored without running a build, tests, or UI verification, following the project working agreements. Review it locally before publishing.
+The Gunsmith update is checked with TypeScript and targeted browser verification of equipment selection, 3D inspection, removal, and saved-build restoration. Builds remain local to the browser.

@@ -1,7 +1,7 @@
 import { appIconStyle } from './config';
 
 export const assetUrl = (path: string) => {
-  const base = process.env.EXPO_BASE_URL?.replace(/\/$/, ``) || `.`;
+  const base = process.env.EXPO_BASE_URL?.replace(/\/$/, ``) || ``;
   return `${base}/media/${path.replace(/^\/?(?:assets|media)\//, ``)}`;
 };
 

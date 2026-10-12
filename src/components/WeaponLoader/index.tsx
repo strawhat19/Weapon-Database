@@ -1,25 +1,25 @@
 import './styles.scss';
 import { assetUrl } from '../../shared/assets';
 
-type WeaponLoaderProps = { active: boolean };
+type WeaponLoaderProps = { active: boolean; id?: string };
 
-const WeaponLoader = ({ active }: WeaponLoaderProps) => (
+const WeaponLoader = ({ active, id = `hero-weapon-loader` }: WeaponLoaderProps) => (
   <div
     role={`status`}
     aria-live={`polite`}
     aria-atomic={true}
     aria-hidden={!active}
-    id={`hero-weapon-loader`}
+    id={id}
     data-active={active}
     className={`weapon-loader`}
   >
-    <div id={`hero-weapon-loader-crest`} className={`weapon-loader__crest`} aria-hidden={true}>
+    <div id={`${id}-crest`} className={`weapon-loader__crest`} aria-hidden={true}>
       <img
         alt={``}
         width={176}
         height={204}
         draggable={false}
-        id={`hero-weapon-loader-mark`}
+        id={`${id}-mark`}
         className={`weapon-loader__mark`}
         src={assetUrl(`brand/crest.svg`)}
       />
@@ -29,7 +29,7 @@ const WeaponLoader = ({ active }: WeaponLoaderProps) => (
         height={204}
         draggable={false}
         src={assetUrl(`brand/crest.svg`)}
-        id={`hero-weapon-loader-slice-upper`}
+        id={`${id}-slice-upper`}
         className={`weapon-loader__slice weapon-loader__slice--upper`}
       />
       <img
@@ -38,7 +38,7 @@ const WeaponLoader = ({ active }: WeaponLoaderProps) => (
         height={204}
         draggable={false}
         src={assetUrl(`brand/crest.svg`)}
-        id={`hero-weapon-loader-slice-lower`}
+        id={`${id}-slice-lower`}
         className={`weapon-loader__slice weapon-loader__slice--lower`}
       />
       <img
@@ -47,7 +47,7 @@ const WeaponLoader = ({ active }: WeaponLoaderProps) => (
         height={204}
         draggable={false}
         src={assetUrl(`brand/crest.svg`)}
-        id={`hero-weapon-loader-slice-bands`}
+        id={`${id}-slice-bands`}
         className={`weapon-loader__slice weapon-loader__slice--bands`}
       />
       <img
@@ -55,13 +55,13 @@ const WeaponLoader = ({ active }: WeaponLoaderProps) => (
         width={176}
         height={204}
         draggable={false}
-        id={`hero-weapon-loader-scan`}
+        id={`${id}-scan`}
         className={`weapon-loader__scan`}
         src={assetUrl(`brand/crest.svg`)}
       />
     </div>
-    <p id={`hero-weapon-loader-label`} className={`mono weapon-loader__label`}>{`Weapons Loading`}</p>
-    <span id={`hero-weapon-loader-signal`} className={`weapon-loader__signal`} aria-hidden={true} />
+    <p id={`${id}-label`} className={`mono weapon-loader__label`}>{`Weapons Loading`}</p>
+    <span id={`${id}-signal`} className={`weapon-loader__signal`} aria-hidden={true} />
   </div>
 );
 

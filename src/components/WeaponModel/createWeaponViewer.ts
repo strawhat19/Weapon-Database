@@ -1,23 +1,28 @@
 import * as THREE from 'three';
-import { createRifleModel } from './buildRifle';
 import { createAutoRotation } from './autoRotation';
-import type { SkinId, ThemeMode } from '../../types/types';
+import { getEquipmentKey } from '../../shared/catalog/equipment';
+import { createPartModel, createWeaponModel } from './buildWeapon';
 import { ArcballControls } from 'three/addons/controls/ArcballControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import type { WeaponModelId, SkinId, ThemeMode, ModelEquipment, EquipmentInspection } from '../../types/types';
 
 export type WeaponViewer = {
   dispose: () => void;
+  zoom: (direction: number) => void;
   resetView: () => void;
   setSkin: (skin: SkinId) => void;
+  setEquipment: (equipment: ModelEquipment) => void;
   setTheme: (theme: ThemeMode) => void;
   setAutoRotation: (enabled: boolean) => void;
 };
 
-export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme: ThemeMode, onAvailability: (available: boolean) => void, onAutoRotation: (enabled: boolean) => void): WeaponViewer => {
+export const createWeaponViewer = (viewport: HTMLDivElement, modelId: WeaponModelId, skin: SkinId, theme: ThemeMode, equipment: ModelEquipment, onAvailability: (available: boolean) => void, onAutoRotation: (enabled: boolean) => void, inspection?: EquipmentInspection): WeaponViewer => {
   const scene = new THREE.Scene();
   const pivot = new THREE.Group();
   const reducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`);
-  let model: ReturnType<typeof createRifleModel> | undefined;
+  let model: ReturnType<typeof createWeaponModel> | undefined;
+  let currentSkin = skin;
+  let currentEquipment = { ...equipment };
   let environment: THREE.WebGLRenderTarget | undefined;
   let environmentScene: RoomEnvironment | undefined;
   let environmentGenerator: THREE.PMREMGenerator | undefined;
@@ -146,7 +151,7 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
     renderer.setClearColor(0x000000, 0);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.domElement.id = `hero-weapon-model-canvas`;
+    renderer.domElement.id = `${viewport.id}-canvas`;
     renderer.domElement.className = `weapon-model__canvas`;
     renderer.domElement.setAttribute(`aria-hidden`, `true`);
     renderer.domElement.addEventListener(`webglcontextlost`, onContextLost);
@@ -178,7 +183,7 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
     rimLight.position.set(0, 5, -6);
     scene.add(keyLight, fillLight, rimLight, new THREE.HemisphereLight(0xcbd5de, 0x263027, 1));
 
-    model = createRifleModel(skin);
+    model = inspection ? createPartModel(modelId, skin, inspection) : createWeaponModel(modelId, skin, equipment);
     const bounds = new THREE.Box3().setFromObject(model.object);
     const center = bounds.getCenter(new THREE.Vector3());
     const size = bounds.getSize(new THREE.Vector3());
@@ -195,7 +200,9 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
     const camera = new THREE.OrthographicCamera(-span / 2, span / 2, verticalSpan / 2, -verticalSpan / 2, 0.1, span * 10);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(initialWidth, initialHeight, false);
-    camera.position.set(span * 0.16, span * 0.12, span * 2);
+    const elevatedView = [`quadcopter`, `fixedwing`, `recurvebow`, `compoundbow`].includes(modelId);
+    camera.position.set(span * (elevatedView ? 0.65 : 0.16), span * (elevatedView ? 1.05 : 0.12), span * (elevatedView ? 1.65 : 2));
+    if (inspection) camera.position.set(span * 1.7, span * .65, span * 1.3);
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld(true);
     const corners = model.framingPoints.map(point => point.clone().sub(center));
@@ -222,13 +229,16 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
       const projectedHeight = Math.max(Math.abs(minY), Math.abs(maxY)) * 2;
       const scale = Math.min(1, (camera.right - camera.left) * 0.94 / projectedWidth, (camera.top - camera.bottom) * 0.88 / projectedHeight);
       pivot.scale.setScalar(scale);
+      viewport.dataset.zoom = camera.zoom.toFixed(2);
       renderer.render(scene, camera);
     };
 
     controls = new ArcballControls(camera, renderer.domElement, scene);
     retireGizmoGeometries();
     controls.enablePan = false;
-    controls.enableZoom = false;
+    controls.enableZoom = true;
+    controls.minZoom = 1;
+    controls.maxZoom = 3;
     controls.enableFocus = false;
     controls.enableGrid = false;
     controls.rotateSpeed = 0.85;
@@ -245,11 +255,20 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
     controls.addEventListener(`start`, onInteractionStart);
     controls.addEventListener(`end`, onInteractionEnd);
 
+    const zoom = (direction: number) => {
+      if (disposed) return;
+      autoRotation?.defer();
+      camera.zoom = THREE.MathUtils.clamp(camera.zoom * (direction > 0 ? 1.25 : .8), 1, 3);
+      camera.updateProjectionMatrix();
+      render();
+    };
     resetView = () => {
       if (disposed) return;
       autoRotation?.defer();
       pivot.quaternion.copy(initialRotation);
       controls?.reset();
+      camera.zoom = 1;
+      camera.updateProjectionMatrix();
       controls?.setGizmosVisible(false);
       render();
     };
@@ -260,6 +279,7 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
         resetView();
         return;
       }
+      if ([`+`, `=`, `-`].includes(event.key)) { event.preventDefault(); zoom(event.key === `-` ? -1 : 1); return; }
       const rotations: Record<string, [number, number, number, number]> = {
         q: [0, 0, 1, 1],
         e: [0, 0, 1, -1],
@@ -303,7 +323,30 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
       observer.observe(viewport);
     }
 
-    const setSkin = (nextSkin: SkinId) => { model?.setSkin(nextSkin); render(); };
+    const setSkin = (nextSkin: SkinId) => { if (disposed) return; currentSkin = nextSkin; model?.setSkin(nextSkin); render(); };
+    const setEquipment = (nextEquipment: ModelEquipment) => {
+      if (disposed || !model) return;
+      if (inspection || getEquipmentKey(currentEquipment) === getEquipmentKey(nextEquipment)) {
+        revealWhenReady();
+        return;
+      }
+      const replacement = createWeaponModel(modelId, currentSkin, nextEquipment);
+      let nextCorners: THREE.Vector3[];
+      try {
+        const nextCenter = new THREE.Box3().setFromObject(replacement.object).getCenter(new THREE.Vector3());
+        replacement.object.position.sub(nextCenter);
+        nextCorners = replacement.framingPoints.map(point => point.clone().sub(nextCenter));
+      } catch (error) { replacement.dispose(); throw error; }
+      const previous = model;
+      pivot.remove(previous.object);
+      pivot.add(replacement.object);
+      model = replacement;
+      corners.splice(0, corners.length, ...nextCorners);
+      currentEquipment = { ...nextEquipment };
+      previous.dispose();
+      render();
+      revealWhenReady();
+    };
     const setTheme = (nextTheme: ThemeMode) => {
       if (!renderer || disposed) return;
       renderer.toneMappingExposure = nextTheme === `dark` ? 1.2 : 1.05;
@@ -315,7 +358,7 @@ export const createWeaponViewer = (viewport: HTMLDivElement, skin: SkinId, theme
     autoRotation = createAutoRotation({ object: pivot, render, viewport, onChange: onAutoRotation, reducedMotion });
     revealWhenReady();
     const setAutoRotation = (enabled: boolean) => autoRotation?.setEnabled(enabled);
-    return { dispose, setSkin, setTheme, resetView, setAutoRotation };
+    return { zoom, dispose, setSkin, setTheme, resetView, setEquipment, setAutoRotation };
   } catch (error) {
     dispose();
     throw error;

@@ -43,7 +43,7 @@ const WeaponCard = ({ weapon, onOpenWeapon }: WeaponCardProps) => {
         </div>
         <div id={`weapon-card-actions-${weapon.id}`} className="weapon-card-actions">
           <button type="button" id={`weapon-card-inspect-${weapon.id}`} className="weapon-card-inspect" onClick={() => onOpenWeapon(weapon.id)}>Inspect Entry <Icon name="arrow" size={16} /></button>
-          {weapon.category === `firearms` && <button type="button" id={`weapon-card-build-${weapon.id}`} className="weapon-card-build" onClick={buildWeapon}><Icon name="sliders" size={15} /> Build</button>}
+          {weapon.modelId && <button type="button" id={`weapon-card-build-${weapon.id}`} className="weapon-card-build" onClick={buildWeapon}><Icon name="sliders" size={15} /> Build</button>}
         </div>
       </div>
     </article>

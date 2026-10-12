@@ -33,12 +33,12 @@ const Header = ({ sticky = true, onOpenAccount, onOpenInfo }: HeaderProps) => {
             type={`button`}
             onClick={toggleTheme}
             id={`header-theme-toggle`}
-            className={`header-theme-toggle`}
+            className={`header-icon-toggle header-theme-toggle`}
             title={`Switch to ${theme === `dark` ? `light` : `dark`} theme`}
             aria-label={`Switch to ${theme === `dark` ? `light` : `dark`} theme`}
           ><Icon name={theme === `dark` ? `sun` : `moon`} size={15} /></button>
           <button type="button" id="header-sign-in" className="header-sign-in" onClick={openAccount}><Icon name="user" size={15} />Sign In</button>
-          <button type="button" id="header-menu-toggle" ref={menuButtonRef} className="icon-button header-menu-toggle" aria-label={menuOpen ? `Close navigation` : `Open navigation`} aria-expanded={menuOpen} aria-controls="header-mobile-menu" onClick={() => setMenuOpen(current => !current)}><Icon name={menuOpen ? `x` : `menu`} size={21} /></button>
+          <button type="button" id="header-menu-toggle" ref={menuButtonRef} className={`header-icon-toggle header-menu-toggle`} aria-label={menuOpen ? `Close navigation` : `Open navigation`} aria-expanded={menuOpen} aria-controls="header-mobile-menu" onClick={() => setMenuOpen(current => !current)}><Icon name={menuOpen ? `x` : `menu`} size={15} /></button>
         </div>
       </div>
       {menuOpen && <div id={`header-mobile-menu`} className={`header-mobile-menu`}>

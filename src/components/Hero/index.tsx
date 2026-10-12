@@ -2,6 +2,7 @@ import './styles.scss';
 import Icon from '../Icon';
 import VaultOval from './VaultOval';
 import WeaponModel from '../WeaponModel';
+import { assetUrl } from '../../shared/assets';
 import { heroSkins, useHero } from './useHero';
 
 type HeroProps = { onOpenWeapon: (id: string) => void };
@@ -10,6 +11,7 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
   const hero = useHero();
   const featuredNumber = String(hero.featuredIndex + 1).padStart(2, `0`);
   const featuredTitle = hero.featuredWeapon?.title ?? `ARX-27`;
+  const equipmentLabel = hero.featuredWeapon?.category === `swords` ? `SWORD ACCESSORIES` : hero.featuredWeapon?.category === `drones` ? `DRONE ADD-ONS` : `OPTICS + ATTACHMENTS`;
 
   return (
     <section id={`hero`} aria-labelledby={`hero-title`} className={`armory-hero armory-hero--${hero.theme}`}>
@@ -27,7 +29,7 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
             <span>{`Every weapon has a story.`}</span>
             <span>{`Find yours in the archive.`}</span>
           </p>
-          <p id={`hero-category-description`} className={`hero-category-description`}>{`Firearms, swords, drones and the systems of tomorrow.`}</p>
+          <p id={`hero-category-description`} className={`hero-category-description`}>{`Firearms, swords, crossbows, drones and the systems of tomorrow.`}</p>
           <form id={`hero-search-form`} role={`search`} className={`hero-search`} onSubmit={hero.searchCatalog}>
             <label htmlFor={`hero-search-input`} className={`hero-search__label`}>{`Search the armory`}</label>
             <Icon name={`search`} size={22} className={`hero-search__icon`} />
@@ -71,16 +73,16 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
           <div id={`hero-featured-heading`} className={`hero-featured-heading`}>
             <p className={`eyebrow`}>{`FEATURED ENTRY / ${String(hero.featuredIndex + 1).padStart(3, `0`)}`}</p>
             <span className={`mono hero-archive-badge`}>{`ARCHIVE`}</span>
-            <span className={`mono hero-mobile-plate`}>{`PLATE / 027`}</span>
+            <span className={`mono hero-mobile-plate`}>{`MODEL / ${featuredTitle}`}</span>
           </div>
           <div id={`hero-rifle-stage`} className={`hero-rifle-stage`}>
             <VaultOval dark={hero.theme === `dark`} />
             <div id={`hero-rifle-ground-shadow`} className={`hero-rifle-shadow`} aria-hidden={true} />
-            <WeaponModel skin={hero.draft.skin} theme={hero.theme} title={featuredTitle} />
+            <WeaponModel equipment={hero.equipment} skin={hero.draft.skin} theme={hero.theme} title={featuredTitle} modelId={hero.featuredWeapon?.modelId ?? `rifle`} image={hero.featuredWeapon?.image ?? assetUrl(`images/armory-rifle.png`)} />
             <svg id={`hero-reference-details`} className={`hero-reference-details`} viewBox={`0 0 787 450`} aria-hidden={true}>
               <g id={`hero-reference-plate-detail`} className={`hero-reference-plate-detail`}>
                 <text x={622} y={39} fontSize={8} letterSpacing={0.5}>{`REFERENCE PLATE`}</text>
-                <text x={622} y={62} fontSize={16} letterSpacing={0.3} className={`hero-reference-plate-detail__value`}>{`ARX / 027`}</text>
+                <text x={622} y={62} fontSize={featuredTitle.length > 16 ? 10 : featuredTitle.length > 10 ? 12 : 16} letterSpacing={0.3} className={`hero-reference-plate-detail__value`}>{featuredTitle}</text>
                 {[14, 22, 16, 22, 10, 18, 22].map((height, index) => (
                   <rect key={index} x={751 + index * 5} y={62 - height} height={height} width={index % 3 ? 1 : 2} opacity={0.32} id={`hero-serial-mark-${index}`} />
                 ))}
@@ -93,15 +95,15 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
                 <strong>{featuredNumber}</strong><span>{`/ ${String(hero.featuredWeapons.length).padStart(2, `0`)}`}</span>
               </span>
               <div className={`hero-carousel-selectors`}>
-                {hero.featuredWeapons.map((weapon, index) => (
+                {hero.featuredWeapons.slice(hero.featuredOffset, hero.featuredOffset + 5).map((weapon, index) => (
                   <button
                     key={weapon.id}
                     type={`button`}
-                    onClick={() => hero.selectFeatured(index)}
+                    onClick={() => hero.selectFeatured(hero.featuredOffset + index)}
                     id={`hero-select-featured-${weapon.id}`}
-                    aria-pressed={hero.featuredIndex === index}
+                    aria-pressed={hero.featuredIndex === hero.featuredOffset + index}
                     aria-label={`Show ${weapon.title} ${weapon.subtitle} Design Study`}
-                    className={`hero-carousel-selector${hero.featuredIndex === index ? ` hero-carousel-selector--active` : ``}`}
+                    className={`hero-carousel-selector${hero.featuredIndex === hero.featuredOffset + index ? ` hero-carousel-selector--active` : ``}`}
                   ><span aria-hidden={true} /></button>
                 ))}
               </div>
@@ -112,7 +114,7 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
           </div>
           <div id={`hero-featured-caption`} className={`hero-featured-caption`}>
             <h2 className={`hero-featured-caption__title`}>{featuredTitle}</h2>
-            <span className={`mono hero-featured-caption__subtitle`}>{`MODULAR PLATFORM / VISUAL LOADOUT`}</span>
+            <span className={`mono hero-featured-caption__subtitle`}>{`3D MODEL / ORIGINAL DESIGN STUDY`}</span>
             <button
               type={`button`}
               disabled={!hero.featuredWeapon}
@@ -122,13 +124,14 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
             ><span>{`View dossier`}</span><Icon name={`arrow`} size={25} /></button>
           </div>
           <div id={`hero-loadout-preview`} className={`hero-loadout-preview`}>
-            <span className={`mono hero-loadout-preview__label`}>{`SKIN`}</span>
+            <span className={`mono hero-loadout-preview__label`}>{`FINISH`}</span>
             <div className={`hero-skin-swatches`} aria-label={`Loadout Skin`}>
               {heroSkins.map(skin => (
                 <button
                   key={skin.id}
                   type={`button`}
-                  style={{ backgroundColor: skin.color }}
+                  title={skin.label}
+                  style={{ background: skin.swatch, color: skin.id === `arctic` || skin.id === `silver` ? `#151817` : `#f8f8f8` }}
                   onClick={() => hero.selectSkin(skin.id)}
                   id={`hero-select-skin-${skin.id}`}
                   aria-label={`Use ${skin.label} Skin`}
@@ -139,8 +142,8 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
             </div>
             <span className={`hero-loadout-preview__divider`} aria-hidden={true} />
             <button type={`button`} onClick={hero.buildLoadout} id={`hero-customize-optics`} className={`hero-optics-action`}>
-              <span className={`hero-optics-action__desktop`}>{`OPTICS + ATTACHMENTS`}</span>
-              <span className={`hero-optics-action__mobile`}>{`OPTICS + PARTS`}</span>
+              <span className={`hero-optics-action__desktop`}>{equipmentLabel}</span>
+              <span className={`hero-optics-action__mobile`}>{equipmentLabel === `OPTICS + ATTACHMENTS` ? `OPTICS + PARTS` : equipmentLabel}</span>
               <Icon name={`sliders`} size={22} />
             </button>
           </div>

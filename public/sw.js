@@ -1,4 +1,4 @@
-const cacheName = `weapon-database-shell-v4`;
+const cacheName = `weapon-database-shell-v9`;
 const rootUrl = new URL(`./`, self.location.href);
 const localFiles = [
   `manifest.webmanifest`,
@@ -28,6 +28,17 @@ const localFiles = [
   `media/fonts/JetBrainsMono-Regular.ttf`,
   `media/fonts/SairaStencilOne-Regular.ttf`,
   `media/images/armory-rifle.png`,
+  `media/images/vx-9.svg`,
+  `media/images/bastion-12.svg`,
+  `media/images/sentinel-sr8.svg`,
+  `media/images/kestrel-p9.svg`,
+  `media/images/aurelius-longsword.svg`,
+  `media/images/ronin-katana.svg`,
+  `media/images/crescent-saber.svg`,
+  `media/images/kestrel-quad.svg`,
+  `media/images/peregrine-wing.svg`,
+  `media/images/ranger-recurve.svg`,
+  `media/images/vanguard-compound.svg`,
   `media/images/future-drone.png`,
   `media/images/heritage-blade.png`,
   `media/textures/dark-brushed-steel.png`,

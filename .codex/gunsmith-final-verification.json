@@ -1,0 +1,18 @@
+{
+  "url": "https://weapon-database.vercel.app/",
+  "textureUrls": [
+    "url(\"/media/textures/light-brushed-steel.png\")",
+    "url(\"/media/textures/dark-brushed-steel.png\")"
+  ],
+  "configuration": "precision/suppressor/grip/light/cheek-rest/extended/none",
+  "checks": [
+    "Production Texture URLs Use Public Root",
+    "Both Themes Load Without Missing Resources",
+    "Six Mounted Parts Render On Production",
+    "Isolated Reflex With Glass And Reticle Renders",
+    "Published Saved Build Restores All Slots",
+    "Mobile Layout Fits Screen"
+  ],
+  "errors": [],
+  "missing": []
+}

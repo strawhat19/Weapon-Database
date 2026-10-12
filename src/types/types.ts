@@ -1,8 +1,32 @@
 export type ThemeMode = `dark` | `light`;
-export type SkinId = `olive` | `graphite` | `silver`;
-export type AttachmentId = `none` | `light` | `bipod`;
+export type SkinId = `olive` | `graphite` | `silver` | `desert` | `woodland` | `arctic` | `urban` | `digital` | `tiger`;
+export type GunModelId = `rifle` | `smg` | `shotgun` | `precision` | `pistol`;
+export type WeaponModelId = GunModelId | `longsword` | `katana` | `saber` | `quadcopter` | `fixedwing` | `recurvebow` | `compoundbow`;
+export type AttachmentId = `none` | `light` | `bipod` | `grip` | `suppressor`;
+export type CustomizationId = `none` | `scabbard` | `tassel` | `ornate-guard` | `camera` | `cargo` | `landing-kit`;
+export type MuzzleId = `none` | `suppressor` | `brake`;
+export type UnderbarrelId = `none` | `grip` | `bipod`;
+export type RailId = `none` | `light`;
+export type StockId = `none` | `cheek-rest`;
+export type MagazineId = `standard` | `extended`;
+export type EquipmentSlot = `optic` | `muzzle` | `underbarrel` | `rail` | `stock` | `magazine` | `customization`;
+export type EquipmentIllustration = `none` | `iron` | `reflex` | `scope` | `suppressor` | `brake` | `grip` | `bipod` | `light` | `stock` | `magazine` | `scabbard` | `tassel` | `guard` | `camera` | `cargo` | `landing`;
+export type EquipmentOption = { id: string; label: string; description: string; illustration: EquipmentIllustration };
+export type GunsmithSlot = { id: EquipmentSlot; label: string; value: string; options: readonly EquipmentOption[] };
+export type EquipmentInspection = { slot: EquipmentSlot; id: string };
+export type EquipmentSelections = {
+  optic: OpticId;
+  rail?: RailId;
+  stock?: StockId;
+  muzzle?: MuzzleId;
+  magazine?: MagazineId;
+  attachment: AttachmentId;
+  underbarrel?: UnderbarrelId;
+  customization?: CustomizationId;
+};
+export type ModelEquipment = Required<EquipmentSelections>;
 export type OpticId = `standard` | `reflex` | `precision`;
-export type Category = `all` | `firearms` | `swords` | `drones` | `future`;
+export type Category = `all` | `firearms` | `swords` | `drones` | `crossbows` | `future`;
 export type WeaponCategory = Exclude<Category, `all`>;
 export type WeaponStat = { label: string; value: string };
 export type Weapon = {
@@ -13,6 +37,8 @@ export type Weapon = {
   image: string;
   subtitle: string;
   featured?: boolean;
+  modelId?: WeaponModelId;
+  defaultSkin?: SkinId;
   isConcept?: boolean;
   description: string;
   stats: WeaponStat[];
@@ -26,13 +52,10 @@ export type DataRecord = {
   createdAt: string;
   updatedAt: string;
 };
-export type LoadoutDraft = {
+export type LoadoutDraft = EquipmentSelections & {
   name: string;
   skin: SkinId;
   weaponId: string;
-  optic: OpticId;
-  attachment: AttachmentId;
 };
 export type SavedWeaponRecord = DataRecord & { weaponId: string };
 export type LoadoutRecord = DataRecord & Omit<LoadoutDraft, `name`>;
-

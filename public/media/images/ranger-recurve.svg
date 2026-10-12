@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="ranger-recurve-title">
+<title id="ranger-recurve-title">Ranger Recurve — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="ranger-recurve-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="ranger-recurve-paint" x2=".2" y2="1"><stop stop-color="#9a9970"/><stop offset=".48" stop-color="#526445"/><stop offset="1" stop-color="#28372c"/></linearGradient>
+<linearGradient id="ranger-recurve-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="ranger-recurve-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="ranger-recurve-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#526445" d="M0 0H96V74H0Z"/><path fill="#28372c" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#9a9970" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path fill="none" stroke="#80918b" stroke-width="2" d="M594 67L334 180L594 292"/>
+<path fill="url(#ranger-recurve-camo)" d="M106 187L258 163L462 164L550 178L533 210L342 212L299 254L235 251L205 224L113 222L91 206Z"/>
+<path fill="url(#ranger-recurve-grip)" d="M240 213L302 214L291 260L267 294L239 285L249 251Z"/>
+<path fill="url(#ranger-recurve-grip)" d="M112 187L208 177L216 212L116 223L100 210Z"/>
+<path fill="url(#ranger-recurve-steel)" d="M234 161L528 163L625 175L624 185L529 195L235 192Z"/>
+<path fill="#17232a" d="M277 171L529 173L598 179L529 184L277 184Z"/>
+<path fill="none" stroke="#e7f0ed" stroke-width="2" d="M249 167L514 169"/>
+<path fill="url(#ranger-recurve-paint)" d="M532 175C517 133 556 101 581 55L600 61C605 83 594 103 579 110C557 132 558 157 560 175ZM532 185C517 227 556 259 581 305L600 299C605 277 594 257 579 250C557 228 558 203 560 185Z"/>
+<path fill="none" stroke="#a7b697" stroke-width="4" d="M542 161C538 130 568 103 585 76M542 199C538 230 568 257 585 284"/>
+<path fill="url(#ranger-recurve-grip)" d="M522 159H563V201H522Z"/>
+<path fill="url(#ranger-recurve-steel)" d="M537 163H551V197H537Z"/>
+<path fill="#192923" d="M324 199L408 199L400 210L338 210Z"/>
+<path fill="none" stroke="#71846b" stroke-width="4" d="M131 194L141 214M150 192L160 212M170 189L180 209"/>
+<circle cx="480" cy="179" r="6" fill="url(#ranger-recurve-steel)"/></g>
+</svg>

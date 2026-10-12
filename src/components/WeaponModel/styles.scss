@@ -30,3 +30,7 @@
 @media (prefers-reduced-motion: reduce) {
   .weapon-model__tools, .weapon-model__viewport, .weapon-model__fallback { transition: none; }
 }
+.weapon-model__zoom { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--rule); border-radius: 3px; color: var(--text); background: var(--surface); cursor: pointer; }
+.weapon-model__zoom:hover { border-color: var(--accent); }
+.weapon-model__fallback--part { display: grid; place-items: center; transform: none; }
+.weapon-model__fallback--part svg { width: 75%; height: 75%; }

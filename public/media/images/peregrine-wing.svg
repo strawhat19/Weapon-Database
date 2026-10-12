@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360" role="img" aria-labelledby="peregrine-wing-title">
+<title id="peregrine-wing-title">Peregrine Wing — Original Exterior Design Study</title>
+<defs>
+<linearGradient id="peregrine-wing-steel" x2="0" y2="1"><stop stop-color="#f3f8fa"/><stop offset=".28" stop-color="#b7c8d0"/><stop offset=".52" stop-color="#596f7b"/><stop offset=".7" stop-color="#d9e6ec"/><stop offset="1" stop-color="#7d919c"/></linearGradient>
+<linearGradient id="peregrine-wing-paint" x2=".2" y2="1"><stop stop-color="#f8f8f3"/><stop offset=".48" stop-color="#e1e5e6"/><stop offset="1" stop-color="#aab5bf"/></linearGradient>
+<linearGradient id="peregrine-wing-grip" x2="0" y2="1"><stop stop-color="#46535a"/><stop offset=".48" stop-color="#182129"/><stop offset="1" stop-color="#303c43"/></linearGradient>
+<linearGradient id="peregrine-wing-gold" x2="0" y2="1"><stop stop-color="#f0d296"/><stop offset=".5" stop-color="#9d7745"/><stop offset="1" stop-color="#d4b371"/></linearGradient>
+<pattern id="peregrine-wing-camo" width="96" height="74" patternUnits="userSpaceOnUse"><path fill="#e1e5e6" d="M0 0H96V74H0Z"/><path fill="#aab5bf" d="M-8 13L24 7L42 25L30 42L-5 36ZM54 51L77 36L104 48L98 78L68 72Z"/><path fill="#f8f8f3" d="M46-8L81-3L96 15L74 27L48 17ZM4 53L26 46L43 63L35 82L9 75Z"/></pattern>
+</defs>
+<g stroke="#17242d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path fill="url(#peregrine-wing-camo)" d="M384 167L280 42L244 36L295 175ZM385 194L280 320L244 326L295 186Z"/>
+<path fill="url(#peregrine-wing-steel)" d="M379 167L280 42L263 40L328 166ZM379 194L280 320L263 323L328 194Z"/>
+<path fill="none" stroke="#627784" stroke-width="2" d="M278 69L341 156M278 292L341 204"/>
+<path fill="url(#peregrine-wing-paint)" d="M224 171L177 116L145 111L175 177ZM224 189L177 245L145 250L175 183Z"/>
+<path fill="url(#peregrine-wing-paint)" d="M168 174L242 163L430 157L594 166L658 181L593 196L430 204L242 197L168 188Z"/>
+<path fill="#f5f8f8" stroke="none" d="M233 169L428 163L587 173L628 181L429 181L231 180Z"/>
+<path fill="#8497a1" stroke="none" d="M231 184L429 184L630 185L587 190L430 198L237 191Z"/>
+<path fill="#304957" d="M506 169L559 174L579 181L556 187L506 193L474 181Z"/>
+<path fill="#8cb6c4" stroke="none" d="M510 174L551 178L561 181L510 182L488 180Z"/>
+<path fill="none" stroke="#dfe9ed" stroke-width="2" d="M253 169L417 165"/>
+<path fill="url(#peregrine-wing-grip)" d="M153 172H174V190H153Z"/>
+<path fill="#34444e" d="M159 179C145 162 143 127 152 120C168 126 171 160 165 180C179 198 180 232 171 240C155 234 152 201 159 179Z"/>
+<circle cx="162" cy="180" r="9" fill="url(#peregrine-wing-steel)"/>
+<path fill="#718791" d="M288 171H321V177H288ZM288 187H321V193H288Z"/></g>
+</svg>

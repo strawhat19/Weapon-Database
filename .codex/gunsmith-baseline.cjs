@@ -1,0 +1,23 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const { chromium } = require('C:/Users/massa/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async () => {
+  const browser = await chromium.launch({ headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] }).catch(() => chromium.launch({ channel: 'msedge', headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] }));
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  await page.goto('https://weapon-database.vercel.app', { waitUntil: 'networkidle', timeout: 60000 });
+  await page.locator('#loadout-lab').scrollIntoViewIfNeeded();
+  await page.locator('#loadout-weapon-model[data-state="ready"]').waitFor({ timeout: 20000 }).catch(() => {});
+  const before = await page.locator('#loadout-weapon-model').getAttribute('data-state');
+  await page.locator('#loadout-optic-input').selectOption('reflex');
+  await page.locator('#loadout-attachment-input').selectOption('light');
+  await page.waitForTimeout(800);
+  await page.locator('#loadout-weapon-model-motion').click().catch(() => {});
+  await page.locator('#loadout-builder').screenshot({ path: '.codex/gunsmith-baseline.png', animations: 'disabled' });
+  const result = { before, after: await page.locator('#loadout-weapon-model').getAttribute('data-state'), canvasCount: await page.locator('canvas.weapon-model__canvas').count(), labels: await page.locator('#loadout-preview-selection').innerText(), errors };
+  fs.writeFileSync('.codex/gunsmith-baseline.json', JSON.stringify(result, null, 2));
+  process.stdout.write(JSON.stringify(result));
+  await browser.close();
+})().catch(error => { process.stderr.write(error.stack); process.exitCode = 1; });

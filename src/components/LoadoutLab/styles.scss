@@ -6,6 +6,9 @@
 .loadout-preview { display: flex; flex-direction: column; min-height: 480px; background: var(--surface-deep); }
 .loadout-preview-meta { display: flex; justify-content: space-between; gap: 20px; padding: 24px 28px; color: var(--muted); font-size: 10px; }
 .loadout-preview-canvas { position: relative; display: flex; align-items: center; justify-content: center; flex: 1; min-height: 280px; padding: 24px 32px 62px; }
+.loadout-preview-canvas .weapon-model { inset: 0 4% 80px; }
+.loadout-preview-canvas--finish-only .weapon-model { bottom: 44px; }
+.loadout-preview-canvas .weapon-model__tools { left: 0; bottom: -25px; }
 .loadout-preview-image { width: 100%; height: 230px; object-fit: contain; transition: filter 260ms ease; }
 .loadout-preview--graphite .loadout-preview-image { filter: grayscale(1) brightness(.85) contrast(1.06); }
 .loadout-preview--silver .loadout-preview-image { filter: grayscale(1) brightness(1.2) contrast(.92); }
@@ -32,6 +35,8 @@
 .loadout-skin-swatch--graphite { background: #565B64; }
 .loadout-skin-swatch--silver { background: #859398; }
 .loadout-selects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.loadout-selects--single { grid-template-columns: minmax(0, 1fr); }
+.loadout-equipment-note { margin: 0 0 20px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .loadout-form-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 6px; }
 .loadout-save, .loadout-reset { min-height: 42px; font-size: 13px; }
 .loadout-saved-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 34px 0 20px; }
@@ -64,7 +69,7 @@
   .loadout-introduction { max-width: 100%; }
   .loadout-preview-meta, .loadout-preview-caption { padding: 20px; }
   .loadout-preview { min-height: 350px; }
-  .loadout-preview-canvas { min-height: 200px; padding: 20px 16px 54px; }
+  .loadout-preview-canvas { min-height: 260px; padding: 20px 16px 54px; }
   .loadout-preview-image { height: 150px; }
   .loadout-preview-selection { left: 16px; right: 16px; }
   .loadout-form { padding: 24px 20px; }
@@ -73,3 +78,17 @@
   .loadout-saved-title { font-size: 24px; }
 }
 @media (prefers-reduced-motion: reduce) { .loadout-preview-image { transition: none; } }
+.loadout-builder { align-items: start; overflow: clip; }
+.loadout-preview { position: sticky; top: 94px; min-height: 0; }
+.loadout-preview-canvas { flex: none; height: 420px; min-height: 0; padding: 0; }
+.loadout-preview-canvas .weapon-model, .loadout-preview-canvas--finish-only .weapon-model { inset: 0 3% 50px; }
+.loadout-preview-canvas .weapon-model__tools { bottom: -38px; }
+.loadout-preview-selection { position: static; padding: 0 20px 20px; }
+.loadout-preview { scroll-margin-top: 96px; }
+@media (max-width: 1050px) { .loadout-preview { position: static; } }
+@media (max-width: 650px) {
+  .loadout-preview-canvas { height: 300px; }
+  .loadout-preview-selection { padding: 0 16px 16px; gap: 6px; }
+  .loadout-preview-chip { padding: 6px; font-size: 8px; }
+  .loadout-preview-canvas .weapon-model__tools { gap: 8px; }
+}

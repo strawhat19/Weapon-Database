@@ -1,10 +1,11 @@
-import { Loadout, SavedWeapon } from '../shared/models';
 import { storageNamespace } from '../shared/config';
-import { getCatalogWeapons } from '../shared/catalog';
-import { createDataRecord, hasMatchingRecordId } from '../shared/common/ids';
+import { Loadout, SavedWeapon } from '../shared/models';
 import { isRecord, isText, isIsoDate } from '../shared/common/values';
-import { StorageError, readStored, writeStored, withStorageLock, reportStorageError } from '../shared/common/storage';
+import { createDataRecord, hasMatchingRecordId } from '../shared/common/ids';
+import { getStoredEquipment, validOptionalSlots } from '../shared/catalog/equipment';
+import { getCatalogWeapons, isSkinId, isOpticId, isAttachmentId } from '../shared/catalog';
 import type { DataRecord, LoadoutDraft, LoadoutRecord, SavedWeaponRecord } from '../types/types';
+import { StorageError, readStored, writeStored, withStorageLock, reportStorageError } from '../shared/common/storage';
 
 export type ArmorySnapshot = {
   counter: number;
@@ -14,16 +15,16 @@ export type ArmorySnapshot = {
 };
 export const armoryStorageKey = `${storageNamespace}:armory`;
 const emptySnapshot = (): ArmorySnapshot => ({ schemaVersion: 1, counter: 0, savedWeapons: [], loadouts: [] });
-const validData = (value: unknown, type: `Loadout` | `SavedWeapon`): value is DataRecord =>
+const validData = (value: unknown, type: `Loadout` | `SavedWeapon`): value is DataRecord & Record<string, unknown> =>
   isRecord(value) && isText(value.id) && isText(value.name) && value.name.length <= 80 &&
   typeof value.number === `number` && Number.isSafeInteger(value.number) && value.number > 0 &&
   isIsoDate(value.createdAt) && isIsoDate(value.updatedAt) && value.updatedAt >= value.createdAt &&
   hasMatchingRecordId(value.id, value.number, type);
 const validSavedWeapon = (value: unknown): value is SavedWeaponRecord => validData(value, `SavedWeapon`) && isRecord(value) && isText(value.weaponId);
 const validLoadout = (value: unknown): value is LoadoutRecord => validData(value, `Loadout`) && isRecord(value) && isText(value.weaponId) &&
-  [`olive`, `graphite`, `silver`].includes(value.skin as string) &&
-  [`standard`, `reflex`, `precision`].includes(value.optic as string) &&
-  [`none`, `light`, `bipod`].includes(value.attachment as string);
+  isSkinId(value.skin) &&
+  isOpticId(value.optic) && isAttachmentId(value.attachment) &&
+  validOptionalSlots(value);
 const validSnapshot = (value: unknown): value is ArmorySnapshot => {
   if (!isRecord(value) || value.schemaVersion !== 1 || typeof value.counter !== `number` || !Number.isSafeInteger(value.counter) || value.counter < 0) return false;
   if (!Array.isArray(value.loadouts) || !Array.isArray(value.savedWeapons) || !value.loadouts.every(validLoadout) || !value.savedWeapons.every(validSavedWeapon)) return false;
@@ -50,8 +51,8 @@ const normalizeDraft = (draft: LoadoutDraft): LoadoutDraft => {
   const name = typeof draft.name === `string` ? draft.name.trim() : ``;
   if (!name || name.length > 80) throw new Error(`Enter A Loadout Name Of 1–80 Characters`);
   getWeapon(draft.weaponId);
-  if (![`olive`, `graphite`, `silver`].includes(draft.skin) || ![`standard`, `reflex`, `precision`].includes(draft.optic) || ![`none`, `light`, `bipod`].includes(draft.attachment)) throw new Error(`Choose Valid Loadout Options`);
-  return { name, weaponId: draft.weaponId, skin: draft.skin, optic: draft.optic, attachment: draft.attachment };
+  if (!isSkinId(draft.skin) || !isOpticId(draft.optic) || !isAttachmentId(draft.attachment) || !validOptionalSlots(draft)) throw new Error(`Choose Valid Loadout Options`);
+  return { name, skin: draft.skin, weaponId: draft.weaponId, ...getStoredEquipment(draft) };
 };
 const nextNumber = (snapshot: ArmorySnapshot) => {
   if (snapshot.counter >= Number.MAX_SAFE_INTEGER) throw new Error(`The Local Record Counter Is Full`);
@@ -92,4 +93,3 @@ export const armoryAPI = {
     return { snapshot: updated, result: updated };
   }),
 };
-

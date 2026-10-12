@@ -63,7 +63,7 @@ export default function AppShell() {
         <dl className={`weapon-dossier__facts`}>{selectedWeapon.stats.map((stat, index) => <div id={`weapon-dossier-stat-${selectedWeapon.id}-${index}`} key={stat.label}><dt className={`eyebrow`}>{stat.label}</dt><dd>{stat.value}</dd></div>)}</dl>
         <div className={`weapon-dossier__actions`}>
           <button type={`button`} disabled={busy} id={`dossier-save-${selectedWeapon.id}`} className={`button button--quiet`} onClick={() => { void toggleSavedWeapon(selectedWeapon.id); }}><Icon name={savedWeaponIds.includes(selectedWeapon.id) ? `check` : `bookmark`} />{savedWeaponIds.includes(selectedWeapon.id) ? `Saved To Armory` : `Save Weapon`}</button>
-          {selectedWeapon.category === `firearms` && <button type={`button`} id={`dossier-build-${selectedWeapon.id}`} className={`button button--primary`} onClick={() => openBuild(selectedWeapon.id)}><Icon name={`sliders`} />Build A Loadout</button>}
+          {selectedWeapon.modelId && <button type={`button`} id={`dossier-build-${selectedWeapon.id}`} className={`button button--primary`} onClick={() => openBuild(selectedWeapon.id)}><Icon name={`sliders`} />Build A Loadout</button>}
         </div>
       </div>}
     </Modal>

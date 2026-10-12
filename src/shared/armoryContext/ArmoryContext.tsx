@@ -1,12 +1,13 @@
+import { catalogAPI } from '../../api/catalog';
+import { errorMessage } from '../common/values';
+import type { ArmorySnapshot } from '../../api/armory';
+import { getStoredEquipment } from '../catalog/equipment';
+import { armoryAPI, armoryStorageKey } from '../../api/armory';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { createContext, useEffect, useRef, useState } from 'react';
-import { catalogAPI } from '../../api/catalog';
-import { armoryAPI, armoryStorageKey } from '../../api/armory';
-import { defaultWeaponId } from '../catalog';
-import { errorMessage } from '../common/values';
-import { storageMode, getStorageError, storageDescription, dismissStorageError, subscribeStorageErrors } from '../common/storage';
-import type { ArmorySnapshot } from '../../api/armory';
+import { defaultWeaponId, getEquipmentDefaults } from '../catalog';
 import type { Category, Weapon, LoadoutDraft, LoadoutRecord } from '../../types/types';
+import { storageMode, getStorageError, storageDescription, dismissStorageError, subscribeStorageErrors } from '../common/storage';
 
 export type ArmoryContextValue = {
   query: string;
@@ -34,7 +35,7 @@ export type ArmoryContextValue = {
   setCategory: Dispatch<SetStateAction<Category>>;
   setDraft: Dispatch<SetStateAction<LoadoutDraft>>;
 };
-export const createDefaultDraft = (): LoadoutDraft => ({ name: `ARX-27 Loadout`, weaponId: defaultWeaponId, skin: `olive`, optic: `standard`, attachment: `none` });
+export const createDefaultDraft = (): LoadoutDraft => ({ name: `ARX-27 Loadout`, weaponId: defaultWeaponId, skin: `olive`, ...getEquipmentDefaults(`rifle`) });
 export const ArmoryContext = createContext<ArmoryContextValue | undefined>(undefined);
 
 export const ArmoryProvider = ({ children }: { children: ReactNode }) => {
@@ -108,7 +109,7 @@ export const ArmoryProvider = ({ children }: { children: ReactNode }) => {
   };
   const saveDraft = () => runMutation(() => armoryAPI.saveLoadout(draft, editingLoadoutId), result => {
     applySnapshot(result.snapshot);
-    setDraft({ name: result.loadout.name, weaponId: result.loadout.weaponId, skin: result.loadout.skin, optic: result.loadout.optic, attachment: result.loadout.attachment });
+    setDraft({ name: result.loadout.name, weaponId: result.loadout.weaponId, skin: result.loadout.skin, ...getStoredEquipment(result.loadout) });
     setEditingLoadoutId(result.loadout.id);
     setNotice(editingLoadoutId ? `Loadout Updated` : `Loadout Saved`);
   });
@@ -122,14 +123,14 @@ export const ArmoryProvider = ({ children }: { children: ReactNode }) => {
   const editLoadout = (id: string) => {
     const record = loadouts.find(item => item.id === id);
     if (!record) { setError(`Loadout Was Not Found`); return; }
-    setDraft({ name: record.name, weaponId: record.weaponId, skin: record.skin, optic: record.optic, attachment: record.attachment });
+    setDraft({ name: record.name, weaponId: record.weaponId, skin: record.skin, ...getStoredEquipment(record) });
     setEditingLoadoutId(id);
     setNotice(`Editing Loadout`);
   };
   const selectWeaponForBuild = (id: string) => {
     const weapon = weapons.find(item => item.id === id);
     if (!weapon) { setError(`Choose A Weapon From The Catalog`); return; }
-    setDraft({ ...createDefaultDraft(), name: `${weapon.title} Loadout`, weaponId: id, skin: id === `arx-27-graphite` ? `graphite` : id === `arx-27-silver` ? `silver` : `olive` });
+    setDraft({ ...createDefaultDraft(), name: `${weapon.title} Loadout`, weaponId: id, skin: weapon.defaultSkin ?? `olive`, ...getEquipmentDefaults(weapon.modelId) });
     setEditingLoadoutId(null);
   };
   const dismissError = () => { setError(null); dismissStorageError(); };
