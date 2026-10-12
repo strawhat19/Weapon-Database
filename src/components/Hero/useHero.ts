@@ -11,12 +11,11 @@ export const useHero = () => {
   const { theme } = useTheme();
   const searchInput = useRef<HTMLInputElement>(null);
   const { busy, weapons, query, draft, setQuery, setDraft, savedWeaponIds, toggleSavedWeapon, selectWeaponForBuild } = useArmory();
-  const featuredWeapons = useMemo(() => weapons.filter(weapon => weapon.featured && weapon.modelId), [weapons]);
+  const featuredWeapons = useMemo(() => weapons.filter(weapon => weapon.category === `firearms` && weapon.featured && weapon.modelId).slice(0, 3), [weapons]);
   const selectedWeapon = weapons.find(weapon => weapon.id === draft.weaponId);
   const featuredIndex = Math.max(0, featuredWeapons.findIndex(weapon => weapon.modelId === selectedWeapon?.modelId));
   const featuredWeapon = featuredWeapons?.[featuredIndex];
   const equipment = getEffectiveEquipment(featuredWeapon?.modelId ?? `rifle`, draft);
-  const featuredOffset = Math.max(0, Math.min(featuredIndex - 2, featuredWeapons.length - 5));
   const hasFeaturedDraft = Boolean(featuredWeapon && featuredWeapon.modelId === selectedWeapon?.modelId);
   const isSaved = Boolean(featuredWeapon && savedWeaponIds.includes(featuredWeapon.id));
 
@@ -47,5 +46,5 @@ export const useHero = () => {
     setDraft(current => ({ ...current, skin }));
   };
   const saveFeatured = () => { if (featuredWeapon) void toggleSavedWeapon(featuredWeapon.id); };
-  return { busy, theme, query, draft, equipment, isSaved, setQuery, selectSkin, buildLoadout, saveFeatured, searchInput, nextFeatured, searchCatalog, browseCatalog, featuredIndex, featuredOffset, featuredWeapon, selectFeatured, featuredWeapons };
+  return { busy, theme, query, draft, equipment, isSaved, setQuery, selectSkin, buildLoadout, saveFeatured, searchInput, nextFeatured, searchCatalog, browseCatalog, featuredIndex, featuredWeapon, selectFeatured, featuredWeapons };
 };

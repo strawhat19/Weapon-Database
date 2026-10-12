@@ -1,19 +1,20 @@
 import Icon from '../Icon';
 import './styles.scss';
 import WeaponCard from '../WeaponCard';
+import type { Category } from '../../types/types';
 import useCatalog, { categoryFilters } from './useCatalog';
 
-type CatalogProps = { onOpenWeapon: (id: string) => void };
+type CatalogProps = { defaultCategory?: Category; onOpenWeapon: (id: string) => void };
 
-const Catalog = ({ onOpenWeapon }: CatalogProps) => {
-  const { query, category, setQuery, setCategory, loading, filteredWeapons, resetFilters } = useCatalog();
+const Catalog = ({ onOpenWeapon, defaultCategory = `firearms` }: CatalogProps) => {
+  const { query, category, setQuery, setCategory, loading, filteredWeapons, resetFilters } = useCatalog(defaultCategory);
   return (
     <section id="catalog" className="catalog-section">
       <div id="catalog-container" className="container catalog-container">
         <div id="catalog-heading" className="section-heading catalog-heading">
           <div id="catalog-heading-copy" className="catalog-heading-copy">
             <p id="catalog-eyebrow" className="eyebrow">The Armory Index</p>
-            <h2 id="catalog-title" className="catalog-title">Objects Worth a Closer Look</h2>
+            <h2 id={`catalog-title`} className={`catalog-title`}>Vault</h2>
           </div>
           <p id="catalog-introduction" className="catalog-introduction">Explore the collection by form, era, and design. Concept studies are clearly marked throughout.</p>
         </div>
@@ -28,7 +29,8 @@ const Catalog = ({ onOpenWeapon }: CatalogProps) => {
                 aria-pressed={category === filter.id}
                 onClick={() => setCategory(filter.id)}
               >
-                {filter.label}
+                <Icon name={filter.id} size={16} className={`catalog-category-icon`} />
+                <span id={`catalog-category-label-${filter.id}`}>{filter.label}</span>
               </button>
             ))}
           </div>

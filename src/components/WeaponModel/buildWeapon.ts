@@ -2,20 +2,24 @@ import { createGunModel } from './buildGun';
 import { Box3, Group, Vector3 } from 'three';
 import { assembleGunMods } from './buildGunMods';
 import { assembleCrossbow } from './buildCrossbow';
+import { createGunGeometry } from './gunGeometry';
 import { createModelAssembly } from './modelAssembly';
 import { assembleSwordDrone } from './buildSwordDrone';
+import { assembleMarksmanSights } from './buildMarksman';
 import { assembleGunEquipment } from './buildGunEquipment';
+import { assembleMedievalSword } from './buildMedievalSword';
 import { assembleDisplayEquipment } from './buildDisplayEquipment';
 import { getEffectiveEquipment, getEquipmentDefaults } from '../../shared/catalog/equipment';
 import type { GunModelId, SkinId, ModelEquipment, WeaponModelId, EquipmentInspection } from '../../types/types';
 
-const gunModels = new Set<WeaponModelId>([`rifle`, `smg`, `shotgun`, `precision`, `pistol`]);
+const gunModels = new Set<WeaponModelId>([`rifle`, `smg`, `shotgun`, `precision`, `marksman`, `pistol`]);
 const isGunModel = (model: WeaponModelId): model is GunModelId => gunModels.has(model);
-const createBaseModel = (model: WeaponModelId, skin: SkinId): ReturnType<typeof createGunModel> => {
-  if (isGunModel(model)) return createGunModel(model, skin, `standard`, `none`);
+const createBaseModel = (model: WeaponModelId, skin: SkinId, onSurfaceReady?: () => void): ReturnType<typeof createGunModel> => {
+  if (isGunModel(model)) return createGunModel(model, skin, `standard`, onSurfaceReady);
   const assembly = createModelAssembly(model);
   try {
     switch (model) {
+      case `greatsword`: case `falchion`: assembleMedievalSword(model, assembly); break;
       case `longsword`: case `katana`: case `saber`: case `quadcopter`: case `fixedwing`: assembleSwordDrone(model, assembly); break;
       case `recurvebow`: case `compoundbow`: assembleCrossbow(model, assembly, `standard`); break;
       default: throw new Error(`Unknown Weapon Presentation Model`);
@@ -33,6 +37,13 @@ const assembleParts = (model: WeaponModelId, selected: ModelEquipment, assembly:
   } else assembleDisplayEquipment(model, selected.customization, assembly);
 };
 export const createPartModel = (model: WeaponModelId, skin: SkinId, inspection: EquipmentInspection): ReturnType<typeof createGunModel> => {
+  if (model === `marksman` && inspection.slot === `optic` && inspection.id === `standard`) {
+    const assembly = createGunGeometry(model);
+    try {
+      assembleMarksmanSights(assembly);
+      return assembly.finish(skin);
+    } catch (error) { assembly.dispose(); throw error; }
+  }
   const selected = getEffectiveEquipment(model, { optic: `standard`, attachment: `none`, [inspection.slot]: inspection.id });
   const assembly = createModelAssembly(model);
   try {
@@ -42,9 +53,9 @@ export const createPartModel = (model: WeaponModelId, skin: SkinId, inspection: 
     return assembly.finish(skin);
   } catch (error) { assembly.dispose(); throw error; }
 };
-export const createWeaponModel = (model: WeaponModelId, skin: SkinId, equipment: ModelEquipment = getEquipmentDefaults(model)): ReturnType<typeof createGunModel> => {
+export const createWeaponModel = (model: WeaponModelId, skin: SkinId, equipment: ModelEquipment = getEquipmentDefaults(model), onSurfaceReady?: () => void): ReturnType<typeof createGunModel> => {
   const selected = getEffectiveEquipment(model, equipment);
-  const base = createBaseModel(model, skin);
+  const base = createBaseModel(model, skin, onSurfaceReady);
   const assembly = createModelAssembly(model);
   try {
     assembleParts(model, selected, assembly);

@@ -1,10 +1,20 @@
-import { useMemo } from 'react';
+import type { Category } from '../../types/types';
+import { useEffect, useMemo, useState } from 'react';
 import { useArmory } from '../../shared/armoryContext';
 
 export { categories as categoryFilters } from '../../shared/catalog';
 
-const useCatalog = () => {
-  const { weapons, query, category, setQuery, setCategory, loading } = useArmory();
+const useCatalog = (defaultCategory: Category = `firearms`) => {
+  const [initializedCategory, setInitializedCategory] = useState<Category>();
+  const { weapons, query: sharedQuery, category: sharedCategory, setQuery, setCategory, loading } = useArmory();
+  const initialized = initializedCategory === defaultCategory;
+  const query = initialized ? sharedQuery : ``;
+  const category = initialized ? sharedCategory : defaultCategory;
+  useEffect(() => {
+    setQuery(``);
+    setCategory(defaultCategory);
+    setInitializedCategory(defaultCategory);
+  }, [defaultCategory, setQuery, setCategory]);
   const filteredWeapons = useMemo(() => {
     const search = query.trim().toLowerCase();
     return weapons.filter(weapon => {

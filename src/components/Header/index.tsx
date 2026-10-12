@@ -2,16 +2,19 @@ import Icon from '../Icon';
 import './styles.scss';
 import Brand from '../Brand';
 import useHeader from './useHeader';
+import { router, usePathname } from 'expo-router';
 import { useTheme } from '../../shared/themeContext';
-import { menuLinks, scrollToSection, type InfoTopic, type SectionId } from '../../shared/routes';
+import { menuLinks, pageRoutes, scrollToSection, type InfoTopic, type SectionId } from '../../shared/routes';
 
 type HeaderProps = { sticky?: boolean; onOpenAccount: () => void; onOpenInfo: (topic: InfoTopic) => void };
 
 const Header = ({ sticky = true, onOpenAccount, onOpenInfo }: HeaderProps) => {
+  const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
   const { scrolled, menuOpen, activeSection, menuButtonRef, closeMenu, setMenuOpen, setActiveSection } = useHeader();
   const navigate = (section: SectionId) => { setActiveSection(section); closeMenu(); scrollToSection(section); };
-  const openMenuLink = (link: (typeof menuLinks)[number]) => { closeMenu(); if (link.section) navigate(link.section); else if (link.topic) onOpenInfo(link.topic); };
+  const openMenuLink = (link: (typeof menuLinks)[number]) => { closeMenu(); if (link.path) router.navigate(link.path); else if (link.section) navigate(link.section); else if (link.topic) onOpenInfo(link.topic); };
+  const currentLink = (link: (typeof menuLinks)[number]): `page` | `location` | undefined => link.path ? pathname === link.path ? `page` : undefined : pathname === pageRoutes.home && activeSection === link.section ? `location` : undefined;
   const openAccount = () => { closeMenu(); onOpenAccount(); };
   return (
     <header id="site-header" className={`site-header${sticky ? ` is-sticky` : ``}${scrolled ? ` is-scrolled` : ``}${menuOpen ? ` is-menu-open` : ``}`}>
@@ -24,9 +27,9 @@ const Header = ({ sticky = true, onOpenAccount, onOpenInfo }: HeaderProps) => {
             key={link.id}
             id={`header-nav-${link.id}`}
             onClick={() => openMenuLink(link)}
-            aria-current={activeSection === link.section ? `location` : undefined}
-            className={`header-nav-link${activeSection === link.section ? ` is-active` : ``}`}
-          ><Icon filled name={link.icon} size={15} className={`header-link-icon`} /><span id={`header-nav-label-${link.id}`}>{link.label}</span></button>)}
+            aria-current={currentLink(link)}
+            className={`header-nav-link${currentLink(link) ? ` is-active` : ``}`}
+          ><Icon name={link.icon} size={15} className={`header-link-icon`} /><span id={`header-nav-label-${link.id}`}>{link.label}</span></button>)}
         </nav>
         <div id="header-actions" className="header-actions">
           <button
@@ -48,9 +51,9 @@ const Header = ({ sticky = true, onOpenAccount, onOpenInfo }: HeaderProps) => {
             key={link.id}
             id={`header-mobile-nav-${link.id}`}
             onClick={() => openMenuLink(link)}
-            aria-current={activeSection === link.section ? `location` : undefined}
-            className={`header-mobile-link${activeSection === link.section ? ` is-active` : ``}`}
-          ><span className={`header-mobile-link-content`}><Icon filled name={link.icon} size={19} className={`header-link-icon`} /><span id={`header-mobile-nav-label-${link.id}`}>{link.label}</span></span><Icon name={`arrow`} size={16} /></button>)}
+            aria-current={currentLink(link)}
+            className={`header-mobile-link${currentLink(link) ? ` is-active` : ``}`}
+          ><span className={`header-mobile-link-content`}><Icon name={link.icon} size={19} className={`header-link-icon`} /><span id={`header-mobile-nav-label-${link.id}`}>{link.label}</span></span><Icon name={`arrow`} size={16} /></button>)}
           <div id={`header-mobile-account-actions`} className={`header-mobile-account-actions`}>
             <button type={`button`} id={`header-mobile-sign-in`} className={`button button--quiet`} onClick={openAccount}><Icon name={`user`} size={16} />Sign In</button>
           </div>

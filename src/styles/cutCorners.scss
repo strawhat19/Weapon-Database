@@ -1,0 +1,26 @@
+@mixin cut-corners($size: 16px) {
+  --cut-corner: #{$size};
+  --cut-border: var(--rule);
+  position: relative;
+  isolation: isolate;
+  border: 1px solid var(--cut-border);
+  border-radius: 0;
+  clip-path: polygon(var(--cut-corner) 0, calc(100% - var(--cut-corner)) 0, 100% var(--cut-corner), 100% calc(100% - var(--cut-corner)), calc(100% - var(--cut-corner)) 100%, var(--cut-corner) 100%, 0 calc(100% - var(--cut-corner)), 0 var(--cut-corner));
+  &::after {
+    position: absolute;
+    z-index: 2;
+    inset: -1px;
+    content: "";
+    pointer-events: none;
+    background:
+      linear-gradient(135deg, transparent 50%, var(--cut-border) 50%, var(--cut-border) calc(50% + 1px), transparent calc(50% + 1px)) top left / var(--cut-corner) var(--cut-corner) no-repeat,
+      linear-gradient(225deg, transparent 50%, var(--cut-border) 50%, var(--cut-border) calc(50% + 1px), transparent calc(50% + 1px)) top right / var(--cut-corner) var(--cut-corner) no-repeat,
+      linear-gradient(315deg, transparent 50%, var(--cut-border) 50%, var(--cut-border) calc(50% + 1px), transparent calc(50% + 1px)) bottom right / var(--cut-corner) var(--cut-corner) no-repeat,
+      linear-gradient(45deg, transparent 50%, var(--cut-border) 50%, var(--cut-border) calc(50% + 1px), transparent calc(50% + 1px)) bottom left / var(--cut-corner) var(--cut-corner) no-repeat;
+  }
+}
+
+.loadout-section, .loadout-builder, .saved-loadout, .loadout-saved-empty { @include cut-corners; }
+.loadout-skin { @include cut-corners(5px); }
+.loadout-save { @include cut-corners(5px); --cut-border: var(--green); }
+.gunsmith-part { @include cut-corners(8px); }

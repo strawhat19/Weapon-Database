@@ -64,13 +64,13 @@ export const getStoredEquipment = (equipment: Partial<EquipmentSelections>): Mod
   underbarrel: equipment.underbarrel ?? (equipment.attachment === `grip` || equipment.attachment === `bipod` ? equipment.attachment : `none`),
 });
 export const getEquipmentDefaults = (model?: WeaponModelId): ModelEquipment => getStoredEquipment({
-  attachment: model === `precision` ? `bipod` : `none`,
-  optic: model === `rifle` || model === `precision` || model === `compoundbow` ? `precision` : `standard`,
+  attachment: model === `precision` || model === `marksman` ? `bipod` : `none`,
+  optic: model === `rifle` || model === `precision` || model === `marksman` || model === `compoundbow` ? `precision` : `standard`,
 });
 export const getEquipmentOptions = (model?: WeaponModelId) => {
-  const gun = [`rifle`, `smg`, `shotgun`, `precision`, `pistol`].includes(model ?? ``);
+  const gun = [`rifle`, `smg`, `shotgun`, `precision`, `marksman`, `pistol`].includes(model ?? ``);
   const crossbow = model === `recurvebow` || model === `compoundbow`;
-  const sword = [`longsword`, `katana`, `saber`].includes(model ?? ``);
+  const sword = [`longsword`, `katana`, `saber`, `greatsword`, `falchion`].includes(model ?? ``);
   const drone = model === `quadcopter` || model === `fixedwing`;
   return {
     optics: optics.filter(option => option.id === `standard` || (gun || crossbow) && (model !== `pistol` || option.id !== `precision`)),
@@ -104,7 +104,7 @@ export const getGunsmithSlots = (model: WeaponModelId | undefined, equipment: Pa
     [`optic`, `Optic`, options.optics], [`muzzle`, `Muzzle`, options.muzzles],
     [`underbarrel`, `Underbarrel`, options.underbarrels], [`rail`, `Side Rail`, options.rails],
     [`stock`, `Stock`, options.stocks], [`magazine`, `Magazine`, options.magazines],
-    [`customization`, `Add-On`, options.customizations],
+    [`customization`, options.customizations.some(option => option.id === `scabbard`) ? `Decorations` : `Add-On`, options.customizations],
   ];
   return entries.filter(([, , items]) => items.length > 1).map(([id, label, items]) => ({ id, label, options: items, value: selected[id] }));
 };

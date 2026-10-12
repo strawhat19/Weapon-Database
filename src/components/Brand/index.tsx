@@ -1,4 +1,4 @@
-import { assetUrl } from '../../shared/assets';
+import { appUrl, assetUrl } from '../../shared/assets';
 import { scrollToSection } from '../../shared/routes';
 
 type BrandProps = { id?: string; compact?: boolean; onNavigate?: () => void };
@@ -6,7 +6,7 @@ type BrandProps = { id?: string; compact?: boolean; onNavigate?: () => void };
 export default function Brand({ id = `header-brand`, compact = false, onNavigate }: BrandProps) {
   return <a
     id={id}
-    href={`#hero`}
+    href={appUrl(``)}
     aria-label={`Weapon Database Home`}
     className={`armory-brand ${compact ? `armory-brand--compact` : ``}`}
     onClick={event => { event.preventDefault(); onNavigate?.(); scrollToSection(`hero`); }}

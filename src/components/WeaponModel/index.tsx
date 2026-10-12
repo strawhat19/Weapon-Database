@@ -1,8 +1,9 @@
 import './styles.scss';
 import Icon from '../Icon';
-import type { ReactNode } from 'react';
 import WeaponLoader from '../WeaponLoader';
+import { useEffect, type ReactNode } from 'react';
 import { useWeaponModel } from './useWeaponModel';
+import { usePageLoading } from '../../shared/pageLoadingContext';
 import { getEquipmentKey } from '../../shared/catalog/equipment';
 import type { WeaponModelId, SkinId, ThemeMode, ModelEquipment, EquipmentInspection } from '../../types/types';
 
@@ -19,7 +20,9 @@ type WeaponModelProps = {
   inspection?: EquipmentInspection;
 };
 const WeaponModel = ({ skin, title, image, theme, modelId, equipment, inspection, fallback, showZoom = false, id = `hero-weapon-model` }: WeaponModelProps) => {
+  const reportModelSettled = usePageLoading()?.reportModelSettled;
   const { zoom, status, viewport, resetView, autoRotation, toggleAutoRotation } = useWeaponModel(modelId, skin, theme, equipment, inspection);
+  useEffect(() => { if (id === `hero-weapon-model` && status !== `loading`) reportModelSettled?.(); }, [id, status, reportModelSettled]);
   const ready = status === `ready`;
   return (
     <div id={id} className={`weapon-model`} data-state={status} data-skin={skin} data-equipment={getEquipmentKey(equipment)} data-part={inspection?.id}>

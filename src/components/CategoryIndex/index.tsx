@@ -1,14 +1,10 @@
 import Icon from '../Icon';
+import type { Category } from '../../types/types';
+import { categories } from '../../shared/catalog';
 import { scrollToSection } from '../../shared/routes';
 import { useArmory } from '../../shared/armoryContext';
-import type { Category } from '../../types/types';
 
-const categories: { id: Category; title: string; subtitle: string }[] = [
-  { id: `firearms`, title: `Firearms`, subtitle: `Rifles / Sidearms` },
-  { id: `swords`, title: `Swords`, subtitle: `Blades / Heritage` },
-  { id: `drones`, title: `Drones`, subtitle: `Air / Autonomous` },
-  { id: `future`, title: `Future Tech`, subtitle: `Research / Systems` },
-];
+const indexCategories = categories.filter(category => category.id !== `all`);
 
 export default function CategoryIndex() {
   const { setCategory, setQuery } = useArmory();
@@ -17,9 +13,12 @@ export default function CategoryIndex() {
     <p id={`archive-index-label`} className={`eyebrow`}>Explore The Index</p>
     <div className={`archive-index__row`}>
       <div className={`archive-index__categories`}>
-        {categories.map((category, index) => <button type={`button`} id={`archive-index-${category.id}`} className={`archive-index__category`} key={category.id} onClick={() => openCategory(category.id)}>
+        {indexCategories.map((category, index) => <button type={`button`} id={`archive-index-${category.id}`} className={`archive-index__category`} key={category.id} onClick={() => openCategory(category.id)}>
           <span className={`archive-index__number mono`}>{String(index + 1).padStart(2, `0`)}</span>
-          <span><strong>{category.title}</strong><small>{category.subtitle}</small></span>
+          <span id={`archive-index-copy-${category.id}`} className={`archive-index__copy`}>
+            <strong id={`archive-index-title-${category.id}`} className={`archive-index__title`}><Icon name={category.id} size={20} className={`archive-index__icon`} /><span>{category.label}</span></strong>
+            <small id={`archive-index-subtitle-${category.id}`}>{category.subtitle}</small>
+          </span>
         </button>)}
       </div>
       <button type={`button`} id={`archive-index-field-notes`} className={`archive-index__journal`} onClick={() => scrollToSection(`journal`)}>

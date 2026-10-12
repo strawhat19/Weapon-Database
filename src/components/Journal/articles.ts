@@ -14,7 +14,7 @@ export const journalArticles: JournalArticle[] = [
     category: `Archive Notes`,
     title: `A Blade Is More Than Its Silhouette`,
     excerpt: `A closer look begins with context, craftsmanship, and the questions an archive should ask.`,
-    image: assetUrl(`images/heritage-blade.png`),
+    image: assetUrl(`images/heritage-blade-studio.webp`),
     paragraphs: [
       `A useful weapon archive invites more than a glance at a silhouette. It provides room for questions about form, materials, provenance, and the setting in which an object belongs.`,
       `The heritage blade entry is a visual reference for this collection. Its place in the index is an invitation to examine the proportions and details, rather than a claim about the origin of a particular historical artifact.`,
@@ -26,7 +26,7 @@ export const journalArticles: JournalArticle[] = [
     category: `Future Systems`,
     title: `Give the Future Its Own Dossier`,
     excerpt: `Emerging ideas deserve a clear place beside the archive, with concepts presented as concepts.`,
-    image: assetUrl(`images/future-drone.png`),
+    image: assetUrl(`images/future-systems-studio.webp`),
     paragraphs: [
       `The Future Systems collection offers a place for visual studies of emerging equipment. It sits beside the historical reference collection while retaining its own identity and labels.`,
       `The drone imagery in this collection represents a design study. The illustrations are intended to support discussion of appearance and design direction; they do not establish operational capabilities or specifications.`,

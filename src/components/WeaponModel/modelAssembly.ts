@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { createSurfaceDetail } from './surfaceDetail';
 import { createWeaponFinish } from './weaponFinishes';
 import type { SkinId, WeaponModelId } from '../../types/types';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
@@ -10,15 +11,37 @@ type Axis = `x` | `y` | `z`;
 export const createModelAssembly = (model: WeaponModelId) => {
   const object = new THREE.Group();
   object.name = `${model.toUpperCase()} Presentation Model`;
-  const paint = new THREE.MeshStandardMaterial({ color: 0x63746a, metalness: 0.38, roughness: 0.55 });
-  const paintInset = new THREE.MeshStandardMaterial({ color: 0x43544a, metalness: 0.28, roughness: 0.68 });
-  const metal = new THREE.MeshStandardMaterial({ color: 0x9aa8b1, metalness: 0.92, roughness: 0.28 });
-  const rubber = new THREE.MeshStandardMaterial({ color: 0x182027, metalness: 0.06, roughness: 0.9 });
-  const trim = new THREE.MeshStandardMaterial({ color: 0xb3a17a, metalness: 0.86, roughness: 0.32 });
-  const lens = new THREE.MeshPhysicalMaterial({ color: 0x447e91, metalness: 0.4, roughness: 0.12, clearcoat: 1, clearcoatRoughness: 0.08, transparent: true, opacity: .28, depthWrite: false });
+  const coated = [`rifle`, `smg`, `shotgun`, `precision`, `marksman`, `pistol`, `recurvebow`, `compoundbow`].includes(model);
+  const medieval = model === `greatsword` || model === `falchion`;
+  const paint = new THREE.MeshStandardMaterial({ color: 0x63746a, metalness: medieval ? .06 : .38, roughness: medieval ? .82 : .55 });
+  const paintInset = new THREE.MeshStandardMaterial({ color: 0x43544a, metalness: medieval ? .04 : .28, roughness: medieval ? .88 : .68 });
+  const metal = new THREE.MeshStandardMaterial({ color: coated ? 0x2b3339 : medieval ? 0x889399 : 0x9aa8b1, metalness: coated ? .86 : .92, roughness: coated ? .38 : medieval ? .39 : .28 });
+  const rubber = new THREE.MeshStandardMaterial({ color: medieval ? 0x211c19 : 0x182027, metalness: 0.06, roughness: medieval ? .94 : .9 });
+  const trim = new THREE.MeshStandardMaterial({ color: coated ? 0x69767e : medieval ? 0xb49c62 : 0xb3a17a, metalness: 0.86, roughness: medieval ? .43 : .32 });
+  const recess = new THREE.MeshStandardMaterial({ color: 0x0b1014, metalness: .12, roughness: .86 });
+  const anodized = new THREE.MeshStandardMaterial({ color: 0x252b30, metalness: .72, roughness: .43 });
+  const lens = new THREE.MeshPhysicalMaterial({
+    clearcoat: 1,
+    depthWrite: false,
+    transparent: true,
+    opacity: coated ? .46 : medieval ? .92 : .28,
+    roughness: coated ? .06 : medieval ? .15 : .12,
+    metalness: coated ? .12 : medieval ? .16 : .4,
+    color: coated ? 0x254654 : medieval ? 0x1b4435 : 0x447e91,
+    clearcoatRoughness: coated ? .035 : .08,
+    side: coated ? THREE.DoubleSide : THREE.FrontSide,
+  });
   const reticle = new THREE.MeshBasicMaterial({ color: 0xff453b });
-  const materials = [paint, paintInset, metal, rubber, trim, lens, reticle];
-  const finishes = createWeaponFinish([paint, paintInset], object);
+  const materials = [paint, paintInset, metal, rubber, trim, recess, anodized, lens, reticle];
+  const finishes = createWeaponFinish([paint, paintInset], object, { studio: coated || medieval });
+  const surfaceDetail = coated || medieval ? createSurfaceDetail([
+    { kind: `paint`, material: paint },
+    { kind: `metal`, material: metal },
+    { kind: `metal`, material: trim },
+    { kind: `rubber`, material: rubber },
+    { kind: `paint`, material: paintInset },
+    { kind: `metal`, material: anodized },
+  ], object) : undefined;
   const cache = new Map<string, THREE.BufferGeometry>();
   const geometries = new Set<THREE.BufferGeometry>();
   const batches = new Map<THREE.Material, THREE.BufferGeometry[]>();
@@ -34,6 +57,7 @@ export const createModelAssembly = (model: WeaponModelId) => {
     if (disposed) return;
     disposed = true;
     finishes.dispose();
+    surfaceDetail?.dispose();
     geometries.forEach(geometry => geometry.dispose());
     materials.forEach(material => material.dispose());
     geometries.clear();
@@ -121,10 +145,11 @@ export const createModelAssembly = (model: WeaponModelId) => {
     batches.clear();
     cache.forEach(release);
     cache.clear();
+    surfaceDetail?.prepare();
     finishes.setSkin(skin);
     return { object, dispose, framingPoints, origin: center.clone(), setSkin: finishes.setSkin };
   };
-  return { paint, paintInset, metal, rubber, trim, lens, reticle, box, panel, tube, cylinder, ellipsoid, ring, beam, custom, finish, dispose, hasGeometry: () => !bounds.isEmpty() };
+  return { paint, paintInset, metal, rubber, trim, lens, reticle, recess, anodized, box, panel, tube, cylinder, ellipsoid, ring, beam, custom, finish, dispose, hasGeometry: () => !bounds.isEmpty() };
 };
 
 export type ModelAssembly = ReturnType<typeof createModelAssembly>;

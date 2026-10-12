@@ -1,7 +1,7 @@
-import { getCatalogWeapons } from '../shared/catalog';
+import { getCatalogWeapon, getCatalogWeapons } from '../shared/catalog';
 
 export const catalogAPI = {
   getWeapons: async () => getCatalogWeapons(),
-  getWeapon: async (id: string) => getCatalogWeapons().find(weapon => weapon.id === id) ?? null,
+  getWeapon: async (id: string) => getCatalogWeapon(id),
 };
 

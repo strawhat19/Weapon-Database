@@ -35,6 +35,8 @@
 .hero-vault-oval { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .hero-vault-oval__rotation { --vault-tilt: -8deg; transform: rotate(var(--vault-tilt)); transform-origin: 0 0; transform-box: view-box; animation: vault-precession 30s ease-in-out infinite paused; }
 .hero-vault-oval__orbit { transform-origin: 0 0; transform-box: view-box; animation: vault-orbit 72s linear infinite paused; }
+.hero-vault-oval__scope-tick { fill: none; stroke: var(--muted); stroke-width: .8; opacity: .55; }
+.hero-vault-oval__scope-tick--major { stroke: var(--accent); stroke-width: 1.4; opacity: .7; }
 .hero-rifle-stage:has(.weapon-model__viewport[data-motion='running']) .hero-vault-oval__rotation, .hero-rifle-stage:has(.weapon-model__viewport[data-motion='running']) .hero-vault-oval__orbit { animation-play-state: running; }
 @keyframes vault-orbit { to { transform: rotate(-360deg); } }
 @keyframes vault-precession {

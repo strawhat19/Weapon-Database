@@ -95,15 +95,15 @@ const Hero = ({ onOpenWeapon }: HeroProps) => {
                 <strong>{featuredNumber}</strong><span>{`/ ${String(hero.featuredWeapons.length).padStart(2, `0`)}`}</span>
               </span>
               <div className={`hero-carousel-selectors`}>
-                {hero.featuredWeapons.slice(hero.featuredOffset, hero.featuredOffset + 5).map((weapon, index) => (
+                {hero.featuredWeapons.map((weapon, index) => (
                   <button
                     key={weapon.id}
                     type={`button`}
-                    onClick={() => hero.selectFeatured(hero.featuredOffset + index)}
+                    onClick={() => hero.selectFeatured(index)}
                     id={`hero-select-featured-${weapon.id}`}
-                    aria-pressed={hero.featuredIndex === hero.featuredOffset + index}
+                    aria-pressed={hero.featuredIndex === index}
                     aria-label={`Show ${weapon.title} ${weapon.subtitle} Design Study`}
-                    className={`hero-carousel-selector${hero.featuredIndex === hero.featuredOffset + index ? ` hero-carousel-selector--active` : ``}`}
+                    className={`hero-carousel-selector${hero.featuredIndex === index ? ` hero-carousel-selector--active` : ``}`}
                   ><span aria-hidden={true} /></button>
                 ))}
               </div>

@@ -1,52 +1,90 @@
 import './styles.scss';
 import Icon from '../Icon';
-import PartIllustration from './PartIllustration';
+import type { KeyboardEvent } from 'react';
+import PartThumbnail from './PartThumbnail';
 import { isEquippedPart } from '../../shared/catalog/equipment';
-import type { EquipmentSlot, GunsmithSlot, EquipmentOption } from '../../types/types';
+import type { EquipmentSlot, GunsmithSlot, WeaponModelId, EquipmentOption } from '../../types/types';
 
 type GunsmithPanelProps = {
   disabled: boolean;
   slots: GunsmithSlot[];
-  activeSlot: EquipmentSlot;
   onReset: () => void;
-  onViewBuild: () => void;
-  onSelectSlot: (slot: EquipmentSlot) => void;
+  modelId?: WeaponModelId;
   onEquip: (slot: EquipmentSlot, id: string) => void;
   onInspect: (slot: EquipmentSlot, option: EquipmentOption) => void;
 };
-const GunsmithPanel = ({ slots, disabled, activeSlot, onReset, onEquip, onInspect, onSelectSlot, onViewBuild }: GunsmithPanelProps) => {
-  const selectedSlot = slots.find(slot => slot.id === activeSlot) ?? slots[0];
+const getVisibleOptions = (slot: GunsmithSlot) => slot.options.filter(option => isEquippedPart(option.id) || slot.id === `optic` && option.id === `standard`);
+const GunsmithPanel = ({ slots, modelId, disabled, onReset, onEquip, onInspect }: GunsmithPanelProps) => {
   const count = slots.filter(slot => isEquippedPart(slot.value)).length;
-  const defaultOption = selectedSlot?.options.find(option => !isEquippedPart(option.id));
-  if (!selectedSlot) return null;
+  const sword = [`longsword`, `katana`, `saber`, `greatsword`, `falchion`].includes(modelId ?? ``);
+  const selectWithKeyboard = (event: KeyboardEvent<HTMLButtonElement>, slot: GunsmithSlot, index: number) => {
+    const keys = [`ArrowLeft`, `ArrowRight`, `ArrowUp`, `ArrowDown`, `Home`, `End`];
+    if (!keys.includes(event.key)) return;
+    event.preventDefault();
+    const options = getVisibleOptions(slot);
+    const last = options.length - 1;
+    const nextIndex = event.key === `Home` ? 0 : event.key === `End` ? last : (index + (event.key === `ArrowLeft` || event.key === `ArrowUp` ? -1 : 1) + options.length) % options.length;
+    const option = options[nextIndex];
+    if (!option) return;
+    onEquip(slot.id, option.id);
+    event.currentTarget.closest(`.gunsmith-parts`)?.querySelector<HTMLButtonElement>(`[data-part-index="${nextIndex}"]`)?.focus();
+  };
+  if (!slots.length) return null;
   return (
     <div id={`gunsmith-panel`} className={`gunsmith-panel`}>
       <div id={`gunsmith-header`} className={`gunsmith-header`}>
-        <div id={`gunsmith-heading`}><h4 id={`gunsmith-title`}>Gunsmith</h4><span id={`gunsmith-count`} className={`mono`} aria-live={`polite`}>{count} / {slots.length} Slots Equipped</span></div>
-        <div id={`gunsmith-toolbar`} className={`gunsmith-toolbar`}><button type={`button`} id={`gunsmith-view-build`} className={`gunsmith-text-action`} onClick={onViewBuild}><Icon name={`search`} size={13} />View Build</button><button type={`button`} id={`gunsmith-reset`} className={`gunsmith-text-action`} disabled={disabled} onClick={onReset}><Icon name={`rotate`} size={13} />Reset Parts</button></div>
+        <div id={`gunsmith-heading`} className={`gunsmith-heading`}>
+          <h4 id={`gunsmith-title`}>{sword ? `Swordsmith` : `Gunsmith`}</h4>
+          <span id={`gunsmith-count`} className={`mono`} aria-live={`polite`}>{count} / {slots.length} Slots Equipped</span>
+        </div>
+        <button type={`button`} id={`gunsmith-reset`} className={`gunsmith-text-action`} disabled={disabled} onClick={onReset}><Icon name={`rotate`} size={13} />Reset Parts</button>
       </div>
-      <div id={`gunsmith-slots`} className={`gunsmith-slots`} role={`group`} aria-label={`Attachment Slots`}>
+      <p id={`gunsmith-instructions`} className={`gunsmith-instructions`}>{sword ? `Choose a decoration card to equip. Choose it again to remove it.` : `Choose a card to equip. Choose an equipped attachment again to deselect it.`}</p>
+      <div id={`gunsmith-groups`} className={`gunsmith-groups`}>
         {slots.map(slot => {
-          const equipped = isEquippedPart(slot.value);
-          const selected = slot.id === selectedSlot.id;
-          const option = slot.options.find(item => item.id === slot.value);
-          return <button type={`button`} key={slot.id} id={`gunsmith-slot-${slot.id}`} className={`gunsmith-slot${selected ? ` is-active` : ``}`} aria-pressed={selected} disabled={disabled} onClick={() => onSelectSlot(slot.id)}><span id={`gunsmith-slot-label-${slot.id}`} className={`gunsmith-slot-label mono`}>{slot.label}</span><span id={`gunsmith-slot-value-${slot.id}`} className={`gunsmith-slot-value`}>{option?.label}</span><span id={`gunsmith-slot-status-${slot.id}`} className={`gunsmith-slot-status${equipped ? ` is-equipped` : ``}`}><span className={`gunsmith-slot-dot`} />{equipped ? `Equipped` : `Factory`}</span></button>;
-        })}
-      </div>
-      <div id={`gunsmith-catalog-heading`} className={`gunsmith-catalog-heading`}><h5 id={`gunsmith-catalog-title`}>{selectedSlot.label} Parts</h5><span className={`mono`}>Inspect · Equip · Rotate</span></div>
-      <div id={`gunsmith-parts-${selectedSlot.id}`} className={`gunsmith-parts`}>
-        {selectedSlot.options.map(option => {
-          const selected = option.id === selectedSlot.value;
-          const removable = selected && isEquippedPart(option.id) && defaultOption;
-          return <article key={option.id} id={`gunsmith-part-${selectedSlot.id}-${option.id}`} className={`gunsmith-part${selected ? ` is-equipped` : ``}`}>
-            <div id={`gunsmith-part-art-${selectedSlot.id}-${option.id}`} className={`gunsmith-part-art`}><PartIllustration id={`gunsmith-thumb-${selectedSlot.id}-${option.id}`} illustration={option.illustration} />{selected && <span className={`gunsmith-part-badge mono`}><Icon name={`check`} size={11} />Selected</span>}</div>
-            <div id={`gunsmith-part-body-${selectedSlot.id}-${option.id}`} className={`gunsmith-part-body`}><h6>{option.label}</h6><p>{option.description}</p>
-              <div className={`gunsmith-part-actions`}>
-                <button type={`button`} id={`gunsmith-equip-${selectedSlot.id}-${option.id}`} className={`gunsmith-part-action${selected ? ` is-selected` : ``}`} disabled={disabled || selected && !removable} onClick={() => onEquip(selectedSlot.id, removable ? defaultOption.id : option.id)} aria-label={`${removable ? `Remove` : `Equip`} ${option.label}`}><Icon name={removable ? `x` : selected ? `check` : `plus`} size={13} />{removable ? `Remove` : selected ? `Selected` : `Equip`}</button>
-                {isEquippedPart(option.id) && <button type={`button`} id={`gunsmith-inspect-${selectedSlot.id}-${option.id}`} className={`gunsmith-part-action`} disabled={disabled} onClick={() => onInspect(selectedSlot.id, option)} aria-label={`Inspect ${option.label} In 3D`}><Icon name={`search`} size={13} />Inspect</button>}
-              </div>
+          const options = getVisibleOptions(slot);
+          const selectedIndex = options.findIndex(option => option.id === slot.value);
+          const defaultOption = slot.options.find(option => !isEquippedPart(option.id));
+          const currentOption = slot.options.find(option => option.id === slot.value);
+          return <section key={slot.id} id={`gunsmith-group-${slot.id}`} className={`gunsmith-group`} aria-labelledby={`gunsmith-group-title-${slot.id}`}>
+            <div id={`gunsmith-group-heading-${slot.id}`} className={`gunsmith-group-heading`}>
+              <h5 id={`gunsmith-group-title-${slot.id}`}>{slot.label}</h5>
+              <span id={`gunsmith-group-selection-${slot.id}`} className={`gunsmith-group-selection mono`}>{currentOption?.label}</span>
             </div>
-          </article>;
+            <div id={`gunsmith-parts-${slot.id}`} className={`gunsmith-parts${options.length === 1 ? ` gunsmith-parts--single` : options.length === 2 ? ` gunsmith-parts--pair` : ``}`} role={`radiogroup`} aria-labelledby={`gunsmith-group-title-${slot.id}`} aria-describedby={`gunsmith-instructions`}>
+              {options.map((option, index) => {
+                const selected = option.id === slot.value;
+                const removable = selected && isEquippedPart(option.id) && defaultOption;
+                const nextId = removable ? defaultOption.id : option.id;
+                return <article key={option.id} id={`gunsmith-part-${slot.id}-${option.id}`} className={`gunsmith-part${selected ? ` is-equipped` : ``}`}>
+                  <button
+                    type={`button`}
+                    role={`radio`}
+                    disabled={disabled}
+                    aria-checked={selected}
+                    data-part-index={index}
+                    tabIndex={index === Math.max(0, selectedIndex) ? 0 : -1}
+                    className={`gunsmith-part-card`}
+                    id={`gunsmith-equip-${slot.id}-${option.id}`}
+                    onClick={() => onEquip(slot.id, nextId)}
+                    onKeyDown={event => selectWithKeyboard(event, slot, index)}
+                    aria-label={`${option.label}${removable ? `, Equipped. Choose Again To Restore ${defaultOption?.label}` : ``}`}
+                    aria-describedby={`gunsmith-part-description-${slot.id}-${option.id}`}
+                  >
+                    <span id={`gunsmith-part-art-${slot.id}-${option.id}`} className={`gunsmith-part-art`}>
+                      <PartThumbnail id={`gunsmith-thumb-${slot.id}-${option.id}`} modelId={modelId} illustration={option.illustration} />
+                      {selected && <span id={`gunsmith-part-badge-${slot.id}-${option.id}`} className={`gunsmith-part-badge mono`}><Icon name={`check`} size={11} />Selected</span>}
+                    </span>
+                    <span id={`gunsmith-part-body-${slot.id}-${option.id}`} className={`gunsmith-part-body`}>
+                      <span id={`gunsmith-part-label-${slot.id}-${option.id}`} className={`gunsmith-part-label`}>{option.label}</span>
+                      <span id={`gunsmith-part-description-${slot.id}-${option.id}`} className={`gunsmith-part-description`}>{option.description}</span>
+                    </span>
+                  </button>
+                  {isEquippedPart(option.id) && <button type={`button`} id={`gunsmith-inspect-${slot.id}-${option.id}`} className={`gunsmith-part-inspect`} disabled={disabled} onClick={() => onInspect(slot.id, option)} aria-label={`Inspect ${option.label} In 3D`} title={`Inspect ${option.label} In 3D`}><Icon name={`search`} size={15} /></button>}
+                </article>;
+              })}
+            </div>
+          </section>;
         })}
       </div>
     </div>

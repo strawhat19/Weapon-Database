@@ -1,8 +1,13 @@
 import type { ModelAssembly } from './modelAssembly';
 import type { WeaponModelId, CustomizationId } from '../../types/types';
+import { assembleMedievalSwordDecoration } from './buildMedievalSword';
 
 export const assembleDisplayEquipment = (model: WeaponModelId, option: CustomizationId, assembly: ModelAssembly): void => {
   if (option === `none`) return;
+  if (model === `greatsword` || model === `falchion`) {
+    assembleMedievalSwordDecoration(model, option, assembly);
+    return;
+  }
   const { box, beam, ring, panel, cylinder, ellipsoid } = assembly;
   const { paint, paintInset, metal, rubber, trim, lens } = assembly;
   const sword = model === `longsword` || model === `katana` || model === `saber`;

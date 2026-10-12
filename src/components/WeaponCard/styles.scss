@@ -3,13 +3,11 @@
 .weapon-card:hover { background: color-mix(in srgb, var(--rule) 55%, var(--accent)); transform: translateY(-2px); }
 .weapon-card:focus-within { background: var(--green); }
 .weapon-card-media { position: relative; height: 230px; overflow: hidden; border-bottom: 1px solid var(--rule); }
-.weapon-card-media::before { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; background: linear-gradient(115deg, color-mix(in srgb, var(--surface-deep) 88%, transparent), color-mix(in srgb, var(--surface-deep) 68%, transparent)), var(--steel-texture); background-position: center; background-size: cover; clip-path: polygon(var(--card-inner-corner) 0, calc(100% - var(--card-inner-corner)) 0, 100% var(--card-inner-corner), 100% 100%, 0 100%, 0 var(--card-inner-corner)); }
+.weapon-card-media::before { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; background: var(--studio-surface); background-position: center; background-size: cover; clip-path: polygon(var(--card-inner-corner) 0, calc(100% - var(--card-inner-corner)) 0, 100% var(--card-inner-corner), 100% 100%, 0 100%, 0 var(--card-inner-corner)); }
 .weapon-card-media::after { position: absolute; right: 24px; bottom: 0; width: 42px; height: 2px; content: ""; pointer-events: none; background: var(--green); }
 .weapon-card-preview { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
 .weapon-card-image { display: block; width: 100%; height: 100%; object-fit: contain; padding: 36px 24px; transition: transform 280ms ease; }
 .weapon-card--photograph .weapon-card-image { padding: 0; object-fit: cover; }
-.weapon-card--arx-27-graphite .weapon-card-image { filter: grayscale(1) brightness(.85) contrast(1.06); }
-.weapon-card--arx-27-silver .weapon-card-image { filter: grayscale(1) brightness(1.2) contrast(.92); }
 .weapon-card-preview:hover .weapon-card-image { transform: scale(1.035); }
 .weapon-card-tag { position: absolute; top: 16px; left: 16px; padding: 6px 9px; color: var(--white); background: var(--black); font-size: 9px; clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px), 0 4px); }
 .weapon-card-save { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border: 0; color: var(--white); background: var(--black); clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0 calc(100% - 5px), 0 5px); }

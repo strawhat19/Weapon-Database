@@ -5,15 +5,16 @@ import Header from '../Header';
 import Footer from '../Footer';
 import Journal from '../Journal';
 import Catalog from '../Catalog';
-import { type CSSProperties } from 'react';
 import LoadoutLab from '../LoadoutLab';
+import { type CSSProperties } from 'react';
 import { useAppShell } from './useAppShell';
 import CategoryIndex from '../CategoryIndex';
-import ArchiveTimeline from '../ArchiveTimeline';
 import { assetUrl } from '../../shared/assets';
-import { scrollToSection } from '../../shared/routes';
+import ArchiveTimeline from '../ArchiveTimeline';
 import { useTheme } from '../../shared/themeContext';
 import { useArmory } from '../../shared/armoryContext';
+import SavedConfigurations from '../SavedConfigurations';
+import { scrollToTop, scrollToSection } from '../../shared/routes';
 
 const information = {
   about: { title: `The public armory.`, copy: `Weapon Database is an archive for exploring weapon design, heritage, and emerging systems. This preview collection combines design studies with editorial reference content. Build a collection, compare forms, and create your own visual loadouts.` },
@@ -23,7 +24,7 @@ const information = {
   contact: { title: `Built by Piratechs.`, copy: `Have a thought about the archive or a future collaboration? Visit Piratechs to learn more about the team behind Weapon Database.` },
 };
 
-export default function AppShell() {
+export default function AppShell({ page = `home` }: { page?: `home` | `weapons` }) {
   const state = useAppShell();
   const { error: themeError, dismissError: dismissThemeError } = useTheme();
   const { busy, weapons, savedWeaponIds, toggleSavedWeapon, selectWeaponForBuild, error, notice, dismissError, dismissNotice, loading } = useArmory();
@@ -40,15 +41,15 @@ export default function AppShell() {
     <a className={`skip-link`} href={`#catalog`} onClick={event => { event.preventDefault(); scrollToSection(`catalog`); }}>Skip To The Catalog</a>
     <Header onOpenInfo={state.setInfoTopic} onOpenAccount={() => state.setAccountOpen(true)} />
     <main id={`armory-main`}>
-      <Hero onOpenWeapon={state.setWeaponId} />
-      <CategoryIndex />
-      <Catalog onOpenWeapon={state.setWeaponId} />
-      <LoadoutLab />
-      <Journal />
-      <ArchiveTimeline />
+      {page === `home` ? <><Hero onOpenWeapon={state.setWeaponId} /><CategoryIndex /></> : <>
+        <div id={`weapons-page-heading`} className={`container weapons-page-heading`}><p className={`eyebrow`}>Your Armory</p><h1 id={`weapons-page-title`}>Weapons</h1></div>
+        <SavedConfigurations onEdit={() => scrollToSection(`loadout-lab`)} />
+      </>}
+      <Catalog key={page} defaultCategory={page === `weapons` ? `all` : `firearms`} onOpenWeapon={state.setWeaponId} />
+      {page === `home` && <><LoadoutLab /><Journal /><ArchiveTimeline /></>}
     </main>
     <Footer onOpenInfo={state.setInfoTopic} />
-    <button type={`button`} id={`scroll-to-top`} className={`scroll-top ${state.pastHero ? `scroll-top--visible` : ``}`} aria-label={`Scroll To Top`} tabIndex={state.pastHero ? 0 : -1} onClick={() => scrollToSection(`hero`)}><Icon name={`chevron-up`} /></button>
+    <button type={`button`} id={`scroll-to-top`} className={`scroll-top ${state.pastHero ? `scroll-top--visible` : ``}`} aria-label={`Scroll To Top`} tabIndex={state.pastHero ? 0 : -1} onClick={scrollToTop}><Icon name={`chevron-up`} /></button>
     {(error || themeError) && <div id={`storage-error-notice`} role={`alert`} className={`app-feedback app-feedback--error`}>
       <p>{error || themeError}</p><button type={`button`} className={`icon-button`} id={`dismiss-storage-error`} aria-label={`Dismiss Message`} onClick={() => { dismissError(); dismissThemeError(); }}><Icon name={`x`} size={18} /></button>
     </div>}

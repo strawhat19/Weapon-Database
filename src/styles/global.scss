@@ -1,4 +1,8 @@
-* { box-sizing: border-box; }
+* { box-sizing: border-box; scrollbar-width: thin; scrollbar-color: var(--accent, #3D5844) var(--surface-deep, #E2E7E9); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner { background: var(--surface-deep, #E2E7E9); }
+::-webkit-scrollbar-thumb { min-height: 40px; border: 2px solid var(--surface-deep, #E2E7E9); border-radius: 5px; background: var(--accent, #3D5844); }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--accent, #3D5844) 82%, var(--text, #17181A)); }
 html { scroll-behavior: smooth; scroll-padding-top: 124px; }
 body { margin: 0; color: var(--text, #17181A); background: var(--background, #EDF0F2); font-family: "Weapon Rajdhani", sans-serif; font-size: 18px; font-weight: 600; -webkit-font-smoothing: antialiased; }
 body, #root { min-height: 100vh; }

@@ -1,7 +1,7 @@
 export type ThemeMode = `dark` | `light`;
 export type SkinId = `olive` | `graphite` | `silver` | `desert` | `woodland` | `arctic` | `urban` | `digital` | `tiger`;
-export type GunModelId = `rifle` | `smg` | `shotgun` | `precision` | `pistol`;
-export type WeaponModelId = GunModelId | `longsword` | `katana` | `saber` | `quadcopter` | `fixedwing` | `recurvebow` | `compoundbow`;
+export type GunModelId = `rifle` | `smg` | `shotgun` | `precision` | `marksman` | `pistol`;
+export type WeaponModelId = GunModelId | `longsword` | `katana` | `saber` | `greatsword` | `falchion` | `quadcopter` | `fixedwing` | `recurvebow` | `compoundbow`;
 export type AttachmentId = `none` | `light` | `bipod` | `grip` | `suppressor`;
 export type CustomizationId = `none` | `scabbard` | `tassel` | `ornate-guard` | `camera` | `cargo` | `landing-kit`;
 export type MuzzleId = `none` | `suppressor` | `brake`;

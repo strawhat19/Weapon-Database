@@ -5,7 +5,7 @@ import { getStoredEquipment } from '../catalog/equipment';
 import { armoryAPI, armoryStorageKey } from '../../api/armory';
 import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { createContext, useEffect, useRef, useState } from 'react';
-import { defaultWeaponId, getEquipmentDefaults } from '../catalog';
+import { defaultWeaponId, getCatalogWeapon, getEquipmentDefaults } from '../catalog';
 import type { Category, Weapon, LoadoutDraft, LoadoutRecord } from '../../types/types';
 import { storageMode, getStorageError, storageDescription, dismissStorageError, subscribeStorageErrors } from '../common/storage';
 
@@ -46,7 +46,7 @@ export const ArmoryProvider = ({ children }: { children: ReactNode }) => {
   const [busy, setBusy] = useState(false);
   const [loading, setLoading] = useState(true);
   const [weapons, setWeapons] = useState<Weapon[]>([]);
-  const [category, setCategory] = useState<Category>(`all`);
+  const [category, setCategory] = useState<Category>(`firearms`);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [loadouts, setLoadouts] = useState<LoadoutRecord[]>([]);
@@ -128,9 +128,9 @@ export const ArmoryProvider = ({ children }: { children: ReactNode }) => {
     setNotice(`Editing Loadout`);
   };
   const selectWeaponForBuild = (id: string) => {
-    const weapon = weapons.find(item => item.id === id);
+    const weapon = getCatalogWeapon(id);
     if (!weapon) { setError(`Choose A Weapon From The Catalog`); return; }
-    setDraft({ ...createDefaultDraft(), name: `${weapon.title} Loadout`, weaponId: id, skin: weapon.defaultSkin ?? `olive`, ...getEquipmentDefaults(weapon.modelId) });
+    setDraft({ ...createDefaultDraft(), name: `${weapon.title} Loadout`, weaponId: weapon.id, skin: weapon.defaultSkin ?? `olive`, ...getEquipmentDefaults(weapon.modelId) });
     setEditingLoadoutId(null);
   };
   const dismissError = () => { setError(null); dismissStorageError(); };

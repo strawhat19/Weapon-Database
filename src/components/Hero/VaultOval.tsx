@@ -43,6 +43,21 @@ const VaultOval = ({ dark }: VaultOvalProps) => {
           <ellipse rx={366} ry={147} fill={`none`} strokeWidth={0.7} stroke={`#859398`} opacity={dark ? 0.12 : 0.15} />
           <g transform={`scale(1 ${160 / 379})`}>
             <g className={`hero-vault-oval__orbit`}>
+              <g id={`${identity}-vault-scope`} className={`hero-vault-oval__scope`}>
+                {Array.from({ length: 60 }, (_, index) => {
+                  const major = index % 5 === 0;
+                  const cardinal = index % 15 === 0;
+                  const innerRadius = cardinal ? 327 : major ? 351 : 361;
+                  return <path
+                    key={index}
+                    transform={`rotate(${index * 6})`}
+                    vectorEffect={`non-scaling-stroke`}
+                    id={`${identity}-vault-scope-tick-${index}`}
+                    d={`M371 0H${innerRadius}${cardinal ? `M${innerRadius} -6V6` : ``}`}
+                    className={`hero-vault-oval__scope-tick${major ? ` hero-vault-oval__scope-tick--major` : ``}`}
+                  />;
+                })}
+              </g>
               {([[204, 216], [24, 36]] as const).map(([start, end], index) => (
                 <path
                   fill={`none`}

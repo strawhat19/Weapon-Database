@@ -3,7 +3,7 @@ import type { Mesh, MeshStandardMaterial, Object3D } from 'three';
 import { Box3, Vector3, CanvasTexture, RepeatWrapping, SRGBColorSpace } from 'three';
 import { weaponFinishes, type WeaponFinish } from '../../shared/catalog/finishes';
 
-const createPatternTexture = (finish: WeaponFinish) => {
+const createPatternTexture = (finish: WeaponFinish, studio: boolean) => {
   const size = 256;
   const canvas = document.createElement(`canvas`);
   canvas.width = size;
@@ -24,11 +24,11 @@ const createPatternTexture = (finish: WeaponFinish) => {
   context.fillStyle = palette[0] ?? finish.color;
   context.fillRect(0, 0, size, size);
   if (finish.pattern === `blotches`) {
-    for (let patch = 0; patch < 58; patch += 1) {
+    for (let patch = 0; patch < (studio ? 110 : 58); patch += 1) {
       const x = random() * size;
       const y = random() * size;
-      const radiusX = 18 + random() * 35;
-      const radiusY = 14 + random() * 27;
+      const radiusX = studio ? 12 + random() * 28 : 18 + random() * 35;
+      const radiusY = studio ? 9 + random() * 21 : 14 + random() * 27;
       const points = Array.from({ length: 10 }, (_, point) => {
         const angle = point * Math.PI / 5;
         const variation = 0.65 + random() * 0.5;
@@ -37,7 +37,15 @@ const createPatternTexture = (finish: WeaponFinish) => {
       context.fillStyle = palette[1 + patch % Math.max(1, palette.length - 1)] ?? finish.color;
       wrap((offsetX, offsetY) => {
         context.beginPath();
-        points.forEach(([pointX, pointY], point) => {
+        if (studio) {
+          const first = points[0];
+          const last = points[points.length - 1];
+          context.moveTo(x + offsetX + (first[0] + last[0]) / 2, y + offsetY + (first[1] + last[1]) / 2);
+          points.forEach(([pointX, pointY], point) => {
+            const next = points[(point + 1) % points.length];
+            context.quadraticCurveTo(x + offsetX + pointX, y + offsetY + pointY, x + offsetX + (pointX + next[0]) / 2, y + offsetY + (pointY + next[1]) / 2);
+          });
+        } else points.forEach(([pointX, pointY], point) => {
           const drawX = x + offsetX + pointX;
           const drawY = y + offsetY + pointY;
           if (!point) context.moveTo(drawX, drawY);
@@ -85,6 +93,14 @@ const createPatternTexture = (finish: WeaponFinish) => {
       context.fill();
     }
   }
+  if (studio) {
+    const grain = context.getImageData(0, 0, size, size);
+    for (let pixel = 0; pixel < grain.data.length; pixel += 4) {
+      const variation = .97 + random() * .06;
+      for (let channel = 0; channel < 3; channel += 1) grain.data[pixel + channel] *= variation;
+    }
+    context.putImageData(grain, 0, 0);
+  }
   const texture = new CanvasTexture(canvas);
   texture.name = `Weapon Finish ${finish.id}`;
   texture.wrapS = RepeatWrapping;
@@ -94,7 +110,7 @@ const createPatternTexture = (finish: WeaponFinish) => {
   return texture;
 };
 
-export const createWeaponFinish = (materials: readonly MeshStandardMaterial[], object?: Object3D) => {
+export const createWeaponFinish = (materials: readonly MeshStandardMaterial[], object?: Object3D, { studio = false }: { studio?: boolean } = {}) => {
   const textures = new Map<SkinId, CanvasTexture>();
   const surfaces = materials.map(material => ({ roughness: material.roughness, metalness: material.metalness }));
   let projected = false;
@@ -133,16 +149,16 @@ export const createWeaponFinish = (materials: readonly MeshStandardMaterial[], o
     let texture: CanvasTexture | null = null;
     if (finish.pattern) {
       prepareProjection();
-      texture = textures.get(skin) ?? createPatternTexture(finish);
+      texture = textures.get(skin) ?? createPatternTexture(finish, studio);
       textures.set(skin, texture);
     }
     materials.forEach((material, index) => {
       const mapPresenceChanged = Boolean(material.map) !== Boolean(texture);
       material.map = texture;
       material.color.set(texture ? `#ffffff` : finish.color);
-      if (index) material.color.multiplyScalar(0.78);
-      material.roughness = texture ? 0.82 : surfaces[index].roughness;
-      material.metalness = texture ? 0.14 : surfaces[index].metalness;
+      if (index) material.color.multiplyScalar(studio ? .86 : .78);
+      material.roughness = texture ? studio ? .68 : .82 : surfaces[index].roughness;
+      material.metalness = texture ? studio ? .24 : .14 : surfaces[index].metalness;
       if (mapPresenceChanged) material.needsUpdate = true;
     });
   };

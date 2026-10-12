@@ -19,6 +19,7 @@ export type WeaponViewer = {
 export const createWeaponViewer = (viewport: HTMLDivElement, modelId: WeaponModelId, skin: SkinId, theme: ThemeMode, equipment: ModelEquipment, onAvailability: (available: boolean) => void, onAutoRotation: (enabled: boolean) => void, inspection?: EquipmentInspection): WeaponViewer => {
   const scene = new THREE.Scene();
   const pivot = new THREE.Group();
+  const studioGun = [`smg`, `shotgun`, `precision`, `marksman`, `pistol`].includes(modelId);
   const reducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`);
   let model: ReturnType<typeof createWeaponModel> | undefined;
   let currentSkin = skin;
@@ -183,14 +184,14 @@ export const createWeaponViewer = (viewport: HTMLDivElement, modelId: WeaponMode
     rimLight.position.set(0, 5, -6);
     scene.add(keyLight, fillLight, rimLight, new THREE.HemisphereLight(0xcbd5de, 0x263027, 1));
 
-    model = inspection ? createPartModel(modelId, skin, inspection) : createWeaponModel(modelId, skin, equipment);
+    model = inspection ? createPartModel(modelId, skin, inspection) : createWeaponModel(modelId, skin, equipment, () => render());
     const bounds = new THREE.Box3().setFromObject(model.object);
     const center = bounds.getCenter(new THREE.Vector3());
     const size = bounds.getSize(new THREE.Vector3());
     const span = Math.max(size.x, size.y, size.z) * 1.15;
     model.object.position.sub(center);
     pivot.add(model.object);
-    pivot.rotation.z = THREE.MathUtils.degToRad(8);
+    pivot.rotation.z = THREE.MathUtils.degToRad(studioGun ? 3 : 8);
     const initialRotation = pivot.quaternion.clone();
     scene.add(pivot);
 
@@ -201,7 +202,7 @@ export const createWeaponViewer = (viewport: HTMLDivElement, modelId: WeaponMode
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(initialWidth, initialHeight, false);
     const elevatedView = [`quadcopter`, `fixedwing`, `recurvebow`, `compoundbow`].includes(modelId);
-    camera.position.set(span * (elevatedView ? 0.65 : 0.16), span * (elevatedView ? 1.05 : 0.12), span * (elevatedView ? 1.65 : 2));
+    camera.position.set(span * (elevatedView ? .65 : studioGun ? .22 : .16), span * (elevatedView ? 1.05 : studioGun ? .26 : .12), span * (elevatedView ? 1.65 : 2));
     if (inspection) camera.position.set(span * 1.7, span * .65, span * 1.3);
     camera.lookAt(0, 0, 0);
     camera.updateMatrixWorld(true);
@@ -330,7 +331,7 @@ export const createWeaponViewer = (viewport: HTMLDivElement, modelId: WeaponMode
         revealWhenReady();
         return;
       }
-      const replacement = createWeaponModel(modelId, currentSkin, nextEquipment);
+      const replacement = createWeaponModel(modelId, currentSkin, nextEquipment, () => render());
       let nextCorners: THREE.Vector3[];
       try {
         const nextCenter = new THREE.Box3().setFromObject(replacement.object).getCenter(new THREE.Vector3());

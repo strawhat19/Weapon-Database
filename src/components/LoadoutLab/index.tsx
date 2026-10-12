@@ -2,12 +2,11 @@ import './styles.scss';
 import Icon from '../Icon';
 import WeaponModel from '../WeaponModel';
 import GunsmithPanel from '../GunsmithPanel';
-import { scrollToSection } from '../../shared/routes';
 import PartInspector from '../GunsmithPanel/PartInspector';
-import useLoadoutLab, { skinOptions, getEquipmentSummary } from './useLoadoutLab';
+import useLoadoutLab, { skinOptions } from './useLoadoutLab';
 
 const LoadoutLab = () => {
-  const { draft, busy, theme, slots, equipment, weapons, loadouts, partLabels, activeSlot, inspection, selectedWeapon, selectedEquipment, unavailableEquipment, equipPart, resetParts, inspectPart, setActiveSlot, closeInspection, equipInspectedPart, editingLoadoutId, saveDraft, deleteLoadout, editLoadout, resetDraft, selectWeaponForBuild, updateDraft } = useLoadoutLab();
+  const { draft, busy, theme, slots, equipment, inspection, selectedWeapon, selectedEquipment, unavailableEquipment, equipPart, resetParts, inspectPart, closeInspection, equipInspectedPart, editingLoadoutId, saveDraft, resetDraft, storageDescription, selectWeaponForBuild, updateDraft } = useLoadoutLab();
   const finishLabel = skinOptions.find(option => option.id === draft.skin)?.label;
   return (
     <section id={`loadout-lab`} className={`loadout-section`}>
@@ -20,7 +19,7 @@ const LoadoutLab = () => {
           </div>
           <p id={`loadout-introduction`} className={`loadout-introduction`}>Inspect parts in 3D, equip independent attachment slots, and save your finished build to this browser.</p>
         </div>
-        <div id={`loadout-builder`} className={`loadout-builder`}>
+        <form id={`loadout-builder`} className={`loadout-builder`} data-slot-count={slots.length} aria-labelledby={`loadout-form-title`} onSubmit={event => { event.preventDefault(); void saveDraft(); }}>
           <div id={`loadout-preview`} className={`loadout-preview loadout-preview--${draft.skin}`}>
             <div id={`loadout-preview-meta`} className={`loadout-preview-meta mono`}><span id={`loadout-preview-status`}>{editingLoadoutId ? `Editing Saved Build` : `Visual Study`}</span><span id={`loadout-preview-finish`}>{finishLabel}</span></div>
             <div id={`loadout-preview-canvas`} className={`loadout-preview-canvas`}>
@@ -37,25 +36,23 @@ const LoadoutLab = () => {
                 />
               ) : selectedWeapon ? <img id={`loadout-preview-image`} className={`loadout-preview-image`} src={selectedWeapon.image} alt={`${selectedWeapon.title} Design Study`} loading={`lazy`} /> : <p id={`loadout-preview-empty`} className={`loadout-preview-empty`}>Select an entry to begin your visual study.</p>}
             </div>
-            {partLabels.length > 0 && <div id={`loadout-preview-selection`} className={`loadout-preview-selection`}>{partLabels.map((label, index) => <span key={label} id={`loadout-preview-part-${index}`} className={`loadout-preview-chip mono`}><Icon name={`sliders`} size={12} />{label}</span>)}</div>}
             <div id={`loadout-preview-caption`} className={`loadout-preview-caption`}><h3 id={`loadout-preview-title`} className={`loadout-preview-title`}>{selectedWeapon?.title ?? `Your Next Build`}</h3><p id={`loadout-preview-note`} className={`loadout-preview-note`}>Design preview. Finishes are illustrative; selections do not describe real-world compatibility.</p></div>
           </div>
-          <form id={`loadout-form`} className={`loadout-form`} onSubmit={event => { event.preventDefault(); void saveDraft(); }}>
-            <div id={`loadout-form-header`} className={`loadout-form-header`}><Icon name={`sliders`} size={20} /><h3 id={`loadout-form-title`} className={`loadout-form-title`}>{editingLoadoutId ? `Refine Your Build` : `Build Your Configuration`}</h3></div>
-            <label id={`loadout-weapon-label`} className={`loadout-field`} htmlFor={`loadout-weapon-input`}><span className={`loadout-field-label mono`}>Equipment</span><select id={`loadout-weapon-input`} className={`loadout-input`} value={draft.weaponId} disabled={busy} onChange={event => selectWeaponForBuild(event.currentTarget.value)}>{equipment.map(weapon => <option id={`loadout-weapon-option-${weapon.id}`} key={weapon.id} value={weapon.id}>{weapon.title}</option>)}</select></label>
-            <label id={`loadout-name-label`} className={`loadout-field`} htmlFor={`loadout-name-input`}><span className={`loadout-field-label mono`}>Build Name</span><input id={`loadout-name-input`} className={`loadout-input`} value={draft.name} maxLength={60} required disabled={busy} placeholder={`Name your configuration`} onChange={event => updateDraft(`name`, event.currentTarget.value)} /></label>
-            <fieldset id={`loadout-skin-options`} className={`loadout-skins`}><legend id={`loadout-skin-label`} className={`loadout-field-label mono`}>Finish</legend><div id={`loadout-skin-grid`} className={`loadout-skin-grid`}>{skinOptions.map(skin => <button type={`button`} key={skin.id} id={`loadout-skin-${skin.id}`} className={`loadout-skin${draft.skin === skin.id ? ` is-active` : ``}`} aria-pressed={draft.skin === skin.id} disabled={busy} onClick={() => updateDraft(`skin`, skin.id)}><span id={`loadout-skin-swatch-${skin.id}`} className={`loadout-skin-swatch loadout-skin-swatch--${skin.id}`} style={{ background: skin.swatch }} /><span id={`loadout-skin-name-${skin.id}`}>{skin.label}</span>{draft.skin === skin.id && <Icon name={`check`} size={12} />}</button>)}</div></fieldset>
-            <GunsmithPanel slots={slots} disabled={busy} activeSlot={activeSlot} onEquip={equipPart} onReset={resetParts} onInspect={inspectPart} onSelectSlot={setActiveSlot} onViewBuild={() => scrollToSection(`loadout-lab`)} />
+          <div id={`loadout-form`} className={`loadout-form`}>
+            <div id={`loadout-form-header`} className={`loadout-form-header`}>
+              <div id={`loadout-form-heading`} className={`loadout-form-heading`}><Icon name={`sliders`} size={20} /><h3 id={`loadout-form-title`} className={`loadout-form-title`}>{editingLoadoutId ? `Refine Your Build` : `Build Your Configuration`}</h3></div>
+              <div id={`loadout-form-actions`} className={`loadout-form-actions`}><span id={`loadout-storage-note`} className={`loadout-storage-note`}><Icon name={`bookmark`} size={13} />{storageDescription}</span><button type={`button`} id={`loadout-reset`} className={`loadout-new-build`} disabled={busy} onClick={resetDraft}><Icon name={editingLoadoutId ? `x` : `plus`} size={14} />{editingLoadoutId ? `Cancel Edit` : `New Build`}</button></div>
+            </div>
+            <fieldset id={`loadout-skin-options`} className={`loadout-skins`}><legend id={`loadout-skin-label`} className={`loadout-field-label mono`}>{selectedWeapon?.category === `swords` ? `Hilt Finish` : `Finish`}</legend><div id={`loadout-skin-grid`} className={`loadout-skin-grid`}>{skinOptions.map(skin => <button type={`button`} key={skin.id} id={`loadout-skin-${skin.id}`} className={`loadout-skin${draft.skin === skin.id ? ` is-active` : ``}`} aria-pressed={draft.skin === skin.id} disabled={busy} onClick={() => updateDraft(`skin`, skin.id)}><span id={`loadout-skin-swatch-${skin.id}`} className={`loadout-skin-swatch loadout-skin-swatch--${skin.id}`} style={{ background: skin.swatch }} /><span id={`loadout-skin-name-${skin.id}`}>{skin.label}</span>{draft.skin === skin.id && <Icon name={`check`} size={12} />}</button>)}</div></fieldset>
+            <div id={`loadout-identity`} className={`loadout-identity`}>
+              <label id={`loadout-weapon-label`} className={`loadout-field loadout-field--weapon`} htmlFor={`loadout-weapon-input`}><span className={`loadout-field-label mono`}>Equipment</span><select id={`loadout-weapon-input`} className={`loadout-input`} value={draft.weaponId} disabled={busy} onChange={event => selectWeaponForBuild(event.currentTarget.value)}>{equipment.map(weapon => <option id={`loadout-weapon-option-${weapon.id}`} key={weapon.id} value={weapon.id}>{weapon.title}</option>)}</select></label>
+              <label id={`loadout-name-label`} className={`loadout-field loadout-field--name`} htmlFor={`loadout-name-input`}><span className={`loadout-field-label mono`}>Build Name</span><input id={`loadout-name-input`} className={`loadout-input`} value={draft.name} maxLength={60} required disabled={busy} placeholder={`Name your configuration`} onChange={event => updateDraft(`name`, event.currentTarget.value)} /></label>
+              <button id={`loadout-save`} className={`button button--primary loadout-save`} type={`submit`} disabled={busy || !draft.name.trim() || !selectedWeapon}><Icon name={editingLoadoutId ? `check` : `bookmark`} size={16} />{busy ? `Saving…` : `Save`}</button>
+            </div>
             {unavailableEquipment && <p id={`loadout-equipment-note`} className={`loadout-equipment-note`}>This saved build includes unavailable equipment. Its stored choices are preserved.</p>}
-            <div id={`loadout-form-actions`} className={`loadout-form-actions`}><button id={`loadout-save`} className={`button button--primary loadout-save`} type={`submit`} disabled={busy || !draft.name.trim() || !selectedWeapon}><Icon name={editingLoadoutId ? `check` : `bookmark`} size={16} />{busy ? `Saving…` : editingLoadoutId ? `Save Changes` : `Save Build`}</button><button type={`button`} id={`loadout-reset`} className={`button button--quiet loadout-reset`} disabled={busy} onClick={resetDraft}><Icon name={editingLoadoutId ? `x` : `plus`} size={15} />{editingLoadoutId ? `Cancel Edit` : `New Build`}</button></div>
-          </form>
-        </div>
-        <div id={`loadout-saved-heading`} className={`loadout-saved-heading`}><h3 id={`loadout-saved-title`} className={`loadout-saved-title`}>Saved Configurations</h3><span id={`loadout-saved-count`} className={`mono`}>{loadouts.length} {loadouts.length === 1 ? `Build` : `Builds`}</span></div>
-        {loadouts.length ? <div id={`loadout-saved-grid`} className={`loadout-saved-grid`}>{loadouts.map(loadout => {
-          const weapon = weapons.find(item => item.id === loadout.weaponId);
-          const equipmentSummary = getEquipmentSummary(weapon?.modelId, loadout);
-          return <article key={loadout.id} id={`saved-loadout-${loadout.id}`} className={`saved-loadout${editingLoadoutId === loadout.id ? ` is-editing` : ``}`}><div id={`saved-loadout-heading-${loadout.id}`} className={`saved-loadout-heading`}><span id={`saved-loadout-number-${loadout.id}`} className={`mono`}>Build {String(loadout.number).padStart(2, `0`)}</span><Icon name={`sliders`} size={16} /></div><h4 id={`saved-loadout-name-${loadout.id}`} className={`saved-loadout-name`}>{loadout.name}</h4><p id={`saved-loadout-equipment-${loadout.id}`} className={`saved-loadout-equipment`}>{weapon?.title ?? `Collection Entry`}</p><p id={`saved-loadout-specs-${loadout.id}`} className={`saved-loadout-specs mono`}>{skinOptions.find(option => option.id === loadout.skin)?.label}{equipmentSummary ? ` / ${equipmentSummary}` : ``}</p><div id={`saved-loadout-actions-${loadout.id}`} className={`saved-loadout-actions`}><button type={`button`} id={`saved-loadout-edit-${loadout.id}`} className={`saved-loadout-action`} disabled={busy} onClick={() => { editLoadout(loadout.id); scrollToSection(`loadout-lab`); }}><Icon name={`edit`} size={14} />Edit Build</button><button type={`button`} id={`saved-loadout-delete-${loadout.id}`} className={`saved-loadout-action saved-loadout-delete`} disabled={busy} onClick={() => { void deleteLoadout(loadout.id); }} aria-label={`Delete ${loadout.name}`}><Icon name={`trash`} size={14} />Delete</button></div></article>;
-        })}</div> : <div id={`loadout-saved-empty`} className={`loadout-saved-empty`}><Icon name={`bookmark`} size={20} /><p id={`loadout-saved-empty-copy`}>Your saved configurations will appear here.</p><span id={`loadout-saved-empty-note`} className={`loadout-saved-empty-note`}>Choose a finish above and save your first build.</span></div>}
+          </div>
+          <GunsmithPanel slots={slots} disabled={busy} modelId={selectedWeapon?.modelId} onEquip={equipPart} onReset={resetParts} onInspect={inspectPart} />
+        </form>
       </div>
     </section>
   );

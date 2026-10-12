@@ -3,7 +3,7 @@ import { Loadout, SavedWeapon } from '../shared/models';
 import { isRecord, isText, isIsoDate } from '../shared/common/values';
 import { createDataRecord, hasMatchingRecordId } from '../shared/common/ids';
 import { getStoredEquipment, validOptionalSlots } from '../shared/catalog/equipment';
-import { getCatalogWeapons, isSkinId, isOpticId, isAttachmentId } from '../shared/catalog';
+import { isSkinId, isOpticId, resolveWeaponId, isAttachmentId, getCatalogWeapon } from '../shared/catalog';
 import type { DataRecord, LoadoutDraft, LoadoutRecord, SavedWeaponRecord } from '../types/types';
 import { StorageError, readStored, writeStored, withStorageLock, reportStorageError } from '../shared/common/storage';
 
@@ -37,13 +37,22 @@ const validSnapshot = (value: unknown): value is ArmorySnapshot => {
 const readSnapshot = async (): Promise<ArmorySnapshot> => {
   const stored = await readStored(armoryStorageKey);
   if (stored === undefined) return emptySnapshot();
-  if (validSnapshot(stored)) return stored;
+  if (validSnapshot(stored)) {
+    const savedWeaponIds = new Set<string>();
+    const savedWeapons = stored.savedWeapons.flatMap(record => {
+      const weaponId = resolveWeaponId(record.weaponId);
+      if (savedWeaponIds.has(weaponId)) return [];
+      savedWeaponIds.add(weaponId);
+      return [{ ...record, weaponId }];
+    });
+    return { ...stored, savedWeapons, loadouts: stored.loadouts.map(record => ({ ...record, weaponId: resolveWeaponId(record.weaponId) })) };
+  }
   const error = new StorageError(`Saved Armory Data Is Not Readable — Existing Data Has Been Preserved`);
   reportStorageError(error);
   throw error;
 };
 const getWeapon = (id: string) => {
-  const weapon = getCatalogWeapons().find(item => item.id === id);
+  const weapon = getCatalogWeapon(id);
   if (!weapon) throw new Error(`Choose A Weapon From The Catalog`);
   return weapon;
 };
@@ -52,7 +61,7 @@ const normalizeDraft = (draft: LoadoutDraft): LoadoutDraft => {
   if (!name || name.length > 80) throw new Error(`Enter A Loadout Name Of 1–80 Characters`);
   getWeapon(draft.weaponId);
   if (!isSkinId(draft.skin) || !isOpticId(draft.optic) || !isAttachmentId(draft.attachment) || !validOptionalSlots(draft)) throw new Error(`Choose Valid Loadout Options`);
-  return { name, skin: draft.skin, weaponId: draft.weaponId, ...getStoredEquipment(draft) };
+  return { name, skin: draft.skin, weaponId: resolveWeaponId(draft.weaponId), ...getStoredEquipment(draft) };
 };
 const nextNumber = (snapshot: ArmorySnapshot) => {
   if (snapshot.counter >= Number.MAX_SAFE_INTEGER) throw new Error(`The Local Record Counter Is Full`);
@@ -69,9 +78,10 @@ export const armoryAPI = {
   getSnapshot: () => withStorageLock(armoryStorageKey, readSnapshot),
   toggleSavedWeapon: (weaponId: string) => transaction(snapshot => {
     const weapon = getWeapon(weaponId);
-    const existing = snapshot.savedWeapons.find(record => record.weaponId === weaponId);
+    const canonicalWeaponId = resolveWeaponId(weaponId);
+    const existing = snapshot.savedWeapons.find(record => record.weaponId === canonicalWeaponId);
     const number = existing ? snapshot.counter : nextNumber(snapshot);
-    const record = existing ? null : new SavedWeapon({ ...createDataRecord(`SavedWeapon`, `${weapon.title} ${weapon.subtitle}`, number), weaponId }).toRecord();
+    const record = existing ? null : new SavedWeapon({ ...createDataRecord(`SavedWeapon`, `${weapon.title} ${weapon.subtitle}`, number), weaponId: canonicalWeaponId }).toRecord();
     const savedWeapons = existing ? snapshot.savedWeapons.filter(item => item.id !== existing.id) : [...snapshot.savedWeapons, record as SavedWeaponRecord];
     const updated = { ...snapshot, counter: number, savedWeapons };
     return { snapshot: updated, result: { snapshot: updated, saved: !existing } };
