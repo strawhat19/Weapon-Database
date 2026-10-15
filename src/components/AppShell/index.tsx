@@ -1,4 +1,5 @@
 import Icon from '../Icon';
+import { router } from 'expo-router';
 import Hero from '../Hero';
 import Modal from '../Modal';
 import Header from '../Header';
@@ -39,7 +40,7 @@ export default function AppShell({ page = `home` }: { page?: `home` | `weapons` 
   const openBuild = (id: string) => { selectWeaponForBuild(id); state.setWeaponId(null); scrollToSection(`loadout-lab`); };
   return <div id={`weapon-database-app`} className={`armory-app`} style={materialStyles}>
     <a className={`skip-link`} href={`#catalog`} onClick={event => { event.preventDefault(); scrollToSection(`catalog`); }}>Skip To The Catalog</a>
-    <Header onOpenInfo={state.setInfoTopic} onOpenAccount={() => state.setAccountOpen(true)} />
+    <Header onOpenInfo={topic => router.push(`/${topic}`)} onOpenAccount={() => router.push(`/signin`)} />
     <main id={`armory-main`}>
       {page === `home` ? <><Hero onOpenWeapon={state.setWeaponId} /><CategoryIndex /></> : <>
         <div id={`weapons-page-heading`} className={`container weapons-page-heading`}><p className={`eyebrow`}>Your Armory</p><h1 id={`weapons-page-title`}>Weapons</h1></div>
@@ -48,7 +49,7 @@ export default function AppShell({ page = `home` }: { page?: `home` | `weapons` 
       <Catalog key={page} defaultCategory={page === `weapons` ? `all` : `firearms`} onOpenWeapon={state.setWeaponId} />
       {page === `home` && <><LoadoutLab /><Journal /><ArchiveTimeline /></>}
     </main>
-    <Footer onOpenInfo={state.setInfoTopic} />
+    <Footer onOpenInfo={topic => router.push(`/${topic}`)} />
     <button type={`button`} id={`scroll-to-top`} className={`scroll-top ${state.pastHero ? `scroll-top--visible` : ``}`} aria-label={`Scroll To Top`} tabIndex={state.pastHero ? 0 : -1} onClick={scrollToTop}><Icon name={`chevron-up`} /></button>
     {(error || themeError) && <div id={`storage-error-notice`} role={`alert`} className={`app-feedback app-feedback--error`}>
       <p>{error || themeError}</p><button type={`button`} className={`icon-button`} id={`dismiss-storage-error`} aria-label={`Dismiss Message`} onClick={() => { dismissError(); dismissThemeError(); }}><Icon name={`x`} size={18} /></button>

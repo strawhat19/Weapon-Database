@@ -13,7 +13,7 @@ const Header = ({ sticky = true, onOpenAccount, onOpenInfo }: HeaderProps) => {
   const { theme, toggleTheme } = useTheme();
   const { scrolled, menuOpen, activeSection, menuButtonRef, closeMenu, setMenuOpen, setActiveSection } = useHeader();
   const navigate = (section: SectionId) => { setActiveSection(section); closeMenu(); scrollToSection(section); };
-  const openMenuLink = (link: (typeof menuLinks)[number]) => { closeMenu(); if (link.path) router.navigate(link.path); else if (link.section) navigate(link.section); else if (link.topic) onOpenInfo(link.topic); };
+  const openMenuLink = (link: (typeof menuLinks)[number]) => { closeMenu(); if (link.path) router.navigate(link.path as never); else if (link.section) navigate(link.section); else if (link.topic) onOpenInfo(link.topic); };
   const currentLink = (link: (typeof menuLinks)[number]): `page` | `location` | undefined => link.path ? pathname === link.path ? `page` : undefined : pathname === pageRoutes.home && activeSection === link.section ? `location` : undefined;
   const openAccount = () => { closeMenu(); onOpenAccount(); };
   return (

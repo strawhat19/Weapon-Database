@@ -1,0 +1,13 @@
+import Icon from '../Icon';
+const named = (name: Parameters<typeof Icon>[0][`name`]) => ({ size = 18 }: { size?: number }) => <Icon name={name} size={size} />;
+export const Heart = named(`bookmark`);
+export const Folder = named(`book`);
+export const Shield = named(`shield`);
+export const Link2 = named(`code`);
+export const Settings = named(`sliders`);
+export const BookOpen = named(`book`);
+export const UserRound = named(`user`);
+export const BarChart3 = named(`all`);
+export const ChevronLeft = named(`chevron-left`);
+export const ChevronDown = named(`chevron`);
+export const LayoutDashboard = named(`all`);

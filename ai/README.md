@@ -30,3 +30,9 @@ The [complete analytics bundle](skills/admin/assets/analytics/) includes local c
 Dropping in guidance starts implementation; it does not itself create resources or supply credentials. Actual connection still needs the destination's implementation, Firebase providers/origins, trusted account bootstrap, deployed compatible rules/indexes, hosted private endpoints and available Vercel scope/plan. Show missing setup instead of mock success or silent local fallback. Follow AGENTS.md for checks, commits and live changes.
 
 [Goals](goals/goals.md) keeps requested scope clear. [Prompts](prompts/prompts.md) provides focused requests without app-specific history.
+
+Use [Shop](skills/shop/SKILL.md) and [its adoption prompt](skills/shop/SKILL.md#adoption-prompt) for a themed Firestore store, cart/native Stripe checkout, permitted shop administration, sourced dropshipping Market, research and controlled fulfillment. It reuses the destination's existing account/store foundations and keeps project-specific pricing/setup outside this portable pack.
+
+## Frontend Only, Before Connections
+
+For page buildouts without live services, use [Disconnected Account Frontend](skills/disconnected-account-frontend/SKILL.md). Simple prompt: "Prepare this app with the disconnected account frontend skill, keep its theme, and commit to my review branch; no backend connections." This mode does not enable the connected defaults above.

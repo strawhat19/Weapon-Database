@@ -3,9 +3,10 @@ import { router } from 'expo-router';
 export const pageRoutes = { home: `/`, weapons: `/weapons` } as const;
 export type SectionId = `hero` | `catalog` | `loadout-lab` | `journal` | `history`;
 export type InfoTopic = `about` | `api` | `contact` | `terms` | `privacy`;
-type MenuLink = { id: string; label: string; path?: typeof pageRoutes.weapons; icon: `info` | `book` | `code` | `shield` | `mail`; section?: SectionId; topic?: InfoTopic };
+type MenuLink = { id: string; label: string; path?: string; icon: `info` | `book` | `code` | `shield` | `mail`; section?: SectionId; topic?: InfoTopic };
 
 export const menuLinks: MenuLink[] = [
+  { id: `saved`, label: `Saved`, path: `/saved`, icon: `book` },
   { id: `about`, label: `About`, icon: `info`, topic: `about` },
   { id: `blog`, label: `Blog`, icon: `book`, section: `journal` },
   { id: `api`, label: `API`, icon: `code`, topic: `api` },
